@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{title}}</title>
+  <meta name="description" content="Портфолио продуктового дизайнера" />
+  <link rel="icon" href="{{root}}assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{root}}assets/css/style.css" />
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="site-header__bar">
+      <a class="site-header__link" href="{{home}}#about">опыт</a>
+      <a class="site-header__logo" href="{{home}}" aria-label="Диана Чикан">
+        <img src="{{root}}assets/img/logo.png" alt="" />
+      </a>
+      <a class="site-header__link" href="{{home}}#cases">кейсы</a>
+      <button class="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav">
+      <a href="{{home}}#about">опыт</a>
+      <a href="{{home}}#cases">кейсы</a>
+    </nav>
+  </header>
+  <main>
+{{body}}
+  </main>
+{{footer}}
+  <script src="{{root}}assets/js/main.js"></script>
+</body>
+</html>
