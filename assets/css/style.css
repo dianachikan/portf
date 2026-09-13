@@ -606,13 +606,17 @@ mark {
 }
 
 .feature-row__title {
+  font-family: var(--headline);
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
+  line-height: 1.2;
   margin: 0 0 12px;
 }
 
 .feature-row__text {
   margin: 0;
+  font-size: 20px;
+  line-height: 1.55;
 }
 
 .feature-row__media,
@@ -677,13 +681,17 @@ mark {
 }
 
 .two-col__title {
+  font-family: var(--headline);
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
+  line-height: 1.2;
   margin: 0 0 12px;
 }
 
 .two-col__text {
   margin: 0;
+  font-size: 20px;
+  line-height: 1.55;
 }
 
 .video-frame {
