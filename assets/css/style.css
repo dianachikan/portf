@@ -389,7 +389,6 @@ mark {
 }
 
 .case-body > p,
-.case-body .split,
 .case-body .principle,
 .case-body .feature-row,
 .case-body .two-col,
@@ -496,21 +495,24 @@ mark {
 
 .split {
   display: grid;
-  grid-template-columns: 160px minmax(0, 1fr);
-  gap: 24px 32px;
-  padding: 15px 0;
+  grid-template-columns: 260px minmax(0, 1fr);
+  column-gap: 40px;
+  padding: 30px 0;
 }
 
 .split__title {
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1.3;
   margin: 0;
+  padding: 7px 50px 7px 0;
+  font-family: var(--headline);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 .split__text {
+  padding: 8px 0 6px;
   font-size: 20px;
-  line-height: 1.45;
+  line-height: 31px;
 }
 
 .principle {
@@ -820,6 +822,19 @@ mark {
   .covers {
     grid-template-columns: 1fr;
     direction: ltr;
+  }
+
+  .split {
+    column-gap: 0;
+    padding: 20px 0;
+  }
+
+  .split__title {
+    padding: 0 0 8px;
+  }
+
+  .split__text {
+    padding: 0;
   }
 
   .hero__photo {
