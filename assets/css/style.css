@@ -152,8 +152,8 @@ mark {
   grid-column: 1;
   grid-row: 1 / span 3;
   width: 261px;
-  height: 244px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   border-radius: var(--radius);
   margin-top: 22px;
 }
@@ -268,8 +268,9 @@ mark {
 
 .case-card img {
   width: 100%;
-  aspect-ratio: 560 / 420;
-  object-fit: cover;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
   border-radius: var(--radius);
   transition: transform 0.35s ease;
 }
@@ -328,10 +329,9 @@ mark {
 
 .case-hero__layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 300px;
-  gap: 40px;
-  align-items: start;
-  min-height: 360px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px 32px;
+  align-items: center;
 }
 
 .case-hero__tags {
@@ -361,12 +361,60 @@ mark {
 }
 
 .case-hero__media {
+  display: block;
+  width: var(--hero-media-w, 460px);
+  max-width: min(100%, 42vw);
+  height: auto;
+  border-radius: 0;
+  object-fit: contain;
+  justify-self: end;
+}
+
+.case-hero__media--circle {
+  --hero-media-w: 300px;
   width: 300px;
+  max-width: 300px;
   height: 300px;
   border-radius: 50%;
   object-fit: cover;
-  margin-top: 12px;
+}
+
+.case-hero__media--product {
+  --hero-media-w: 460px;
+}
+
+.case-hero__media--gantt {
+  --hero-media-w: 499px;
+}
+
+.case-hero__media--startech {
+  --hero-media-w: 369px;
+}
+
+.case-hero__stack {
+  --hero-media-w: 458px;
+  position: relative;
+  width: 458px;
+  max-width: min(100%, 42vw);
+  aspect-ratio: 458 / 340;
   justify-self: end;
+}
+
+.case-hero__stack img {
+  position: absolute;
+  width: 47.8%;
+  height: auto;
+  border-radius: 0;
+}
+
+.case-hero__stack img:first-child {
+  left: 0;
+  top: 23%;
+}
+
+.case-hero__stack img:last-child {
+  right: 0;
+  top: 0;
 }
 
 .case-hero__cta {
@@ -838,10 +886,9 @@ mark {
   }
 
   .hero__photo {
-    width: 100%;
-    max-width: 261px;
+    width: 140px;
+    max-width: 140px;
     height: auto;
-    aspect-ratio: 261 / 244;
     grid-row: auto;
     margin-top: 12px;
   }
@@ -883,8 +930,21 @@ mark {
   }
 
   .case-hero__media {
+    width: min(100%, var(--hero-media-w, 460px));
+    max-width: 100%;
+    height: auto;
+    justify-self: start;
+  }
+
+  .case-hero__media--circle {
     width: 180px;
     height: 180px;
+    max-width: 180px;
+  }
+
+  .case-hero__stack {
+    width: min(100%, 340px);
+    max-width: 100%;
     justify-self: start;
   }
 
