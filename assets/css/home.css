@@ -1,3 +1,6 @@
+@font-face { font-family: Inter; font-style: normal; font-weight: 400; font-display: swap; src: url(../fonts/inter-400.ttf) format("truetype"); }
+@font-face { font-family: Inter; font-style: normal; font-weight: 500; font-display: swap; src: url(../fonts/inter-500.ttf) format("truetype"); }
+@font-face { font-family: Inter; font-style: normal; font-weight: 600; font-display: swap; src: url(../fonts/inter-600.ttf) format("truetype"); }
 :root {
   color-scheme: light;
   --paper: #f6f2e8;
@@ -46,6 +49,10 @@ h2 { color: var(--pink); font-size: clamp(30px, 2.5vw, 42px); font-weight: 600; 
 .cards { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 2.2%; }
 .cards a { display: block; font-size: clamp(18px,1.67vw,28px); line-height: 1.2; }
 .cards span { display: block; margin-top: 14px; }
+#cases .cards { grid-template-columns: minmax(0, 1fr); gap: clamp(56px, 7vw, 112px); max-width: 1120px; margin-inline: auto; }
+#cases h2 { font-size: 36px; font-weight: 600; }
+#cases h3 { margin-top: 22px; font-size: clamp(26px, 2.5vw, 40px); font-weight: 600; line-height: 1.2; letter-spacing: -.04em; }
+#cases .case-img { height: auto; aspect-ratio: 4 / 3; object-fit: contain; }
 .shot, .case-img { display: block; width: 100%; aspect-ratio: 405/275; object-fit: cover; }
 .shot { display: grid; place-items: center; overflow: hidden; }
 .shot img { width: 89%; height: 84%; object-fit: contain; }
