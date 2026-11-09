@@ -1,88 +1,56 @@
-    <section class="hero">
-      <div class="container">
-        <div class="hero__grid">
-          <img class="hero__photo" src="assets/img/photo.png" alt="Диана Чикан" width="261" />
-          <h1 class="hero__name">диана чикан</h1>
-          <div class="hero__contacts">
-            <a href="mailto:dianachikan@yandex.ru">dianachikan@yandex.ru</a>
-            <a href="https://t.me/dyanatort">tg: @dyanatort</a>
-          </div>
-          <p class="hero__bio">Продуктовый дизайнер,<br />проектирую сложные B2B системы.<br />Люблю создавать, развивать и улучшать.</p>
-          <p class="hero__meta">24 года, Москва</p>
-        </div>
-        <ul class="pills">
-          <li>3+ года опыта</li>
-          <li>Web&amp;mobile</li>
-          <li>B2B и B2E</li>
-          <li>B2C</li>
-          <li>Дизайн-системы</li>
-          <li>SaaS</li>
-          <li>Исследования</li>
-        </ul>
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Диана Чикан — продуктовый дизайнер</title>
+  <meta name="description" content="Портфолио Дианы Чикан — интерфейсы, проекты и опыт продуктового дизайнера.">
+  <link rel="icon" href="assets/img/favicon.svg">
+  <link rel="stylesheet" href="assets/css/home.css">
+  <script defer src="assets/js/home.js"></script>
+</head>
+<body>
+  <main>
+    <header class="cover">
+      <h1><img class="lettering" src="assets/redesign/lettering.png" alt="Diana Chikan"></h1>
+      <img class="portrait" src="assets/redesign/portrait.png" alt="Диана Чикан">
+      <img class="heart" src="assets/redesign/heart.svg" alt="">
+      <div class="languages" aria-label="Language" role="group">
+        <button type="button" data-lang="ru" aria-pressed="true" lang="ru">RU</button>
+        <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+      </div>
+      <div class="intro"><h2 lang="en">product designer</h2>
+        <p data-en="I find what matters and think through the details">нахожу главное и продумываю до мелочей</p>
+      </div>
+      <div class="contacts">
+        <a href="https://t.me/dyanatort"><span data-en="chat">написать</span><img src="assets/redesign/chat.svg" alt=""></a>
+        <a href="#about"><span data-en="cv">резюме</span><img src="assets/redesign/cv.svg" alt=""></a>
+        <a href="mailto:dianachikan@yandex.ru"><span data-en="mail">почта</span><img src="assets/redesign/mail.svg" alt=""></a>
+        <a href="https://t.me/vot_dumay"><span data-en="channel">канал</span><img src="assets/redesign/channel.svg" alt=""></a>
+      </div>
+    </header>
+    <section class="section">
+      <h2 data-en="design details">дизайн в деталях</h2>
+      <div class="cards studies">
+        <a href="gantt/"><div class="shot mint"><img loading="lazy" src="assets/img/tild6237-633_gant.png" alt=""></div><span data-en="Scheduling work on a timeline">Планирование на диаграмме Ганта</span></a>
+        <a href="design-system/"><div class="shot rose"><img loading="lazy" src="assets/img/tild3235-306_InputDateDropdown1.png" alt=""></div><span data-en="Choosing a date in a table">Выбор даты в таблице</span></a>
+        <a href="yasmy/"><div class="shot peach"><img loading="lazy" src="assets/img/tild3565-646_photo.png" alt=""></div><span data-en="From a recipe to a shopping list">От рецепта к списку покупок</span></a>
       </div>
     </section>
-
-    <section class="cases" id="cases">
-      <div class="container">
-        <h2 class="section-title">кейсы</h2>
-        <div class="cases-grid">
-          <a class="case-card" href="yasmy/" aria-label="Ясми: от сервиса хранения рецептов к продукту, принимающему решения">
-            <img src="assets/img/card-yasmy.png" alt="" />
-          </a>
-          <a class="case-card" href="product-restart/" aria-label="Перезапуск продукта ServiceVizor и смена стратегии">
-            <img src="assets/img/card-product-restart.png" alt="" />
-          </a>
-          <a class="case-card" href="gantt/" aria-label="От ручного планирования к системе управления процессами">
-            <img src="assets/img/card-gantt.png" alt="" />
-          </a>
-          <a class="case-card" href="startech/" aria-label="Анкета стартапа как инструмент внешней коммуникации">
-            <img src="assets/img/card-startech.png" alt="" />
-          </a>
-          <a class="case-card" href="design-system/" aria-label="Дизайн-система продукта для технических специалистов">
-            <img src="assets/img/card-design-system.png" alt="" />
-          </a>
-        </div>
+    <section class="section" id="cases">
+      <h2 data-en="selected projects">кейсы</h2>
+      <div class="cards">
+        <a href="yasmy/"><img class="case-img" loading="lazy" src="assets/img/card-yasmy.png" alt=""><span data-en="Yasmi · Meal planning">Ясми · Планирование питания</span></a>
+        <a href="product-restart/"><img class="case-img" loading="lazy" src="assets/img/card-product-restart.png" alt=""><span data-en="ServiceVizor · Product relaunch">ServiceVizor · Перезапуск продукта</span></a>
+        <a href="startech/"><img class="case-img" loading="lazy" src="assets/img/card-startech.png" alt=""><span data-en="Startech.Base · Startup profile">Startech.Base · Анкета стартапа</span></a>
       </div>
     </section>
-
-    <section class="experience" id="about">
-      <div class="container">
-        <h2 class="section-title section-title--lower">опыт</h2>
-
-        <article class="job">
-          <div class="job__meta">
-            <p class="job__date">апрель 2024 – нв</p>
-            <h3 class="job__role">Продуктовый дизайнер<br />в АО «Моделирование и цифровые двойники»</h3>
-          </div>
-          <div class="job__body">
-            <p><strong>B2B SaaS / B2E</strong> для цифровизации производственных процессов (web + tablet). Сложные сценарии: роли пользователей, таблицы, дашборды, управление задачами. Дизайнер в кросс-функциональной команде.</p>
-            <p><strong>Ключевые результаты:</strong><br />⭐ Пересобрала архитектуру продукта → упростила использование<br />⭐ Прототипы использовались в продажах → 2 крупных клиента подписали контракты и 4 производства начали использовать продукт в демо режиме</p>
-            <p><strong>Зона ответственности:</strong><br />✨ Спроектировала ключевые пользовательские сценарии (таблицы, роли, дашборды, таск трекер), упростив работу с системой<br />✨ Участвовала UX-концепцию продукта в рамках перезапуска<br />✨ Проводила глубинные интервью с пользователями (операторы, технические специалисты) и коридорные юзабилити-тесты прототипов, выявляла проблемные места в сценариях<br />✨ Систематизировала и развивала дизайн-систему совместно с разработкой<br />✨ Участовала в сборе и структурировании качественного фидбека<br />✨ Работала с продукт-менеджером над приоритизацией фич и формированием решений<br />✨ Проводила дизайн-ревью и сопровождала реализацию</p>
-          </div>
-        </article>
-
-        <article class="job">
-          <div class="job__meta">
-            <p class="job__date">июнь – ноябрь 2023</p>
-            <h3 class="job__role">Продуктовый дизайнер<br />в Startech. Base</h3>
-          </div>
-          <div class="job__body">
-            <p><strong>B2C</strong> платформа для взаимодействия стартапов и инвесторов. Работала фулл-тайм единственным дизайнером на этапе пост-MVP.</p>
-            <p><strong>Ключевые результаты:</strong><br />⭐ Упростила пользовательские сценарии для двух сегментов (стартапы/инвесторы)<br />⭐ Снизила сложность входа в продукт за счёт переработки анкеты стартапа<br />⭐ Подготовила продукт к масштабированию и развитию</p>
-            <p><strong>Зона ответственности:</strong><br />✨ Провела аудит интерфейса и выявила проблемы консистентности и логики<br />✨ Спроектировала пользовательские сценарии и новые разделы платформы<br />✨ Разработала личный кабинет с учётом ролей и тарифных моделей<br />✨ Переработала онбординг и форму регистрации<br />✨ Спроектировала систему уведомлений<br />✨ Систематизировала UI и собрала компонентную библиотеку<br />✨ Синхронизировала дизайн с фронтенд-реализацией<br />✨ Участвовала в сборе и анализе пользовательского фидбека</p>
-          </div>
-        </article>
-
-        <article class="job">
-          <div class="job__meta">
-            <p class="job__date">сентябрь 2022 — апрель 2024</p>
-            <h3 class="job__role">Early-stage стартапы B2C</h3>
-          </div>
-          <div class="job__body">
-            <p>Проектировала MVP цифровых продуктов для стартапов на ранней стадии. Работала с фаундерами на этапе формирования требований и запуска.</p>
-            <p><strong>Ключевые результаты:</strong><br />⭐ Структурировала пользовательские сценарии и базовую архитектуру продуктов<br />⭐ Подготовила интерфейсы к запуску MVP<br />⭐ Заложила основу для дальнейшего развития</p>
-            <p><strong>Зона ответственности:</strong><br />✨ Проектировала пользовательские сценарии (CJM, user flow, sitemap)<br />✨ Разрабатывала прототипы интерфейсов<br />✨ Создавала базовые UI-kit и систематизировала визуальные решения<br />✨ Подготавливала интерфейсы к передаче в разработку и запуску<br />✨ Работала с фаундерами над формированием требований и сценариев</p>
-          </div>
-        </article>
-      </div>
+    <section class="section experience" id="about">
+      <h2 data-en="experience">опыт</h2>
+      <article><time data-en="from April 2024">с апреля 2024</time><div><h3 data-en="Modelling and Digital Twins">Моделирование и цифровые двойники</h3><p data-en="Product designer. Research, work instructions and planning tools for manufacturing teams.">Продуктовый дизайнер. Исследования, рабочие инструкции и инструменты планирования для производственных команд.</p></div></article>
+      <article><time data-en="June — November 2023">июнь — ноябрь 2023</time><div><h3>Startech.Base</h3><p data-en="Product designer. Onboarding, startup profiles and accounts for founders and investors.">Продуктовый дизайнер. Онбординг, анкеты стартапов и личные кабинеты для основателей и инвесторов.</p></div></article>
+      <article><time>2022 — 2024</time><div><h3 data-en="Early-stage startups">Стартапы ранней стадии</h3><p data-en="Designed the first versions of consumer products with their founders.">Вместе с основателями проектировала первые версии потребительских продуктов.</p></div></article>
     </section>
+  </main>
+</body>
+</html>

@@ -75,6 +75,8 @@ def expand_includes(text: str) -> str:
 
 
 def render(page: dict) -> str:
+    if page["src"] == "home.html":
+        return typograf_html((SRC / "pages" / "home.html").read_text())
     html = (SRC / "layout.html").read_text()
     body = expand_includes((SRC / "pages" / page["src"]).read_text()).rstrip() + "\n"
     footer = (SRC / "footer.html").read_text() if page["footer"] else ""
