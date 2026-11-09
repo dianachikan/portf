@@ -51,10 +51,10 @@ h2 { color: var(--pink); font-size: clamp(30px, 2.5vw, 42px); font-weight: 600; 
 .cards span { display: block; margin-top: 14px; }
 #cases, .experience { width: 88.89%; max-width: 1120px; margin-inline: auto; }
 #cases .cards { grid-template-columns: minmax(0, 1fr); gap: clamp(56px, 7vw, 96px); }
-#cases h2 { margin-bottom: 40px; font-size: 36px; font-weight: 600; }
-#cases .cards a { display: flex; flex-direction: column; gap: 24px; }
-#cases h3 { order: -1; max-width: 28ch; font-size: clamp(26px, 2.5vw, 40px); font-weight: 600; line-height: 1.2; letter-spacing: -.04em; }
-#cases .case-img { height: auto; aspect-ratio: 4 / 3; object-fit: contain; }
+#cases h2 { margin-bottom: 40px; font-size: 36px; font-weight: 600; text-align: center; }
+#cases .cards a { display: flex; flex-direction: column; align-items: center; gap: 24px; }
+#cases h3 { order: -1; width: 100%; max-width: 640px; text-align: center; font-size: clamp(26px, 2.5vw, 40px); font-weight: 600; line-height: 1.2; letter-spacing: -.04em; }
+#cases .case-img { max-width: 840px; height: auto; aspect-ratio: 4 / 3; object-fit: contain; }
 .shot, .case-img { display: block; width: 100%; aspect-ratio: 405/275; object-fit: cover; }
 .shot { display: grid; place-items: center; overflow: hidden; }
 .shot img { width: 89%; height: 84%; object-fit: contain; }
