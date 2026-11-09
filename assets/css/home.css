@@ -49,9 +49,11 @@ h2 { color: var(--pink); font-size: clamp(30px, 2.5vw, 42px); font-weight: 600; 
 .cards { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 2.2%; }
 .cards a { display: block; font-size: clamp(18px,1.67vw,28px); line-height: 1.2; }
 .cards span { display: block; margin-top: 14px; }
-#cases .cards { grid-template-columns: minmax(0, 1fr); gap: clamp(56px, 7vw, 112px); max-width: 1120px; margin-inline: auto; }
-#cases h2 { font-size: 36px; font-weight: 600; }
-#cases h3 { margin-top: 22px; font-size: clamp(26px, 2.5vw, 40px); font-weight: 600; line-height: 1.2; letter-spacing: -.04em; }
+#cases, .experience { width: 88.89%; max-width: 1120px; margin-inline: auto; }
+#cases .cards { grid-template-columns: minmax(0, 1fr); gap: clamp(56px, 7vw, 96px); }
+#cases h2 { margin-bottom: 40px; font-size: 36px; font-weight: 600; }
+#cases .cards a { display: flex; flex-direction: column; gap: 24px; }
+#cases h3 { order: -1; max-width: 28ch; font-size: clamp(26px, 2.5vw, 40px); font-weight: 600; line-height: 1.2; letter-spacing: -.04em; }
 #cases .case-img { height: auto; aspect-ratio: 4 / 3; object-fit: contain; }
 .shot, .case-img { display: block; width: 100%; aspect-ratio: 405/275; object-fit: cover; }
 .shot { display: grid; place-items: center; overflow: hidden; }
@@ -77,6 +79,8 @@ h2 { color: var(--pink); font-size: clamp(30px, 2.5vw, 42px); font-weight: 600; 
   .contacts { width: fit-content; max-width: 100%; margin-top: 20px; padding: 5px 12px; gap: 10px; flex-wrap: wrap; }
   .contacts a { font-size: 16px; min-height: 44px; }
   .cards { grid-template-columns: 1fr; gap: 30px; }
+  #cases h2 { margin-bottom: 28px; }
+  #cases .cards a { gap: 16px; }
   .experience article { grid-template-columns: 1fr; gap: 8px; }
 }
 .scroll-header {
