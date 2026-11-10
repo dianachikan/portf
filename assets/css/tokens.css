@@ -6,7 +6,7 @@
 :root {
   --color-paper: #f6f2e8;
   --color-ink: #04392f;
-  --color-heading: #ff6ba1;
+  --color-heading: #c83270;
   --color-ink-muted: #5c716b;
   --color-line: #b8c1b3;
   --color-focus: #04392f;
@@ -19,28 +19,29 @@
   --type-compact: 15px;
   --type-tiny: 13px;
   --type-language: clamp(14px, 1.25cqw, 21px);
-  --type-header-link: clamp(16px, 1.4vw, 20px);
-  --type-small: 16px;
-  --type-body: 20px;
-  --type-lead: 24px;
-  --type-subtitle: 28px;
-  --type-heading: 36px;
-  --type-heading-mobile: 32px;
-  --leading-body: 1.45;
-  --leading-heading: 1.12;
-  --tracking-body: -.02em;
-  --tracking-heading: -.04em;
-  --type-display: 52px;
-  --type-hero: clamp(52px, 7vw, 88px);
+  /* Text styles exported from Figma, frame 62:39. */
+  --figma-header1: 44px;
+  --figma-header2: 32px;
+  --figma-body1: 24px;
+  --figma-body2: 20px;
+  --figma-body3: 16px;
+  --type-small: var(--figma-body3);
+  /* Keep every text role in step as the viewport changes from phone to desktop. */
+  --type-heading: clamp(26px, calc(19.314px + 1.7143vw), var(--figma-header1));
+  --type-subheading: clamp(22px, calc(18.286px + .9524vw), var(--figma-header2));
+  --type-body: clamp(var(--figma-body3), calc(13.029px + .7619vw), var(--figma-body1));
+  --leading-body: normal;
+  --leading-heading: normal;
+  --tracking-body: -.05em;
+  --tracking-heading: -.05em;
+  --type-display: var(--type-heading);
+  --type-hero: var(--type-heading);
   --type-stat: clamp(72px, 10vw, 120px);
-  --type-card-title: clamp(26px, 2.5vw, 40px);
-  --type-meta: clamp(16px, 1.4vw, 22px);
   --tap-size: 44px;
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 700px) {
   :root {
-    --type-heading: 44px;
-    --type-display: 60px;
+    --tracking-body: -.03em;
   }
 }
