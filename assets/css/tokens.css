@@ -1,0 +1,46 @@
+/* Shared visual language for the cover and every case page. */
+@font-face { font-family: Inter; font-style: normal; font-weight: 400; font-display: swap; src: url(../fonts/inter-400.ttf) format("truetype"); }
+@font-face { font-family: Inter; font-style: normal; font-weight: 500; font-display: swap; src: url(../fonts/inter-500.ttf) format("truetype"); }
+@font-face { font-family: Inter; font-style: normal; font-weight: 600; font-display: swap; src: url(../fonts/inter-600.ttf) format("truetype"); }
+
+:root {
+  --color-paper: #f6f2e8;
+  --color-ink: #04392f;
+  --color-heading: #ff6ba1;
+  --color-ink-muted: #5c716b;
+  --color-line: #b8c1b3;
+  --color-focus: #04392f;
+  --color-oval: #f4bac8;
+  --color-heading-hover: #dd477d;
+  --color-mint-soft: #dce7dc;
+  --color-rose-soft: #f4dce1;
+  --color-peach-soft: #f7dfc8;
+  --font-ui: Inter, "Helvetica Neue", Arial, sans-serif;
+  --type-compact: 15px;
+  --type-tiny: 13px;
+  --type-language: clamp(14px, 1.25cqw, 21px);
+  --type-header-link: clamp(16px, 1.4vw, 20px);
+  --type-small: 16px;
+  --type-body: 20px;
+  --type-lead: 24px;
+  --type-subtitle: 28px;
+  --type-heading: 36px;
+  --type-heading-mobile: 32px;
+  --leading-body: 1.45;
+  --leading-heading: 1.12;
+  --tracking-body: -.02em;
+  --tracking-heading: -.04em;
+  --type-display: 52px;
+  --type-hero: clamp(52px, 7vw, 88px);
+  --type-stat: clamp(72px, 10vw, 120px);
+  --type-card-title: clamp(26px, 2.5vw, 40px);
+  --type-meta: clamp(16px, 1.4vw, 22px);
+  --tap-size: 44px;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --type-heading: 44px;
+    --type-display: 60px;
+  }
+}
