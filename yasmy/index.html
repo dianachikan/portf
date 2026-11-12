@@ -6,150 +6,204 @@
   <title>От&nbsp;хранения рецептов к&nbsp;продукту, принимающему решения</title>
   <meta name="description" content="Портфолио продуктового дизайнера" />
   <link rel="icon" href="../assets/img/favicon.png" type="image/png" />
-  <link rel="stylesheet" href="../assets/css/style.css?v=7" />
+  <link rel="stylesheet" href="../assets/css/style.css?v=12" />
+  <link rel="stylesheet" href="../assets/css/case-blocks.css?v=6" />
 </head>
 <body id="top">
-  <header class="site-header">
-    <div class="site-header__bar">
-      <a class="site-header__link" href="../index.html#about">опыт</a>
-      <a class="site-header__logo" href="../index.html" aria-label="Диана Чикан">
-        <img src="../assets/img/logo.png" alt="" />
+  <header class="portfolio-header">
+    <div class="portfolio-header__inner">
+      <a class="portfolio-header__mark" href="../index.html" aria-label="На главную">
+        <img src="../assets/redesign/d-mark-transparent.png" width="72" height="72" alt="" />
       </a>
-      <a class="site-header__link" href="../index.html#cases">кейсы</a>
-      <button class="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="mobile-nav">
-        <span></span><span></span><span></span>
-      </button>
+      <nav class="portfolio-header__contacts" aria-label="Контакты">
+        <a href="https://t.me/dyanatort">написать<img src="../assets/redesign/chat.svg" alt="" /></a>
+        <a href="../index.html#about">резюме<img src="../assets/redesign/cv.svg" alt="" /></a>
+        <a href="mailto:dianachikan@yandex.ru">почта<img src="../assets/redesign/mail.svg" alt="" /></a>
+        <a href="https://t.me/vot_dumay">канал<img src="../assets/redesign/channel.svg" alt="" /></a>
+      </nav>
+      <a class="portfolio-header__back" href="../index.html#cases" aria-label="Вернуться к кейсам"><span class="portfolio-header__back-wide">← к&nbsp;кейсам</span><span class="portfolio-header__back-mobile">кейсы</span></a>
     </div>
-    <nav class="mobile-nav" id="mobile-nav">
-      <a href="../index.html#about">опыт</a>
-      <a href="../index.html#cases">кейсы</a>
-    </nav>
   </header>
   <main>
-    <article class="case">
-      <header class="case-hero">
-        <div class="container case-hero__layout">
-          <div>
-            <ul class="pills case-hero__tags">
-              <li>B2C</li>
-              <li>Mobile</li>
-              <li>AI-Dev</li>
-              <li>Pet-project</li>
-            </ul>
+    <article class="case case--yasmy">
+      <header class="case-hero case-hero--editorial">
+        <div class="container">
+          <p class="case-eyebrow">избранный кейс <span aria-hidden="true">/</span> продукт и&nbsp;исследование</p>
+          <div class="case-hero__copy">
             <h1 class="case-hero__title">От&nbsp;библиотеки рецептов к&nbsp;продукту, который принимает решения</h1>
             <p class="case-hero__lead">Как исследования изменили концепцию приложения для&nbsp;планирования питания и&nbsp;хранения рецептов</p>
           </div>
-          <img class="case-hero__media case-hero__media--circle" src="../assets/img/logo-yasmy.png" alt="Логотип Ясми" />
+          <figure class="case-cover">
+  <img src="../assets/img/card-yasmy-phones.png" alt="Четыре экрана Yasmy: план питания, рецепт, список покупок и семейный доступ" width="3621" height="1784" fetchpriority="high" />
+</figure>
+
         </div>
       </header>
 
-      <div class="container case-body">
-        <div class="accordion">
-          <div class="accordion__item">
-            <button class="accordion__btn" type="button" aria-expanded="false" aria-controls="about-product">
-              <span>о&nbsp;продукте</span>
-              <span class="accordion__icon" aria-hidden="true"></span>
-            </button>
-            <div class="accordion__panel" id="about-product" hidden>
-              <p>Ясми — это веб-приложение и&nbsp;Telegram-бот, которые собирают меню для&nbsp;пользователя из&nbsp;знакомых блюд и&nbsp;автоматически превращают это решение в&nbsp;список покупок. Кроме того, это удобное хранилище рецептов без&nbsp;ручного добавления: Ясми с&nbsp;помощью ИИ создает рецепт из&nbsp;ссылки на&nbsp;видео, текста, картинок и&nbsp;сохраняет в&nbsp;библиотеке.</p>
+      <div class="container case-story">
+        <section class="case-section case-section--split" aria-labelledby="yasmy-about">
+  <h2 id="yasmy-about">о&nbsp;продукте</h2>
+  <div class="case-section__content">
+<p class="case-lead">Ясми помогает решить ежедневный вопрос «что приготовить?» и&nbsp;сразу превращает меню в&nbsp;список покупок.</p>
+            <p>Это веб-приложение и&nbsp;Telegram-бот: они собирают план из&nbsp;знакомых блюд, а&nbsp;рецепты из&nbsp;ссылок на&nbsp;видео, текста и&nbsp;изображений сохраняют в&nbsp;библиотеку с&nbsp;помощью ИИ.</p>
+  </div>
+</section>
+
+
+        <aside class="case-highlight" aria-label="Главное в проекте">
+  <span class="case-highlight__label">главное изменение</span>
+  <p>После интервью фокус сместился с&nbsp;хранения рецептов на&nbsp;помощь в&nbsp;принятии решения. Продукт должен снижать нагрузку, а&nbsp;не&nbsp;просить пользователя составлять ещё один план.</p>
+</aside>
+
+
+        <section class="case-section case-section--split" aria-labelledby="yasmy-role">
+  <h2 id="yasmy-role">моя роль</h2>
+  <div class="case-section__content">
+<p>Ясми — пет-проект, который мы разрабатываем вдвоём по&nbsp;вечерам и&nbsp;выходным без&nbsp;внешнего финансирования.</p>
+            <div class="case-columns">
+              <div>
+                <h3>Я отвечаю за</h3>
+                <ul class="case-list">
+                  <li>дизайн и&nbsp;сценарии</li>
+                  <li>исследования и&nbsp;продуктовую стратегию</li>
+                  <li>информационную архитектуру</li>
+                  <li>фронтенд с&nbsp;помощью Cursor</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Партнёр отвечает за</h3>
+                <ul class="case-list">
+                  <li>бэкенд</li>
+                  <li>ИИ</li>
+                  <li>инфраструктуру</li>
+                </ul>
+              </div>
             </div>
+  </div>
+</section>
+
+
+        <section class="case-section case-section--split" aria-labelledby="yasmy-context">
+  <h2 id="yasmy-context">контекст</h2>
+  <div class="case-section__content">
+<p>Идея появилась из&nbsp;личной проблемы. Когда еда заканчивалась, приходилось снова выбирать блюда, искать рецепты, обсуждать меню с&nbsp;партнёром и&nbsp;составлять список покупок.</p>
+            <p>Мне хотелось создать ощущение спокойствия: решение уже принято, но&nbsp;его можно изменить. Отсюда и&nbsp;название Ясми — короткое, мягкое и&nbsp;созвучное слову «ясно».</p>
+  </div>
+</section>
+
+
+        <section class="case-section" aria-labelledby="yasmy-hypothesis">
+          <div class="case-section__intro">
+            <h2 id="yasmy-hypothesis">первая гипотеза</h2>
+            <p>Сначала я представляла продукт как библиотеку рецептов с&nbsp;планировщиком меню. Первые вайрфреймы строились вокруг простого сценария:</p>
           </div>
-        </div>
+          <ol class="case-flow" aria-label="Первый сценарий продукта">
+            <li><span>01</span>сохранить рецепт</li>
+            <li><span>02</span>составить меню</li>
+            <li><span>03</span>получить список покупок</li>
+          </ol>
+          <p class="case-section__after">Исследование показало, что сложность возникает раньше — в&nbsp;момент выбора блюда.</p>
+        </section>
 
-        <h2>коротко</h2>
-        <p>После серии интервью концепция продукта полностью изменилась: вместо инструмента для&nbsp;хранения рецептов появился сервис, который снижает когнитивную нагрузку и&nbsp;помогает перестать ежедневно принимать одно и&nbsp;то&nbsp;же решение.</p>
-        <figure>
-          <img src="../assets/img/tild3565-646_photo.png" alt="Экраны приложения Ясми" />
-        </figure>
+        <section class="case-section" aria-labelledby="yasmy-research">
+          <div class="case-section__intro">
+            <h2 id="yasmy-research">исследование</h2>
+            <p>Я проверила, существует&nbsp;ли проблема у&nbsp;других людей и&nbsp;как они справляются с&nbsp;планированием еды.</p>
+          </div>
+          <div class="case-research">
+            <article class="case-research__method">
+              <span class="case-research__number">75</span>
+              <h3>ответов на&nbsp;опрос</h3>
+              <p>50&nbsp;ответов вошли в&nbsp;анализ: люди готовят минимум раз в&nbsp;2–3&nbsp;дня, сталкиваются с&nbsp;трудностями в&nbsp;организации питания и&nbsp;уверенно пользуются цифровыми сервисами.</p>
+            </article>
+            <article class="case-research__method">
+              <span class="case-research__number">3</span>
+              <h3>глубинных интервью</h3>
+              <p>Я поговорила с&nbsp;людьми, у&nbsp;которых есть минимум две трудности в&nbsp;планировании или&nbsp;готовке и&nbsp;уже сложились собственные способы организации питания.</p>
+            </article>
+          </div>
+          <div class="case-chart-grid">
+            <figure class="case-chart">
+              <figcaption>Что раздражает в&nbsp;организации питания</figcaption>
+              <div class="case-chart__row"><span>Не&nbsp;знаю, что приготовить</span><strong>35</strong><i style="--bar:100%"></i></div>
+              <div class="case-chart__row"><span>Продукты портятся</span><strong>33</strong><i style="--bar:94%"></i></div>
+              <div class="case-chart__row"><span>Покупаю лишнее или&nbsp;забываю нужное</span><strong>27</strong><i style="--bar:77%"></i></div>
+              <div class="case-chart__row"><span>Сложно учитывать КБЖУ</span><strong>13</strong><i style="--bar:37%"></i></div>
+            </figure>
+            <figure class="case-chart case-chart--blue">
+              <figcaption>Где люди ищут рецепты</figcaption>
+              <div class="case-chart__row"><span>Поисковик</span><strong>33</strong><i style="--bar:100%"></i></div>
+              <div class="case-chart__row"><span>Instagram или&nbsp;TikTok</span><strong>27</strong><i style="--bar:82%"></i></div>
+              <div class="case-chart__row"><span>Решают на&nbsp;ходу</span><strong>19</strong><i style="--bar:58%"></i></div>
+              <div class="case-chart__row"><span>Telegram или&nbsp;VK</span><strong>19</strong><i style="--bar:58%"></i></div>
+            </figure>
+          </div>
+          <p class="case-caption">Показаны самые частые ответы из&nbsp;опроса.</p>
+          <div class="case-quote-grid" aria-label="Фрагменты интервью">
+            <blockquote>«Я несколько раз просила нейросеть составить мне меню, потому что хочу питаться разнообразнее и&nbsp;полезнее, но&nbsp;потом я забываю и&nbsp;забиваю»</blockquote>
+            <blockquote>«На&nbsp;поиски рецептов я могу потратить час. Или&nbsp;продукты дорогие, или&nbsp;рецепт сложный, или&nbsp;слишком долгий процесс»</blockquote>
+            <blockquote>«Я часто покупаю продукты в&nbsp;хорошем настроении, а&nbsp;потом нет времени — и&nbsp;продукты пропадают»</blockquote>
+          </div>
+        </section>
 
-        <h2>моя роль и&nbsp;вклад в&nbsp;проект</h2>
-        <p>Ясми — это пет-проект, который мы разрабатываем вдвоём.<br />Я отвечаю за:<br />— дизайн<br />— разработку фронтенда c помощью Cursor<br />— исследования и&nbsp;ресерч<br />— формирование продуктовой стратегии<br />— информационную архитектуру<br />— проектирование сценариев</p>
-        <p>Партнёр:<br />— Backend<br />— AI<br />— инфраструктура<br />Работаем по&nbsp;вечерам и&nbsp;выходным без&nbsp;внешнего финансирования.</p>
+        <section class="case-section case-section--split" aria-labelledby="yasmy-alternatives">
+  <h2 id="yasmy-alternatives">существующие решения</h2>
+  <div class="case-section__content">
+<p>Я несколько месяцев пробовала доставки продуктовых наборов, в&nbsp;том числе Elementaree и&nbsp;Шефмаркет. Они помогают разнообразить рацион, но&nbsp;не&nbsp;закрывают завтраки, ограничивают выбор и&nbsp;не&nbsp;позволяют готовить любимые блюда.</p>
+            <p>Чаще люди собирают собственную систему из&nbsp;поиска, соцсетей, заметок и&nbsp;доставки. Каждый сервис помогает на&nbsp;одном этапе, но&nbsp;самый сложный вопрос — <strong>что приготовить</strong> — остаётся у&nbsp;человека.</p>
+  </div>
+</section>
 
-        <h2>контекст</h2>
-        <p>Идея появилась из&nbsp;личной проблемы. Каждый раз после того, как еда заканчивалась, приходилось заново думать что приготовить, искать рецепты, обсуждать меню с&nbsp;партнёром и&nbsp;составлять список покупок.</p>
-        <p>Мне хотелось создать продукт, который не&nbsp;просто помогает хранить рецепты, а&nbsp;<mark class="mark">снимает ощущение постоянной необходимости думать о&nbsp;еде</mark>. Отсюда появилось название Ясми — короткое, мягкое и&nbsp;созвучное слову «ясно».<br />Целью было создать ощущение спокойствия, заботы и&nbsp;уверенности, что решение уже принято.</p>
-        <figure>
-          <img src="../assets/img/tild6466-666_photo.png" alt="Контекст и пользовательский сценарий Ясми" />
-        </figure>
 
-        <h2>первая гипотеза</h2>
-        <p>Изначально я представляла Ясми как приложение для&nbsp;хранения рецептов и&nbsp;планирования меню.<br />Основной сценарий выглядел так:<br />сохранить рецепт → составить меню → получить список покупок.</p>
-        <p>Я начала проектировать первые вайрфреймы именно вокруг этой идеи. Но&nbsp;исследования показали, что настоящая проблема пользователей совсем в&nbsp;другом.</p>
+        <section class="case-section" aria-labelledby="yasmy-insights">
+          <div class="case-section__intro"><h2 id="yasmy-insights">ключевые инсайты</h2></div>
+          <div class="case-insight-grid">
+            <article><span>01</span><h3>В&nbsp;рутине не&nbsp;ищут новые рецепты</h3><p>Чаще перебирают блюда, которые уже умеют готовить.</p></article>
+            <article><span>02</span><h3>ИИ должен предлагать сам</h3><p>Если нужно нажать «Подобрать меню», решение всё ещё принимает пользователь.</p></article>
+            <article><span>03</span><h3>Долгий план не&nbsp;работает</h3><p>Даже подготовленное заранее меню часто меняется в&nbsp;последний момент.</p></article>
+            <article><span>04</span><h3>Проблема не&nbsp;в&nbsp;хранении рецептов</h3><p>Люди устают каждый день принимать одно и&nbsp;то&nbsp;же бытовое решение.</p></article>
+          </div>
+        </section>
 
-        <h2>исследования</h2>
-        <p>Перед разработкой хотелось понять, действительно&nbsp;ли проблема существует у&nbsp;других людей. Исследование проходило в&nbsp;два этапа.</p>
+        <section class="case-section" aria-labelledby="yasmy-principles">
+          <div class="case-section__intro"><h2 id="yasmy-principles">продуктовые принципы</h2><p>Каждое решение проверяла одним вопросом: уменьшает&nbsp;ли оно число действий и&nbsp;решений пользователя?</p></div>
+          <ol class="case-principles">
+            <li><span>01</span><div><h3>План никогда не&nbsp;пустой</h3><p>Если пользователь ничего не&nbsp;запланировал, Ясми собирает меню и&nbsp;показывает его как «Собрано для&nbsp;вас».</p></div></li>
+            <li><span>02</span><div><h3>Сначала знакомая еда</h3><p>80% базы — привычные блюда, 20% — рецепты для&nbsp;постепенного разнообразия.</p></div></li>
+            <li><span>03</span><div><h3>Рецепт сохраняется без&nbsp;усилий</h3><p>Достаточно отправить боту ссылку или&nbsp;описание: рецепт автоматически появится в&nbsp;библиотеке.</p></div></li>
+          </ol>
+        </section>
 
-        <div class="split">
-          <h3 class="split__title">Опрос (немодерируемое, количественное)</h3>
-          <div class="split__text">Сначала я создала форму для&nbsp;опроса. По&nbsp;бесплатным каналам (чаты+репосты) удалось собрать 75&nbsp;человек. Из&nbsp;этих ответов были отобраны 50, в&nbsp;которых люди:<br />— готовят минимум раз в&nbsp;2–3&nbsp;дня;<br />— регулярно сталкиваются хотя&nbsp;бы с&nbsp;одной проблемой при&nbsp;организации питания;<br />— уверенно чувствуют себя в&nbsp;цифровой среде.</div>
-        </div>
-        <figure>
-          <img src="../assets/img/tild3132-633____________.png" alt="Результаты опроса" />
-        </figure>
-        <figure>
-          <img src="../assets/img/tild3133-353________.png" alt="Дополнительные результаты опроса" />
-        </figure>
+        <section class="case-section" aria-labelledby="yasmy-scope">
+          <div class="case-section__intro"><h2 id="yasmy-scope">что вошло в&nbsp;продукт</h2></div>
+          <div class="case-roadmap">
+            <div><h3>MVP</h3><ul><li>Библиотека рецептов</li><li>План питания</li><li>Список покупок</li><li>Совместный доступ</li><li>Рецепт по&nbsp;ссылке</li></ul></div>
+            <div><h3>позже</h3><ul><li>Счётчик КБЖУ</li><li>История покупок</li><li>Рецепты из&nbsp;остатков</li><li>Режим готовки</li><li>Уведомления</li></ul></div>
+          </div>
+        </section>
 
-        <div class="split">
-          <h3 class="split__title">Интервью (модерируемое, качественное)</h3>
-          <div class="split__text">Я провела 3&nbsp;интервью с&nbsp;респондентками, которые:<br />— сталкиваются минимум с&nbsp;двумя проблемами при&nbsp;планировании или&nbsp;готовке еды;<br />— уже используют или&nbsp;использовали собственные способы для&nbsp;организации питания.</div>
-        </div>
-        <figure>
-          <img src="../assets/img/tild6466-666_photo.png" alt="Выводы из интервью" />
-        </figure>
+        <section class="case-section case-section--split" aria-labelledby="yasmy-result">
+  <h2 id="yasmy-result">промежуточный результат</h2>
+  <div class="case-section__content">
+<p>Проект готовится к&nbsp;закрытому тестированию. Уже готовы продуктовая стратегия, веб-приложение, Telegram-бот и&nbsp;база рецептов.</p>
+            <p>Следующий этап — проверить, помогает&nbsp;ли автоматическое меню быстрее решить, что приготовить, и&nbsp;действительно&nbsp;ли снижает когнитивную нагрузку.</p>
+  </div>
+</section>
 
-        <h2>существующие решения</h2>
-        <p>Главные конкуренты Ясми — доставки готовых наборов продуктов, как Elementaree и&nbsp;Шефмаркет. Я проверяла их для&nbsp;себя несколько месяцев. Чаще всего они не&nbsp;закрывают вопрос с&nbsp;завтраками, имеют ограниченное меню и&nbsp;выходят дороже обычных продуктов. Но&nbsp;главным минусом таких сервисов для&nbsp;меня остается невозможность готовить свои проверенные рецепты и&nbsp;любимые блюда. Так что я использую такие доставки чтобы разнообразить рацион пару раз в&nbsp;месяц, но&nbsp;в&nbsp;остальное время готовлю по&nbsp;старинке.</p>
-        <p>Чаще всего пользователи собирают собственную систему из&nbsp;разных сервисов. Instagram, TikTok, Telegram, заметки, ВкусВилл, доставка готовой еды — каждый решает какой-то этап сценария.<br />Но&nbsp;самый сложный этап — <mark class="mark">выбрать, что готовить</mark> — остаётся на&nbsp;пользователе.</p>
+        <aside class="case-highlight case-highlight--closing" aria-label="Вывод проекта">
+  <span class="case-highlight__label">вывод</span>
+  <p>Исследование изменило не&nbsp;только интерфейс, но&nbsp;и&nbsp;ценность продукта: вместо планировщика рецептов появился сервис, который помогает перестать ежедневно принимать одно и&nbsp;то&nbsp;же решение.</p>
+</aside>
 
-        <h2>ключевые инсайты</h2>
-        <figure>
-          <img src="../assets/img/tild6462-303_photo.png" alt="Ключевые инсайты исследования" />
-        </figure>
-
-        <h2>новые продуктовые принципы</h2>
-        <p>Все дальнейшие решения строились вокруг одного вопроса: Как уменьшить количество решений, которые принимает пользователь?</p>
-        <div class="principle">
-          <div class="principle__num">1</div>
-          <p class="principle__text">План никогда не&nbsp;пустой. Если пользователь ничего не&nbsp;запланировал, Ясми автоматически собирает меню и&nbsp;показывает его как «Собрано для&nbsp;вас».</p>
-        </div>
-        <div class="principle">
-          <div class="principle__num">2</div>
-          <p class="principle__text">Библиотека начинается с&nbsp;привычной еды:<br />80% базы знакомые блюда и&nbsp;20% рецепты для&nbsp;постепенного разнообразия.</p>
-        </div>
-        <div class="principle">
-          <div class="principle__num">3</div>
-          <p class="principle__text">Сохранение и&nbsp;создание рецептов без&nbsp;усилий. Достаточно отправить ссылку боту или&nbsp;описать рецепт текстом — рецепт автоматически появится в&nbsp;библиотеке.</p>
-        </div>
-
-        <h2>MVP</h2>
-        <figure>
-          <img src="../assets/img/tild3761-666_MVP.png" alt="Схема MVP Ясми" />
-        </figure>
-        <h2>Post-MVP</h2>
-        <figure>
-          <img src="../assets/img/tild6433-323_Post-MVP.png" alt="Схема Post-MVP Ясми" />
-        </figure>
-
-        <h2>промежуточный результат</h2>
-        <p>Сейчас проект находится на&nbsp;этапе подготовки к&nbsp;закрытому тестированию. Уже готовы:<br />— продуктовая стратегия;<br />— веб-приложение;<br />— Telegram-бот;<br />— база рецептов.</p>
-        <p>Следующий этап — проверить, действительно&nbsp;ли автоматическое формирование меню снижает когнитивную нагрузку и&nbsp;помогает пользователям быстрее принимать решение о&nbsp;приготовлении еды.</p>
-        <p class="case-body__last">Этот проект показал мне, что исследования могут изменить не&nbsp;только интерфейс, но&nbsp;и&nbsp;саму ценность продукта.<br />Я начинала с&nbsp;идеи сделать удобный планировщик рецептов, а&nbsp;пришла к&nbsp;сервису, который помогает человеку перестать ежедневно принимать одно и&nbsp;то&nbsp;же бытовое решение.</p>
       </div>
     </article>
 
   </main>
-  <footer class="site-footer">
-    <div class="container site-footer__row">
-      <ul class="site-footer__links">
-        <li><a href="../yasmy/">От&nbsp;хранения рецептов к&nbsp;продукту, принимающему решения</a></li>
-        <li><a href="../product-restart/">Перезапуск B2B-продукта и&nbsp;смена стратегии</a></li>
-        <li><a href="../gantt/">От&nbsp;ручного планирования к&nbsp;системе управления процессами</a></li>
-        <li><a href="../design-system/">Дизайн-система для&nbsp;B2B-продукта</a></li>
-        <li><a href="../startech/">Анкета стартапа как инструмент внешней коммуникации</a></li>
-      </ul>
-      <a class="site-footer__top" href="#top" data-scroll-top>Наверх <span aria-hidden="true">↑</span></a>
+  <footer class="portfolio-footer">
+    <div class="container portfolio-footer__inner">
+      <span class="portfolio-footer__label">дальше</span>
+      <a class="portfolio-footer__link" href="../index.html#cases">посмотреть все кейсы <span aria-hidden="true">↗</span></a>
+      <a class="portfolio-footer__top" href="#top">наверх ↑</a>
     </div>
   </footer>
 

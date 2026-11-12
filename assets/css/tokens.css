@@ -5,19 +5,25 @@
 
 :root {
   --color-paper: #f6f2e8;
+  --color-surface: #fffdf8;
   --color-ink: #04392f;
   --color-heading: #c83270;
   --color-ink-muted: #5c716b;
   --color-line: #b8c1b3;
-  --color-focus: #04392f;
+  --color-focus: var(--color-ink);
   --color-oval: #f4bac8;
   --color-heading-hover: #dd477d;
   --color-mint-soft: #dce7dc;
   --color-rose-soft: #f4dce1;
   --color-peach-soft: #f7dfc8;
+  --color-neutral-soft: #e9e8df;
+  --color-chart-green: #7eb572;
+  --color-chart-blue: #6ca9b9;
+  --color-video: #1a1a1a;
+  --color-shadow: color-mix(in srgb, var(--color-ink) 10%, transparent);
   --font-ui: Inter, "Helvetica Neue", Arial, sans-serif;
-  --type-compact: 15px;
-  --type-tiny: 13px;
+  --type-compact: clamp(14px, calc(13.63px + .095vw), 15px);
+  --type-tiny: clamp(11px, calc(10.26px + .19vw), 13px);
   --type-language: clamp(14px, 1.25cqw, 21px);
   /* Text styles exported from Figma, frame 62:39. */
   --figma-header1: 44px;
@@ -25,9 +31,17 @@
   --figma-body1: 24px;
   --figma-body2: 20px;
   --figma-body3: 16px;
-  --type-small: var(--figma-body3);
+  --type-small: clamp(14px, calc(13.26px + .19vw), var(--figma-body3));
+  --type-secondary: clamp(18px, calc(17.26px + .19vw), var(--figma-body2));
+  --type-card-title: clamp(24px, calc(21.03px + .762vw), var(--figma-header2));
+  --type-card-description: clamp(18px, calc(15.77px + .571vw), var(--figma-body1));
+  --section-heading-gap: clamp(36px, calc(31.54px + 1.143vw), 48px);
+  --section-space: clamp(56px, calc(39.66px + 4.19vw), 100px);
+  --case-section-space: clamp(48px, calc(37.97px + 2.57vw), 75px);
   /* Keep every text role in step as the viewport changes from phone to desktop. */
   --type-heading: clamp(26px, calc(19.314px + 1.7143vw), var(--figma-header1));
+  /* Text-only case heroes need one display step above the shared H1; the home hero is artwork. */
+  --type-case-title: calc(var(--type-heading) * 1.35);
   --type-subheading: clamp(22px, calc(18.286px + .9524vw), var(--figma-header2));
   --type-body: clamp(var(--figma-body3), calc(13.029px + .7619vw), var(--figma-body1));
   --leading-body: normal;

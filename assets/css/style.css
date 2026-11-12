@@ -1,4 +1,4 @@
-@import url("./tokens.css?v=3");
+@import url("./tokens.css?v=7");
 
 :root {
   --bg: var(--color-paper);
@@ -68,15 +68,15 @@ mark {
 }
 
 .mark {
-  background: rgba(35, 201, 157, 0.49);
+  background: var(--color-mint-soft);
 }
 
 .mark--rose {
-  background: rgba(141, 16, 71, 0.27);
+  background: var(--color-rose-soft);
 }
 
 .mark--mint {
-  background: rgb(196, 235, 225);
+  background: var(--color-mint-soft);
 }
 
 /* Header */
@@ -460,7 +460,7 @@ mark {
   color: var(--color-heading);
   letter-spacing: var(--tracking-heading);
   line-height: var(--leading-heading);
-  margin: 75px 0 0;
+  margin: var(--case-section-space) 0 0;
 }
 
 .case-body > p,
@@ -476,6 +476,16 @@ mark {
 
 .case-body > figure {
   margin: 15px 0 30px;
+}
+
+.case-body > h2 + :is(.split, .feature-row, .two-col, .covers, .teaser, .principle, .stats) {
+  margin-top: 15px;
+  padding-top: 0;
+}
+
+.case-body > h2 + .split .split__title,
+.case-body > h2 + .split .split__text {
+  padding-top: 0;
 }
 
 .case-body > figure img {
@@ -608,7 +618,7 @@ mark {
   height: 56px;
   border-radius: 50%;
   background: var(--accent);
-  color: #fff;
+  color: var(--color-surface);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -739,7 +749,7 @@ mark {
   position: relative;
   width: 100%;
   padding-top: 62%;
-  background: #1a1a1a;
+  background: var(--color-video);
   border-radius: 8px;
   overflow: hidden;
 }
@@ -1011,10 +1021,6 @@ mark {
   .case-body > h2,
   .accordion__btn {
     font-size: var(--type-heading);
-  }
-
-  .case-body > h2 {
-    margin-top: 48px;
   }
 
   .site-footer__row {

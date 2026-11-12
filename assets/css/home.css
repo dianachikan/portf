@@ -1,4 +1,4 @@
-@import url("./tokens.css?v=3");
+@import url("./tokens.css?v=7");
 :root {
   color-scheme: light;
   --paper: var(--color-paper);
@@ -54,7 +54,7 @@ a:hover { text-decoration: underline; text-underline-offset: .15em; }
 .languages button[aria-pressed=true]::before, .language-toggle::before { opacity: 1; transform: none; }
 .intro { left: 5.555%; top: 76.59%; width: min(34%, 339px); }
 h2 { color: var(--pink); font-size: var(--type-heading); font-weight: 600; line-height: var(--leading-heading); letter-spacing: var(--tracking-heading); }
-.intro p, .cover .contacts a, #cases h3 { font-size: var(--type-body); font-weight: 400; line-height: var(--leading-body); letter-spacing: var(--tracking-body); }
+.intro p, .cover .contacts a { font-size: var(--type-body); font-weight: 400; line-height: var(--leading-body); letter-spacing: var(--tracking-body); }
 .intro p { margin-top: 8px; }
 .contacts {
   right: 5.555%; top: 79.29%; width: max-content; height: auto;
@@ -64,27 +64,29 @@ h2 { color: var(--pink); font-size: var(--type-heading); font-weight: 600; line-
 }
 .contacts a { display: inline-flex; align-items: center; gap: .26em; font-size: var(--type-body); letter-spacing: var(--tracking-body); min-height: 36px; }
 .contacts img { width: .86em; height: .86em; object-fit: contain; }
-.section { margin: 0 5.555%; padding: clamp(44px, 5vw, 80px) 0; }
-.section h2 { margin-bottom: 28px; }
-.cards { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 2.2%; }
-.cards a { display: block; font-size: var(--type-body); line-height: var(--leading-body); }
-.cards span { display: block; margin-top: 14px; }
 #cases, .experience { width: 88.89%; max-width: 842px; margin-inline: auto; }
-#cases { margin-top: clamp(40px, 5vw, 64px); padding-top: 0; padding-bottom: 0; }
-#cases .cards { grid-template-columns: minmax(0, 1fr); gap: 48px; }
-#cases h2, .experience h2 { margin-bottom: 48px; font-size: var(--type-heading); font-weight: 600; text-align: left; }
-#cases .cards a { display: flex; flex-direction: column; align-items: stretch; gap: 20px; }
-#cases h3 { width: 100%; text-align: left; }
-#cases .case-img { max-width: none; height: auto; aspect-ratio: 842 / 474; object-fit: cover; }
-#cases .case-img--yasmy { object-fit: contain; }
-#cases .case-img--mockup { object-fit: contain; }
-.shot, .case-img { display: block; width: 100%; aspect-ratio: 405/275; object-fit: cover; }
-.shot { display: grid; place-items: center; overflow: hidden; }
-.shot img { width: 89%; height: 84%; object-fit: contain; }
-.mint { background: var(--color-mint-soft); }
-.rose { background: var(--color-rose-soft); }
-.peach { background: var(--color-peach-soft); }
-.experience { margin-top: clamp(56px, 7vw, 96px); padding-top: 0; padding-bottom: clamp(96px, 12vw, 180px); }
+#cases { margin-top: 0; padding-top: var(--section-space); padding-bottom: var(--section-space); }
+#more-cases { width: 88.89%; max-width: 1280px; margin-inline: auto; padding-top: var(--section-space); padding-bottom: var(--section-space); }
+#cases h2, #more-cases h2, .experience h2 { margin-bottom: var(--section-heading-gap); font-size: var(--type-heading); font-weight: 600; text-align: left; }
+.case-list { display: grid; }
+.case-list--featured { grid-template-columns: minmax(0, 1fr); gap: 48px; }
+.case-list--more { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.case-card { display: flex; min-width: 0; flex-direction: column; gap: 24px; text-decoration: none; }
+.case-card:hover, .case-card:focus-visible { text-decoration: none; }
+.case-card__image { display: block; width: 100%; height: auto; }
+.case-card__copy { display: grid; gap: 8px; color: var(--ink); letter-spacing: -.05em; line-height: normal; }
+.case-card__copy h3 { font-size: var(--type-card-title); font-weight: 600; }
+.case-card__copy p { font-size: var(--type-card-description); }
+.case-list--more .case-card { gap: 20px; }
+.case-list--more .case-card__image { aspect-ratio: 3840 / 2130; object-fit: cover; }
+.case-list--more .case-card__image--top { object-position: top; }
+.case-list--more .case-card__copy { font-size: var(--type-secondary); }
+.case-list--more .case-card__copy h3 { font-size: inherit; font-weight: 700; }
+.case-list--more .case-card__copy p { font-size: inherit; }
+@media (min-width: 701px) and (max-width: 1000px) {
+  .case-list--more { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.experience { margin-top: var(--section-space); padding-top: 0; padding-bottom: clamp(96px, 12vw, 180px); }
 .experience__list { display: grid; grid-template-columns: minmax(0, 1fr); gap: 64px; }
 .experience__item { border-top: 1px solid var(--color-line); padding-top: 24px; }
 .experience__head { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; }
@@ -96,7 +98,8 @@ h2 { color: var(--pink); font-size: var(--type-heading); font-weight: 600; line-
 .experience__highlights li { position: relative; padding-left: 20px; font-size: var(--type-small); line-height: 1.45; letter-spacing: -.03em; }
 .experience__highlights li::before { content: "✳"; position: absolute; left: 0; top: 0; color: var(--pink); }
 @media (max-width: 700px) {
-  .cover { aspect-ratio: auto; min-height: 520px; padding: calc(66vw + 75px) 6% 22px; }
+  :root { --section-space: 40px; --section-heading-gap: 28px; }
+  .cover { aspect-ratio: auto; min-height: 0; padding: calc(58vw + 42px) 6% 40px; }
   .lettering { top: 60px; left: 0; width: 100%; }
   .portrait { top: 26px; left: auto; right: 4%; width: 19%; }
   .heart { top: calc(78px + 27vw); left: 17%; width: 13%; }
@@ -106,16 +109,19 @@ h2 { color: var(--pink); font-size: var(--type-heading); font-weight: 600; line-
   .intro p { max-width: 28ch; }
   .cover .contacts {
     width: max-content; max-width: 100%; height: auto; margin-top: 16px;
-    padding: 8px 22px; gap: 4px 14px; justify-content: flex-start;
-    flex-wrap: wrap; background-size: 100% 100%;
+    padding: 8px 14px; gap: clamp(6px, 2vw, 12px); justify-content: flex-start;
+    flex-wrap: nowrap; background-size: 100% 100%;
   }
-  .cover .contacts a { min-width: var(--tap-size); min-height: var(--tap-size); white-space: nowrap; }
+  .cover .contacts a { min-width: 0; min-height: var(--tap-size); font-size: clamp(14px, 3.6vw, 16px); white-space: nowrap; }
   .cover .contacts img { display: none; }
-  .cards { grid-template-columns: 1fr; gap: 30px; }
-  #cases h2, .experience h2 { margin-bottom: 36px; }
-  #cases .cards { gap: 36px; }
-  #cases .cards a { gap: 16px; }
-  .experience__list { gap: 48px; }
+  .case-list--featured { gap: 32px; }
+  .case-list--featured .case-card:nth-child(n + 2) .case-card__image { aspect-ratio: 1.5; object-fit: cover; }
+  .case-list--more { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .case-list--more .case-card__image { aspect-ratio: 1.4; }
+  .case-card { gap: 12px; }
+  .case-list--more .case-card { gap: 12px; }
+  .experience__list { gap: 40px; }
+  .experience__item { padding-top: 20px; }
   .experience__head { display: block; }
   .experience time { margin-top: 10px; text-align: left; }
   .experience__highlights { grid-template-columns: minmax(0, 1fr); gap: 12px; }
@@ -200,12 +206,8 @@ html.language-changing [data-en], html.language-changing #cases [data-en] { opac
   to { opacity: 1; transform: translateY(0) rotate(0) scale(1); }
 }
 
-.motion-ready .reveal { opacity: 0; transform: translateY(28px); transition: opacity .6s ease, transform .75s cubic-bezier(.2,.7,.2,1); }
-.motion-ready #cases .cards a.reveal { transform: translateY(48px) scale(.985); }
-.motion-ready .reveal.is-revealed, .motion-ready #cases .cards a.reveal.is-revealed { opacity: 1; transform: translateY(0) scale(1); }
-#cases .cards a { text-decoration: none; }
-#cases .case-img { transition: transform .4s cubic-bezier(.2,.7,.2,1), filter .4s ease; }
-#cases h3 { transition: color .25s ease; }
+.case-card__image { transition: transform .4s cubic-bezier(.2,.7,.2,1), filter .4s ease; }
+.case-card h3 { transition: color .25s ease; }
 .contacts img { transition: transform .25s ease; }
 .portrait, .heart { transition: transform .35s cubic-bezier(.2,.7,.2,1); }
 @media (hover: hover) and (pointer: fine) {
@@ -214,14 +216,14 @@ html.language-changing [data-en], html.language-changing #cases [data-en] { opac
   .letter:hover { transform: translate(var(--move-x), var(--move-y)) rotate(var(--turn)); }
   .portrait:hover { transform: rotate(2deg) translateY(-4px); }
   .heart:hover { transform: rotate(-8deg) scale(1.08); }
-  #cases .cards a:hover .case-img { transform: translateY(-7px) scale(1.015); filter: drop-shadow(0 16px 16px rgb(4 57 47 / 10%)); }
-  #cases .cards a:hover h3 { color: var(--color-heading-hover); }
+  .case-card:hover .case-card__image { transform: translateY(-7px) scale(1.015); filter: drop-shadow(0 16px 16px var(--color-shadow)); }
+  .case-card:hover h3 { color: var(--color-heading-hover); }
   .contacts a:hover img { transform: translate(2px, -2px); }
 }
 .languages button:focus-visible, .language-toggle:focus-visible { color: var(--ink); transform: translateY(-2px); }
 .languages button:focus-visible::before, .language-toggle:focus-visible::before { background-color: var(--pink); opacity: 1; transform: scale(1.08); }
-#cases .cards a:focus-visible .case-img { transform: translateY(-7px) scale(1.015); }
-#cases .cards a:focus-visible h3 { color: var(--color-heading-hover); }
+.case-card:focus-visible .case-card__image { transform: translateY(-7px) scale(1.015); }
+.case-card:focus-visible h3 { color: var(--color-heading-hover); }
 @media (max-width: 1023px) {
   .scroll-header { background: var(--paper); border-bottom: 1px solid var(--color-line); }
   .scroll-header__inner { display: grid; grid-template-columns: 44px minmax(0, 1fr) 44px; align-items: center; gap: 10px; padding: 3px 8px; }
@@ -250,6 +252,5 @@ html.language-changing [data-en], html.language-changing #cases [data-en] { opac
   .lettering, .portrait, .heart, .intro, .cover .contacts { animation: none; }
   .letter { transition: none; }
   .letter:hover { transform: none; }
-  .motion-ready .reveal, .motion-ready .reveal.is-revealed { opacity: 1; transform: none; transition: none; }
-  #cases .case-img, #cases h3, .contacts img, .portrait, .heart { transition: none; }
+  .case-card__image, .case-card h3, .contacts img, .portrait, .heart { transition: none; }
 }

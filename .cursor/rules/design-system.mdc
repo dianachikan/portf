@@ -1,0 +1,6 @@
+---
+description: Reuse the portfolio's typography, colors, and case components
+alwaysApply: true
+---
+
+Follow the repository root `AGENTS.md`. Use typography and color tokens from `assets/css/tokens.css`; choose an existing role before adding a new one. Build repeated case content with the templates in `src/components/` and the shared layout. Keep page CSS free of hardcoded UI colors and one-off font sizes.

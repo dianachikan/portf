@@ -6,8 +6,8 @@
   <title>Диана Чикан — продуктовый дизайнер</title>
   <meta name="description" content="Портфолио Дианы Чикан — интерфейсы, проекты и опыт продуктового дизайнера.">
   <link rel="icon" href="assets/img/favicon.png" type="image/png">
-  <link rel="stylesheet" href="assets/css/home.css?v=50">
-  <script defer src="assets/js/home.js?v=10"></script>
+  <link rel="stylesheet" href="assets/css/home.css?v=58">
+  <script defer src="assets/js/home.js?v=15"></script>
 </head>
 <body id="top">
   <nav class="scroll-header" inert aria-label="Навигация">
@@ -46,20 +46,34 @@
         <a class="social-link" href="https://t.me/vot_dumay" data-en-href="https://www.linkedin.com/in/diana-chikan-0b086a3b4" aria-label="Телеграм-канал"><span data-en="linked">канал</span><img src="assets/redesign/channel.svg" data-en-src="assets/redesign/linkedin.svg" alt=""></a>
       </div>
     </header>
-    <section class="section" hidden>
-      <h2 data-en="design details">дизайн в деталях</h2>
-      <div class="cards studies">
-        <a href="gantt/"><div class="shot mint"><img loading="lazy" src="assets/img/tild6237-633_gant.png" alt=""></div><span data-en="Scheduling work on a timeline">Планирование на диаграмме Ганта</span></a>
-        <a href="design-system/"><div class="shot rose"><img loading="lazy" src="assets/img/tild3235-306_InputDateDropdown1.png" alt=""></div><span data-en="Choosing a date in a table">Выбор даты в таблице</span></a>
-        <a href="yasmy/"><div class="shot peach"><img loading="lazy" src="assets/img/tild3565-646_photo.png" alt=""></div><span data-en="From a recipe to a shopping list">От рецепта к списку покупок</span></a>
+    <section class="section" id="cases">
+      <h2 data-en="selected cases">избранные кейсы</h2>
+      <div class="case-list case-list--featured">
+        <a class="case-card" href="yasmy/">
+          <img class="case-card__image" loading="lazy" src="assets/img/card-yasmy-phones.png?v=2" alt="Экраны приложения Ясми: план питания, рецепт, список покупок и семья" width="3621" height="1784">
+          <div class="case-card__copy"><h3 data-en="Yasmy">Ясми</h3><p data-en="From a recipe storage service to a product that helps make decisions">От сервиса для хранения рецептов к продукту, принимающему решения</p></div>
+        </a>
+        <a class="case-card" href="product-restart/">
+          <img class="case-card__image" loading="lazy" src="assets/img/card-servicevizor-browser.png?v=2" alt="Рабочие инструкции ServiceVizor в окне браузера" width="3840" height="2130">
+          <div class="case-card__copy"><h3>ServiceVizor</h3><p data-en="How a scalable work instruction system led to the first long-term contracts">Как переход к масштабируемой системе рабочих инструкций привёл к первым долгосрочным контрактам</p></div>
+        </a>
       </div>
     </section>
-    <section class="section" id="cases">
-      <h2 data-en="selected projects">кейсы</h2>
-      <div class="cards">
-        <a href="yasmy/"><img class="case-img case-img--yasmy" loading="lazy" src="assets/img/card-yasmy-phones.png" alt="Экраны приложения Ясми: план питания, рецепт, семья и список покупок" width="7241" height="3567"><h3 data-en="Yasmi · Meal planning">Ясми · Планирование питания</h3></a>
-        <a href="product-restart/"><img class="case-img case-img--mockup" loading="lazy" src="assets/img/card-servicevizor-browser.png?v=2" alt="Интерфейс ServiceVizor в окне браузера" width="3840" height="2130"><h3 data-en="ServiceVizor · Product relaunch">ServiceVizor · Перезапуск продукта</h3></a>
-        <a href="startech/"><img class="case-img case-img--mockup" loading="lazy" src="assets/img/card-startech-browser.png" alt="Профиль стартапа на платформе Startech.Base в окне браузера" width="3840" height="2130"><h3 data-en="Startech.Base · Startup profile">Startech.Base · Анкета стартапа</h3></a>
+    <section class="section" id="more-cases">
+      <h2 data-en="more cases">еще кейсы</h2>
+      <div class="case-list case-list--more">
+        <a class="case-card" href="startech/">
+          <img class="case-card__image" loading="lazy" src="assets/img/card-startech-browser.png?v=2" alt="Анкета стартапа Startech.Base в окне браузера" width="3840" height="2130">
+          <div class="case-card__copy"><h3>Startech Base</h3><p data-en="A startup profile as a tool for external communication">Анкета стартапа как инструмент внешней коммуникации</p></div>
+        </a>
+        <a class="case-card" href="gantt/">
+          <img class="case-card__image" loading="lazy" src="assets/img/card-gantt-browser.png" alt="Диаграмма Ганта в интерфейсе ServiceVizor" width="3840" height="2130">
+          <div class="case-card__copy"><h3>ServiceVizor</h3><p data-en="From manual planning to a process management system">От ручного планирования к системе управления процессами</p></div>
+        </a>
+        <a class="case-card" href="design-system/">
+          <img class="case-card__image case-card__image--top" loading="lazy" src="assets/img/card-design-system-browser.png" alt="Компоненты дизайн-системы ServiceVizor в Figma" width="2880" height="1800">
+          <div class="case-card__copy"><h3>ServiceVizor</h3><p data-en="A product design system for technical specialists">Дизайн-система продукта для технических специалистов</p></div>
+        </a>
       </div>
     </section>
     <section class="section experience" id="about">

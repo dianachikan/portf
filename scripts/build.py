@@ -8,6 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).parent))
 from typograf import typograf_html
+from components import render_components
 
 SRC = ROOT / "src"
 INCLUDE_RE = re.compile(r"\{\{include:([\w-]+)\}\}")
@@ -78,7 +79,7 @@ def render(page: dict) -> str:
     if page["src"] == "home.html":
         return typograf_html((SRC / "pages" / "home.html").read_text())
     html = (SRC / "layout.html").read_text()
-    body = expand_includes((SRC / "pages" / page["src"]).read_text()).rstrip() + "\n"
+    body = render_components(expand_includes((SRC / "pages" / page["src"]).read_text())).rstrip() + "\n"
     footer = (SRC / "footer.html").read_text() if page["footer"] else ""
     return typograf_html(
         html.replace("{{title}}", page["title"])

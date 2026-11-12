@@ -6,24 +6,23 @@
   <title>{{title}}</title>
   <meta name="description" content="Портфолио продуктового дизайнера" />
   <link rel="icon" href="{{root}}assets/img/favicon.png" type="image/png" />
-  <link rel="stylesheet" href="{{root}}assets/css/style.css?v=7" />
+  <link rel="stylesheet" href="{{root}}assets/css/style.css?v=12" />
+  <link rel="stylesheet" href="{{root}}assets/css/case-blocks.css?v=6" />
 </head>
 <body id="top">
-  <header class="site-header">
-    <div class="site-header__bar">
-      <a class="site-header__link" href="{{home}}#about">опыт</a>
-      <a class="site-header__logo" href="{{home}}" aria-label="Диана Чикан">
-        <img src="{{root}}assets/img/logo.png" alt="" />
+  <header class="portfolio-header">
+    <div class="portfolio-header__inner">
+      <a class="portfolio-header__mark" href="{{home}}" aria-label="На главную">
+        <img src="{{root}}assets/redesign/d-mark-transparent.png" width="72" height="72" alt="" />
       </a>
-      <a class="site-header__link" href="{{home}}#cases">кейсы</a>
-      <button class="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="mobile-nav">
-        <span></span><span></span><span></span>
-      </button>
+      <nav class="portfolio-header__contacts" aria-label="Контакты">
+        <a href="https://t.me/dyanatort">написать<img src="{{root}}assets/redesign/chat.svg" alt="" /></a>
+        <a href="{{home}}#about">резюме<img src="{{root}}assets/redesign/cv.svg" alt="" /></a>
+        <a href="mailto:dianachikan@yandex.ru">почта<img src="{{root}}assets/redesign/mail.svg" alt="" /></a>
+        <a href="https://t.me/vot_dumay">канал<img src="{{root}}assets/redesign/channel.svg" alt="" /></a>
+      </nav>
+      <a class="portfolio-header__back" href="{{home}}#cases" aria-label="Вернуться к кейсам"><span class="portfolio-header__back-wide">← к кейсам</span><span class="portfolio-header__back-mobile">кейсы</span></a>
     </div>
-    <nav class="mobile-nav" id="mobile-nav">
-      <a href="{{home}}#about">опыт</a>
-      <a href="{{home}}#cases">кейсы</a>
-    </nav>
   </header>
   <main>
 {{body}}

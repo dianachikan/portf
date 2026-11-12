@@ -96,23 +96,16 @@ compactLanguageButton.addEventListener('click', () => {
   switchLanguage(document.documentElement.lang === 'ru' ? 'en' : 'ru');
 });
 
-// Intentional scrolls connect the cover, cases and experience. The case list
-// itself and the return from experience keep their normal scrolling behavior.
-const cases = document.querySelector('#cases');
-const lastCase = cases.querySelector('.cards a:last-child');
-const experience = document.querySelector('#about');
+// Snap only between the cover and the start of the featured cases.
+const casesHeading = document.querySelector('#cases h2');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-let scrollingBetweenSections = false;
-let scrollDirection = 0;
-let scrollDestination = '';
+let transitionDirection = 0;
 let transitionFrame = 0;
-let transitionTimer = 0;
 let touchStartY = null;
-let touchOrigin = null;
 
 function atCoverStart() {
   return window.scrollY < Math.min(cover.offsetHeight * .45, 300)
-    && cases.getBoundingClientRect().top > window.innerHeight * .35;
+    && casesHeading.getBoundingClientRect().top > window.innerHeight * .35;
 }
 
 function sectionTarget(section) {
@@ -120,31 +113,22 @@ function sectionTarget(section) {
 }
 
 function atCasesStart() {
+  const target = sectionTarget(casesHeading);
   return window.scrollY > Math.min(cover.offsetHeight * .45, 300)
-    && window.scrollY < sectionTarget(cases) + 160;
+    && window.scrollY <= target + 140;
 }
 
-function atLastCase() {
-  const lastCaseBottom = lastCase.getBoundingClientRect().bottom;
-  return lastCaseBottom > 0
-    && lastCaseBottom <= window.innerHeight - 24
-    && experience.getBoundingClientRect().top > header.offsetHeight + 24;
-}
-
-function moveBetweenSections(destination, force = false) {
-  const canMove = destination === 'cases' ? atCoverStart()
-    : destination === 'hero' ? atCasesStart() : atLastCase();
-  if (scrollingBetweenSections || (!force && !canMove)) return;
-  scrollingBetweenSections = true;
-  scrollDirection = destination === 'hero' ? -1 : 1;
-  scrollDestination = destination;
-  clearTimeout(transitionTimer);
+function moveBetweenSections(direction) {
+  if (transitionDirection === direction) return;
+  if (!transitionDirection && !(direction > 0 ? atCoverStart() : atCasesStart())) return;
+  cancelAnimationFrame(transitionFrame);
+  transitionDirection = direction;
   const start = window.scrollY;
-  const target = destination === 'hero' ? 0 : sectionTarget(destination === 'cases' ? cases : experience);
+  const target = direction > 0 ? sectionTarget(casesHeading) : 0;
 
   if (reducedMotion.matches) {
     window.scrollTo(0, target);
-    scrollingBetweenSections = false;
+    transitionDirection = 0;
     return;
   }
 
@@ -159,94 +143,55 @@ function moveBetweenSections(destination, force = false) {
       transitionFrame = requestAnimationFrame(step);
     } else {
       transitionFrame = 0;
-      transitionTimer = window.setTimeout(() => { scrollingBetweenSections = false; }, 180);
+      transitionDirection = 0;
     }
   }
   transitionFrame = requestAnimationFrame(step);
 }
 
 window.addEventListener('wheel', (event) => {
-  if (event.ctrlKey) return;
-  if (scrollingBetweenSections) {
-    if (Math.sign(event.deltaY) === -scrollDirection) {
-      if (transitionFrame) cancelAnimationFrame(transitionFrame);
-      clearTimeout(transitionTimer);
-      scrollingBetweenSections = false;
-      if (scrollDestination !== 'experience') {
-        event.preventDefault();
-        moveBetweenSections(scrollDestination === 'cases' ? 'hero' : 'cases', true);
-      }
-      return;
-    }
+  if (event.ctrlKey || !event.deltaY) return;
+  const direction = Math.sign(event.deltaY);
+  if (transitionDirection) {
     event.preventDefault();
+    if (direction !== transitionDirection) moveBetweenSections(direction);
     return;
   }
-  const destination = event.deltaY > 0
-    ? (atCoverStart() ? 'cases' : atLastCase() ? 'experience' : '')
-    : (event.deltaY < 0 && atCasesStart() ? 'hero' : '');
-  if (destination) {
+  if (direction > 0 ? atCoverStart() : atCasesStart()) {
     event.preventDefault();
-    moveBetweenSections(destination);
+    moveBetweenSections(direction);
   }
 }, { passive: false });
 
 window.addEventListener('touchstart', (event) => {
-  touchOrigin = event.touches.length === 1
-    ? { cover: atCoverStart(), cases: atCasesStart(), lastCase: atLastCase() } : null;
-  touchStartY = touchOrigin && Object.values(touchOrigin).some(Boolean) ? event.touches[0].clientY : null;
+  touchStartY = event.touches.length === 1 && (atCoverStart() || atCasesStart() || transitionDirection)
+    ? event.touches[0].clientY : null;
 }, { passive: true });
 window.addEventListener('touchmove', (event) => {
-  if (event.touches.length !== 1) {
-    touchStartY = null;
-    touchOrigin = null;
+  if (event.touches.length !== 1 || touchStartY === null) return;
+  const delta = touchStartY - event.touches[0].clientY;
+  if (Math.abs(delta) <= 18) return;
+  const direction = Math.sign(delta);
+  if (transitionDirection) {
+    event.preventDefault();
+    if (direction !== transitionDirection) moveBetweenSections(direction);
     return;
   }
-  if (scrollingBetweenSections) {
-    event.preventDefault();
-    return;
-  }
-  const delta = touchStartY === null ? 0 : touchStartY - event.touches[0].clientY;
-  const destination = delta > 0
-    ? (touchOrigin?.cover ? 'cases' : touchOrigin?.lastCase ? 'experience' : '')
-    : (touchOrigin?.cases ? 'hero' : '');
-  if (Math.abs(delta) > 18 && destination) {
+  if (direction > 0 ? atCoverStart() : atCasesStart()) {
     event.preventDefault();
     touchStartY = null;
-    touchOrigin = null;
-    moveBetweenSections(destination, true);
+    moveBetweenSections(direction);
   }
 }, { passive: false });
-window.addEventListener('touchend', () => { touchStartY = null; touchOrigin = null; }, { passive: true });
+window.addEventListener('touchend', () => { touchStartY = null; }, { passive: true });
 
 window.addEventListener('keydown', (event) => {
   if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey || (event.target instanceof Element && event.target.closest('button, a, input, textarea, select'))) return;
   if ((event.key === 'ArrowDown' || event.key === 'PageDown' || event.key === ' ') && atCoverStart()) {
     event.preventDefault();
-    moveBetweenSections('cases');
-  } else if ((event.key === 'ArrowDown' || event.key === 'PageDown' || event.key === ' ') && atLastCase()) {
-    event.preventDefault();
-    moveBetweenSections('experience');
+    moveBetweenSections(1);
   } else if ((event.key === 'ArrowUp' || event.key === 'PageUp') && atCasesStart()) {
     event.preventDefault();
-    moveBetweenSections('hero');
+    moveBetweenSections(-1);
   }
 });
-
-// Reveal section content once as it enters the viewport. Keep content visible when
-// motion is reduced or IntersectionObserver is unavailable.
-if (!reducedMotion.matches && 'IntersectionObserver' in window) {
-  const revealItems = document.querySelectorAll('#cases h2, #cases .cards a, .experience h2, .experience__item');
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    for (const entry of entries) {
-      if (!entry.isIntersecting) continue;
-      entry.target.classList.add('is-revealed');
-      observer.unobserve(entry.target);
-    }
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-
-  for (const item of revealItems) {
-    item.classList.add('reveal');
-    revealObserver.observe(item);
-  }
-  document.documentElement.classList.add('motion-ready');
-}
