@@ -6,15 +6,30 @@
   <title>Диана Чикан — продуктовый дизайнер</title>
   <meta name="description" content="Портфолио Дианы Чикан — интерфейсы, проекты и опыт продуктового дизайнера.">
   <link rel="icon" href="assets/img/favicon.png" type="image/png">
-  <link rel="stylesheet" href="assets/css/home.css?v=58">
-  <script defer src="assets/js/home.js?v=15"></script>
+  <link rel="stylesheet" href="assets/css/home.css?v=59">
+  <link rel="stylesheet" href="assets/css/site-header.css?v=2">
+  <script defer src="assets/js/home.js?v=16"></script>
 </head>
 <body id="top">
-  <nav class="scroll-header" inert aria-label="Навигация">
-    <div class="scroll-header__inner">
-      <a class="home-mark" href="#top" aria-label="На главную"><img src="assets/redesign/d-mark-transparent.png" alt="D"></a>
+  <header class="site-header site-header--home" inert>
+  <div class="site-header__inner">
+    <a class="site-header__mark" href="#top" aria-label="На главную">
+      <img src="assets/redesign/d-mark-transparent.png" width="72" height="72" alt="" />
+    </a>
+    <nav class="site-header__contacts" aria-label="Контакты">
+      <a href="https://t.me/dyanatort"><span data-en="chat">написать</span><img src="assets/redesign/chat.svg" alt="" /></a>
+      <a href="#about"><span data-en="cv">резюме</span><img src="assets/redesign/cv.svg" alt="" /></a>
+      <a href="mailto:dianachikan@yandex.ru"><span data-en="mail">почта</span><img src="assets/redesign/mail.svg" alt="" /></a>
+      <a class="social-link" href="https://t.me/vot_dumay" data-en-href="https://www.linkedin.com/in/diana-chikan-0b086a3b4" aria-label="Телеграм-канал"><span data-en="linked">канал</span><img src="assets/redesign/channel.svg" data-en-src="assets/redesign/linkedin.svg" alt="" /></a>
+    </nav>
+    <div class="site-header__languages" aria-label="Language" role="group">
+      <button type="button" data-lang="ru" aria-pressed="true" lang="ru">RU</button>
+      <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
     </div>
-  </nav>
+    <button class="site-header__language-toggle" type="button"></button>
+  </div>
+</header>
+
   <main>
     <header class="cover">
       <h1 aria-label="Diana Chikan"><span class="lettering" aria-hidden="true">

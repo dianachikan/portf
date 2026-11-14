@@ -7,28 +7,28 @@
   <meta name="description" content="Портфолио продуктового дизайнера" />
   <link rel="icon" href="../assets/img/favicon.png" type="image/png" />
   <link rel="stylesheet" href="../assets/css/style.css?v=12" />
-  <link rel="stylesheet" href="../assets/css/case-blocks.css?v=6" />
+  <link rel="stylesheet" href="../assets/css/case-blocks.css?v=11" />
+  <link rel="stylesheet" href="../assets/css/site-header.css?v=2" />
 </head>
 <body id="top">
-  <header class="portfolio-header">
-    <div class="portfolio-header__inner">
-      <a class="portfolio-header__mark" href="../index.html" aria-label="На главную">
-        <img src="../assets/redesign/d-mark-transparent.png" width="72" height="72" alt="" />
-      </a>
-      <nav class="portfolio-header__contacts" aria-label="Контакты">
-        <a href="https://t.me/dyanatort">написать<img src="../assets/redesign/chat.svg" alt="" /></a>
-        <a href="../index.html#about">резюме<img src="../assets/redesign/cv.svg" alt="" /></a>
-        <a href="mailto:dianachikan@yandex.ru">почта<img src="../assets/redesign/mail.svg" alt="" /></a>
-        <a href="https://t.me/vot_dumay">канал<img src="../assets/redesign/channel.svg" alt="" /></a>
-      </nav>
-      <a class="portfolio-header__back" href="../index.html#cases" aria-label="Вернуться к кейсам"><span class="portfolio-header__back-wide">← к&nbsp;кейсам</span><span class="portfolio-header__back-mobile">кейсы</span></a>
-    </div>
-  </header>
+  <header class="site-header site-header--case">
+  <div class="site-header__inner">
+    <a class="site-header__mark" href="../index.html" aria-label="На главную">
+      <img src="../assets/redesign/d-mark-transparent.png" width="72" height="72" alt="" />
+    </a>
+    <nav class="site-header__contacts" aria-label="Контакты">
+      <a href="https://t.me/dyanatort"><span data-en="chat">написать</span><img src="../assets/redesign/chat.svg" alt="" /></a>
+      <a href="../index.html#about"><span data-en="cv">резюме</span><img src="../assets/redesign/cv.svg" alt="" /></a>
+      <a href="mailto:dianachikan@yandex.ru"><span data-en="mail">почта</span><img src="../assets/redesign/mail.svg" alt="" /></a>
+      <a class="social-link" href="https://t.me/vot_dumay" data-en-href="https://www.linkedin.com/in/diana-chikan-0b086a3b4" aria-label="Телеграм-канал"><span data-en="linked">канал</span><img src="../assets/redesign/channel.svg" data-en-src="../assets/redesign/linkedin.svg" alt="" /></a>
+    </nav>
+  </div>
+</header>
+
   <main>
     <article class="case case--yasmy">
       <header class="case-hero case-hero--editorial">
         <div class="container">
-          <p class="case-eyebrow">избранный кейс <span aria-hidden="true">/</span> продукт и&nbsp;исследование</p>
           <div class="case-hero__copy">
             <h1 class="case-hero__title">От&nbsp;библиотеки рецептов к&nbsp;продукту, который принимает решения</h1>
             <p class="case-hero__lead">Как исследования изменили концепцию приложения для&nbsp;планирования питания и&nbsp;хранения рецептов</p>
@@ -52,7 +52,10 @@
 
         <aside class="case-highlight" aria-label="Главное в проекте">
   <span class="case-highlight__label">главное изменение</span>
-  <p>После интервью фокус сместился с&nbsp;хранения рецептов на&nbsp;помощь в&nbsp;принятии решения. Продукт должен снижать нагрузку, а&nbsp;не&nbsp;просить пользователя составлять ещё один план.</p>
+  <div class="case-highlight__content">
+    <p class="case-highlight__statement">После интервью фокус сместился с&nbsp;хранения рецептов на&nbsp;помощь в&nbsp;принятии решения</p>
+    <p class="case-highlight__description">Продукт должен снижать нагрузку, а&nbsp;не&nbsp;просить пользователя составлять ещё один план.</p>
+  </div>
 </aside>
 
 
@@ -92,7 +95,7 @@
 </section>
 
 
-        <section class="case-section" aria-labelledby="yasmy-hypothesis">
+        <section class="case-section case-section--divider" aria-labelledby="yasmy-hypothesis">
           <div class="case-section__intro">
             <h2 id="yasmy-hypothesis">первая гипотеза</h2>
             <p>Сначала я представляла продукт как библиотеку рецептов с&nbsp;планировщиком меню. Первые вайрфреймы строились вокруг простого сценария:</p>
@@ -155,7 +158,7 @@
 </section>
 
 
-        <section class="case-section" aria-labelledby="yasmy-insights">
+        <section class="case-section case-section--divider" aria-labelledby="yasmy-insights">
           <div class="case-section__intro"><h2 id="yasmy-insights">ключевые инсайты</h2></div>
           <div class="case-insight-grid">
             <article><span>01</span><h3>В&nbsp;рутине не&nbsp;ищут новые рецепты</h3><p>Чаще перебирают блюда, которые уже умеют готовить.</p></article>
@@ -174,7 +177,7 @@
           </ol>
         </section>
 
-        <section class="case-section" aria-labelledby="yasmy-scope">
+        <section class="case-section case-section--divider" aria-labelledby="yasmy-scope">
           <div class="case-section__intro"><h2 id="yasmy-scope">что вошло в&nbsp;продукт</h2></div>
           <div class="case-roadmap">
             <div><h3>MVP</h3><ul><li>Библиотека рецептов</li><li>План питания</li><li>Список покупок</li><li>Совместный доступ</li><li>Рецепт по&nbsp;ссылке</li></ul></div>
@@ -192,7 +195,10 @@
 
         <aside class="case-highlight case-highlight--closing" aria-label="Вывод проекта">
   <span class="case-highlight__label">вывод</span>
-  <p>Исследование изменило не&nbsp;только интерфейс, но&nbsp;и&nbsp;ценность продукта: вместо планировщика рецептов появился сервис, который помогает перестать ежедневно принимать одно и&nbsp;то&nbsp;же решение.</p>
+  <div class="case-highlight__content">
+    <p class="case-highlight__statement">Исследование изменило не&nbsp;только интерфейс, но&nbsp;и&nbsp;ценность продукта</p>
+    <p class="case-highlight__description">Вместо планировщика рецептов появился сервис, который помогает перестать ежедневно принимать одно и&nbsp;то&nbsp;же решение.</p>
+  </div>
 </aside>
 
       </div>

@@ -12,6 +12,7 @@ COMPONENTS = Path(__file__).resolve().parents[1] / "src" / "components"
 COMPONENT_RE = re.compile(
     r"<case-(text|callout|media)\b([^>]*)>(.*?)</case-\1>", re.DOTALL
 )
+SITE_HEADER_RE = re.compile(r"<site-header\b([^>]*)></site-header>", re.DOTALL)
 
 
 class _Attributes(HTMLParser):
@@ -39,6 +40,36 @@ def _required(attrs: dict[str, str], name: str, component: str) -> str:
 def render_components(source: str) -> str:
     """Expand case component tags; their contents remain ordinary page HTML."""
 
+    def replace_site_header(match: re.Match[str]) -> str:
+        attrs = _attributes(match.group(1))
+        variant = attrs.get("variant", "")
+        if variant not in ("home", "case"):
+            raise ValueError(f"Unknown site-header variant: {variant}")
+        template = Template((COMPONENTS / "site-header.html").read_text())
+        if variant == "home":
+            tail_html = """    <div class="site-header__languages" aria-label="Language" role="group">
+      <button type="button" data-lang="ru" aria-pressed="true" lang="ru">RU</button>
+      <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+    </div>
+    <button class="site-header__language-toggle" type="button"></button>
+"""
+            return template.substitute(
+                variant=variant,
+                inert_attr=" inert",
+                home_href="#top",
+                about_href="#about",
+                tail_html=tail_html,
+            )
+        return template.substitute(
+            variant=variant,
+            inert_attr="",
+            home_href="{{home}}",
+            about_href="{{home}}#about",
+            tail_html="",
+        )
+
+    source = SITE_HEADER_RE.sub(replace_site_header, source)
+
     def replace(match: re.Match[str]) -> str:
         kind, raw_attrs, raw_body = match.groups()
         attrs = _attributes(raw_attrs)
@@ -58,6 +89,7 @@ def render_components(source: str) -> str:
 
         if kind == "callout":
             label = _required(attrs, "label", kind)
+            title = attrs.get("title", "").strip()
             variant = attrs.get("variant", "")
             if variant not in ("", "closing"):
                 raise ValueError(f"Unknown case-callout variant: {variant}")
@@ -65,6 +97,11 @@ def render_components(source: str) -> str:
                 variant_class=" case-highlight--closing" if variant else "",
                 aria_label=html.escape(attrs.get("aria-label", label), quote=True),
                 label=html.escape(label),
+                title_html=(
+                    f'    <p class="case-highlight__statement">{html.escape(title)}</p>\n'
+                    if title
+                    else ""
+                ),
                 body=body,
             )
 

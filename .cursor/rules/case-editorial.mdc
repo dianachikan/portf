@@ -1,0 +1,19 @@
+---
+description: Keep portfolio case pages structurally and visually consistent
+alwaysApply: true
+---
+
+# Case editorial rules
+
+- Follow the repository root `AGENTS.md`.
+- Reuse `site-header`; cases show only the logo and contacts. Desktop header is transparent without a divider; mobile matches the main header surface.
+- Omit decorative breadcrumbs and category labels above a case title unless they provide real navigation.
+- Align the case hero to the same container and side padding as the sections below. Let the title use the full available container width.
+- Use the shared 12-column case grid. On wide screens, section labels use columns 1–4 and main copy uses columns 5–12.
+- Align section copy, callout content, and the footer's main action to the start of column 5. Full-width media and card groups may span all 12 columns.
+- On mobile, collapse the case grid to one column with a shared left edge and no horizontal overflow.
+- Use separators only between major narrative phases. Do not add a divider before every section or list row.
+- Minimize typography roles. Equal logical units use the same role, weight, line height, and responsive scaling throughout the case.
+- Merge roles that look nearly identical. Prefer hierarchy through weight and spacing before adding another size.
+- Reuse `case-text`, `case-media`, and `case-callout`. Use the rose callout for a key change and the mint callout for the conclusion, with the same label, statement, and explanation structure.
+- Build all pages after component changes and check wide and mobile layouts for wrapping and horizontal overflow.

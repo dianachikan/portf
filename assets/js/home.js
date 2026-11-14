@@ -1,13 +1,8 @@
-const header = document.querySelector('.scroll-header');
-const headerInner = header.querySelector('.scroll-header__inner');
+const header = document.querySelector('.site-header--home');
 const cover = document.querySelector('.cover');
 const coverIntro = cover.querySelector('.intro');
 const coverContacts = document.querySelector('.cover .contacts');
-headerInner.append(coverContacts.cloneNode(true), document.querySelector('.cover .languages').cloneNode(true));
-const compactLanguageButton = document.createElement('button');
-compactLanguageButton.className = 'language-toggle';
-compactLanguageButton.type = 'button';
-headerInner.append(compactLanguageButton);
+const compactLanguageButton = header.querySelector('.site-header__language-toggle');
 
 function updateHeader() {
   const visible = Math.max(
@@ -39,7 +34,7 @@ function setLanguage(language) {
   const en = language === 'en';
   document.documentElement.lang = language;
   header.setAttribute('aria-label', en ? 'Navigation' : 'Навигация');
-  header.querySelector('.home-mark').setAttribute('aria-label', en ? 'Home' : 'На главную');
+  header.querySelector('.site-header__mark').setAttribute('aria-label', en ? 'Home' : 'На главную');
   document.title = en ? 'Diana Chikan — Product Designer' : originalTitle;
   document.querySelector('.portrait').alt = en ? 'Diana Chikan' : 'Диана Чикан';
   for (const item of copy) item.textContent = item.dataset[language];
