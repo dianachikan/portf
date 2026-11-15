@@ -43,7 +43,11 @@
 
     const apply = (value) => {
       const v = Number(value);
-      top.style.width = `${v}%`;
+      if (ba.closest(".case-comparison")) {
+        ba.style.setProperty("--compare-position", `${v}%`);
+      } else {
+        top.style.width = `${v}%`;
+      }
       handle.style.left = `${v}%`;
     };
 
