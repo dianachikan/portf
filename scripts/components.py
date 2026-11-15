@@ -112,16 +112,38 @@ def render_components(source: str) -> str:
         if not width.isdecimal() or not height.isdecimal():
             raise ValueError("case-media width and height must be pixel dimensions")
         variant = attrs.get("variant", "inline")
-        if variant not in ("inline", "cover"):
+        if variant not in ("inline", "cover", "screen"):
             raise ValueError(f"Unknown case-media variant: {variant}")
+        video = attrs.get("video", "").strip()
+        if video:
+            media_html = (
+                '  <div class="case-video">\n'
+                f'    <video controls playsinline preload="none" poster="{html.escape(src, quote=True)}" '
+                f'width="{width}" height="{height}" aria-label="{html.escape(alt, quote=True)}">\n'
+                f'      <source src="{html.escape(video, quote=True)}" type="video/mp4" />\n'
+                f'      <a href="{html.escape(video, quote=True)}">Открыть видеозапись</a>\n'
+                '    </video>\n'
+                f'    <button class="case-video__play" type="button" hidden aria-label="Воспроизвести видео: {html.escape(alt, quote=True)}">\n'
+                '      <span class="case-video__circle" aria-hidden="true"></span>\n'
+                '      <span class="case-video__label">Смотреть видео</span>\n'
+                '    </button>\n'
+                '  </div>'
+            )
+        else:
+            fetch_priority = ' fetchpriority="high"' if variant == "cover" else ' loading="lazy"'
+            media_html = (
+                f'  <img src="{html.escape(src, quote=True)}" alt="{html.escape(alt, quote=True)}" '
+                f'width="{width}" height="{height}"{fetch_priority} />'
+            )
         return template.substitute(
-            class_name="case-cover" if variant == "cover" else "case-media",
+            class_name=("case-cover" if variant == "cover" else "case-media case-media--screen" if variant == "screen" else "case-media"),
             src=html.escape(src, quote=True),
             alt=html.escape(alt, quote=True),
             width=width,
             height=height,
             fetch_priority=' fetchpriority="high"' if variant == "cover" else ' loading="lazy"',
             caption_html=f"  <figcaption>{body}</figcaption>\n" if body else "",
+            media_html=media_html,
         )
 
     rendered = COMPONENT_RE.sub(replace, source)

@@ -25,7 +25,7 @@ PAGES = [
     {
         "src": "yasmy.html",
         "out": "yasmy/index.html",
-        "title": "От хранения рецептов к продукту, принимающему решения",
+        "title": "Ясми: от хранения рецептов к готовому меню",
         "root": "../",
         "home": "../index.html",
         "footer": True,

@@ -1,4 +1,25 @@
 (() => {
+  document.querySelectorAll(".case-video").forEach((container) => {
+    const video = container.querySelector("video");
+    const play = container.querySelector(".case-video__play");
+    if (!video || !play) return;
+
+    play.hidden = false;
+    video.addEventListener("play", () => { play.hidden = true; });
+    video.addEventListener("ended", () => { play.hidden = false; });
+    play.addEventListener("click", async () => {
+      play.disabled = true;
+      try {
+        await video.play();
+        video.focus();
+      } catch {
+        play.hidden = false;
+      } finally {
+        play.disabled = false;
+      }
+    });
+  });
+
   document.querySelectorAll(".accordion__btn").forEach((btn) => {
     const item = btn.closest(".accordion__item");
     const panel = item?.querySelector(".accordion__panel");
