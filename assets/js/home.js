@@ -23,11 +23,17 @@ updateHeader();
 const copy = [...document.querySelectorAll('[data-en]')];
 const buttons = document.querySelectorAll('[data-lang]');
 const socialLinks = document.querySelectorAll('.social-link');
+const caseLinks = document.querySelectorAll('.case-card');
 const originalTitle = document.title;
 for (const item of copy) item.dataset.ru = item.textContent;
 for (const link of socialLinks) {
   link.dataset.ruHref = link.getAttribute('href');
   link.querySelector('img').dataset.ruSrc = link.querySelector('img').getAttribute('src');
+}
+for (const link of caseLinks) {
+  link.dataset.ruHref = link.getAttribute('href');
+  const image = link.querySelector('img');
+  if (image) image.dataset.ruAlt = image.alt;
 }
 
 function setLanguage(language) {
@@ -42,6 +48,11 @@ function setLanguage(language) {
     link.href = link.dataset[`${language}Href`];
     link.querySelector('img').src = link.querySelector('img').dataset[`${language}Src`];
     link.setAttribute('aria-label', en ? 'LinkedIn' : 'Телеграм-канал');
+  }
+  for (const link of caseLinks) {
+    link.href = en ? `en/${link.dataset.ruHref}` : link.dataset.ruHref;
+    const image = link.querySelector('img');
+    if (image?.dataset.enAlt) image.alt = en ? image.dataset.enAlt : image.dataset.ruAlt;
   }
   for (const button of buttons) {
     button.setAttribute('aria-pressed', String(button.dataset.lang === language));
