@@ -23,42 +23,27 @@ Status:
 a working beta shared with friends.
 Yasmy mockups: meal plan, recipe, new shopping design, and shared family access concept
 About the product
-Yasmy suggests a meal plan and turns it into a shopping list. The goal is to help answer the daily question “What should I cook?” without making people plan from scratch every time.
-The Telegram Mini App and bot connect a meal plan, recipe library, and shopping list. Users can add their own recipes through the bot.
-Shared access and the subscription shown on the cover are planned next. Neither is available in the working beta yet.
-Key idea of the project
-Key change
-Interviews shifted the focus from storing recipes to helping people decide what to cook
-The product should ease the mental load, not ask users to make yet another plan.
+Yasmy suggests a menu, lets users replace dishes, and creates a shopping list. The goal is to make everyday meal choices easier.
+The meal plan, recipes, and shopping list work in a Telegram Mini App and bot. Shared access and the subscription shown on the cover are still in development.
 My role
-Yasmy is a side project that my partner and I build in the evenings and on weekends without outside funding.
-Research and product strategy.
-I ran a survey and interviews and studied how people currently plan meals. The findings shifted the focus from a recipe library to a suggested menu.
-Design and development.
-I own the information architecture, UX/UI, and frontend development with Codex across meal planning, recipes, and shopping. I also sometimes work on the backend.
-My partner's work.
-He leads backend development, deployment, and server maintenance, including operations and hosting costs.
+I lead research, product strategy, information architecture, UX/UI, and frontend development with Codex, with occasional backend work. My partner handles the main backend and server. We work evenings and weekends without external funding.
 Context
-The idea came from a personal problem. When we ran out of food, we had to choose meals again, find recipes, discuss the menu together, and write a shopping list.
-I wanted the product to feel reassuring: a decision has already been made, but you can change it. The name Yasmy is short and gentle, and in Russian it echoes the word for “clear.”
+Whenever food ran out, I searched for recipes again, discussed dinner with my partner, and put together a grocery order. I wanted to open a ready-made suggestion and adapt it to my needs.
 Initial concept
-At first, I imagined a recipe library with a menu planner. Early wireframes followed a simple flow:
+I initially designed a recipe library with a meal planner:
 Original product flow
 save a recipe
 make a meal plan
 get a shopping list
-In the survey, 35 of 50 selected participants said they did not know what to cook. I changed the starting point from an empty planner to a suggested menu that users could edit.
-Revised product flow
-see a suggested menu
-keep the dishes or edit the plan
-make a shopping list
-Research
-I wanted to see whether other people faced this problem and how they handled meal planning.
-I ran the survey in January 2026, inviting people through chats, Instagram stories, and UX research communities. Of 69 respondents, I selected 50 close to the target audience. I invited those who had left contact details to interviews. This was a volunteer sample from channels available to me, not a random sample of everyone who cooks at home.
-survey responses
-I selected 50 people close to the target audience for further analysis: those who regularly cook at home and struggle with meal planning.
-research interviews
-We discussed how participants choose meals, plan cooking, and use existing tools. This was separate from the first interface tests.
+Existing apps did not make me want to return. I decided to explore what other people needed and how they already handled this task.
+survey: what to explore further
+Goal.
+Understand meal planning difficulties and habits, and select topics and participants for interviews.
+Who I surveyed and how
+Online survey, January 2026. Recruitment through chats, Instagram, and UX communities. From 69 responses, I selected 50 participants close to the target audience: people who cook at home and face planning difficulties. 33 of 50 plan meals for two.
+What I learned
+35 of 50 do not know what to cook; 22 feel the difficulties most strongly before cooking. Only three plan a week ahead. In interviews, I explored how meal choices arise and why plans change.
+Interview participants described using Telegram. The survey combines it with VK, so I did not measure Telegram usage separately.
 What makes meal planning frustrating
 Number of participants out of 50. Up to three answers were allowed.
 I don't know what to cook
@@ -69,84 +54,70 @@ I buy too much or forget what I need
 27 of 50
 Tracking calories and macros is difficult
 13 of 50
-How people find and save recipes
-Number of participants out of 50. Each person could give more than one answer.
+How people plan meals
+50 participants, one answer each.
+Sometimes, depending on mood
+20 of 50
+For 2–3 days
+19 of 50
+Do not plan
+6 of 50
+For a week
+3 of 50
+For a day
+2 of 50
+Where people find and save recipes
+Out of 50 participants; multiple sources allowed. Selected options are shown.
 Search engines
 33 of 50
-Instagram or TikTok
 27 of 50
-Don't save recipes; decide as they go
+Telegram / VK
 19 of 50
-Telegram or VK
-19 of 50
-Survey, January 2026. Selected responses from the target sample, N = 50; bar widths show each share of the 50 participants. Totals may exceed 50. The sample describes these participants, not how common the problem is among everyone.
-Interview excerpts
-“I've asked AI to make a menu for me several times because I want to eat a more varied, healthier diet. But then I forget and drop it.”
-“I can spend an hour looking for recipes. Either the ingredients are expensive, the recipe is difficult, or it takes too long.”
-“I often buy groceries when I'm in a good mood, then I don't have time to cook and they go bad.”
+Recipe apps
+3 of 50
+Selected sample, N = 50. Bars show the share of 50 participants. This volunteer sample focuses on planning difficulties; results cannot be generalised to everyone who cooks at home.
+interviews: how people choose meals
+Method.
+Four research interviews, March 2026. Recruitment from people who left their contact details in the survey. We explored their latest cooking and shopping experiences: the trigger, actions, options, and reasons for their choices.
+The next meal decision starts when food runs out
+One participant chose the next dish after the last portion; another did so on her way home. They recalled familiar meals and considered tiredness and ingredients at home. A saved recipe does not yet decide what to cook now.
+Plans change with circumstances
+One participant had stopped weekly planning: she wanted different food, discounts changed her choice of meat, or ingredients ran out. Another did not return to her AI-generated menu. Getting a plan and using it are different tasks.
+Not everyone who cooks needs help
+One participant was happy with her routine: decisions with her partner, bulk shopping, and a chart on the fridge. Further testing should focus on people who struggle to choose meals or maintain a planning routine.
 Existing alternatives
-I tried meal-kit deliveries for several months, including Elementaree and Chefmarket. They add variety, but do not cover breakfasts, limit choice, and do not let me cook my favorite meals.
-More often, people assemble their own system from search, social media, notes, and delivery services. Each tool helps with one stage, but the hardest question —
-what to cook
-— is still left to the person.
-From observations to decisions
-Start with a suggestion, not an empty plan
-Observation.
-35 of 50 selected survey participants said they did not know what to cook. I saw a problem that comes before saving a recipe.
-Decision.
-I made a suggested menu the starting point. My hypothesis is that a ready-made suggestion can make choosing easier. Its effect still needs to be tested in use.
-What to test.
-Can someone choose a suitable dinner without help, and how many substitutions do they need?
-Let people change the menu
-Observation.
-One interview participant said she gave up on weekly plans: by the planned day she wanted something else, or discounts and changes in her pantry affected the choice.
-Decision.
-The suggested plan is editable. Automation gives people a starting point, not a fixed menu.
-What to test.
-Do people understand how to change dishes and portions, and what happens to the rest of the plan?
-Don't begin with manual recipe entry
-Observation.
-Only 3 of 50 survey participants mentioned recipe apps. When I tried alternatives myself, I also stopped entering recipes after just two.
-Decision.
-Adding a recipe through the bot became its own flow: users share a source instead of rewriting the recipe from scratch. My experience helped shape the idea, but cannot replace user testing.
-What to test.
-Can people save their own recipes, find them in the library, and correct imported details when needed?
-Product principles
-I checked each decision against one question: does it reduce the actions and decisions required of the user?
-A suggestion instead of a blank start
-Yasmy selects dishes for the plan. If no suitable dish exists, leaving a meal empty is better than suggesting one that breaks dietary restrictions.
-Personal recipes influence suggestions
-Saved dishes get priority alongside other preferences. There is no fixed ratio of familiar to new recipes.
-Less manual input
-Users can send a recipe to the bot for import. Automatic extraction helps fill the library, though the result may need checking.
+Yasmy competes with the habit of deciding on the go.
+19 of 50 participants selected this option in the recipe question. Memory, search, and messaging are always at hand: a new service needs to give people a reason to change that habit.
+I tried alternatives myself. Elementaree and Chefmarket meal kits did not give me enough flexibility for breakfasts and my own dishes. I abandoned a recipe app after two entries because manual input was a barrier. This personal experience led to the import hypothesis.
+what I changed
+A suggested menu replaces the empty planner. Users can swap dishes and change portions. The hypothesis: starting with a suggestion is easier than choosing from scratch.
+Revised product flow
+see a suggested menu
+keep the dishes or edit the plan
+make a shopping list
 The menu is editable
-Users start with a suggested menu. If a dish does not fit, they can remove it and pick another for the same meal without rebuilding the whole plan.
-Filling gaps and rebuilding the plan are different actions.
-Automatic filling keeps dishes and portions already selected. A meal that the user deliberately removed should not return on its own.
-Users can edit the plan.
-They can remove a dish, add another, and change portion counts. Rebuilding the entire menu also replaces manual edits, so it should not be described as simply filling empty slots.
-A suitable recipe may not be found.
-In that case, the recommendation leaves the meal empty. The aim is to respect the user's restrictions, not fill the menu at any cost.
+Users can replace dishes and change portions. Automatic filling keeps existing choices and does not restore removed meals. Rebuilding the entire plan replaces manual edits too.
+Personal recipes get priority in suggestions. If no suitable dish is available, the slot stays empty: dietary restrictions take priority over filling the menu.
 Beta recording: rebuilding a suggested menu, removing breakfast, and choosing another dish
 Open video recording
 Play video: rebuilding a suggested menu, removing breakfast, and choosing another dish
 Watch video
 Choosing a new breakfast: dish cards and an Add to plan action
 Importing a recipe from a link
-Instead of entering a recipe manually, users send a link to the bot. After processing, they receive ingredients and steps in the chat, open the recipe in the Mini App, and can add it to a chosen day in the plan.
-The bot indicates that it is processing the link, then sends the completed recipe.
+Users send a link to the bot, receive a recipe, and add it to the plan. There is no need to copy ingredients manually.
+The bot shows that processing is in progress. Users can check and correct the result in the editor.
 Beta recording: sending a link to the bot, processing it, opening the recipe, and adding it to the plan
 Open video recording
 Play video: sending a link to the bot, processing it, opening the recipe, and adding it to the plan
 Watch video
 Imported tom yum in the Mini App: cover, ingredients, and Add to plan button
 More recipe actions
-The bot message links to the original source and offers actions to open, edit, or add the recipe to a plan. In the editor, users can correct the name, cooking time, portions, and ingredients.
+The editor lets users change the name, time, portions, and ingredients.
 Bot recipe actions: open, edit, add to plan, and create a shopping list
 Imported recipe editor: name, cooking time, portions, and ingredients
 Shopping from the plan
-After choosing dishes, users get a list of required groceries for the entire plan period, four days in this example. Items are grouped by category and can be checked off while shopping.
-The new shopping design shown on the cover has not shipped. The working version is shown below.
+The list covers the entire plan period: four days here. Groceries are grouped by category and can be checked off.
+The recording shows the working list. The new design on the cover has not been implemented yet.
 Beta recording: opening a four-day shopping list from the plan and checking off items without changing row order
 Open video recording
 Play video: opening a four-day shopping list and checking off items without changing row order
@@ -158,36 +129,35 @@ Open video recording
 Play video: opening a shopping list message grouped by product category
 Watch video
 Beta and early observations
-Yasmy is already in beta: we gave friends access and gained our first users. We are now building shared access for a partner or family. Subscriptions and payments come next, followed by a wider beta and metric checks.
+We shared the beta with friends and got our first users. We are building shared access next, followed by subscriptions and a wider beta.
 Open Yasmy in Telegram ↗
-Separately, I ran early informal tests with two participants, walking through the main product flows. They revealed issues with how people understood the interface, but cannot establish an effect across the broader audience.
+I ran initial scenario tests with two participants and found interface comprehension issues. The product's impact has not been measured yet.
 What the first tests revealed
 The plan period was unclear
 Observation.
-One participant took a three-day plan to be a menu for today only because the period was not clearly shown.
+A participant mistook a three-day plan for today's menu.
 Change.
-We added an onboarding question asking how many days the menu should cover. Users now set the period before their first plan. The plan itself still has no separate period label; another test will show whether the onboarding change is enough.
+We added a duration choice to onboarding. The plan itself still has no period label; repeat testing will show whether this change is enough.
 Shopping and meal plans do not always cover the same period
 Observation.
-Participants described different needs: buying a little food for tomorrow or stocking up for longer. A list covering the whole plan did not always match the amount they expected to buy.
+Shopping for tomorrow and stocking up are different tasks. A list covering the whole plan did not always match expectations.
 Change and limitation.
-We labeled the shopping list period, for example “Shopping for three days” when the plan covers three days. We did not add a separate shopping period selector: the list still covers the entire plan. The label explains current behavior, but does not solve the need for a smaller grocery trip.
+We labelled the shopping period. A separate duration choice has not been added, so this does not solve a short shopping trip within a longer plan.
 Checking off an item should not move its row
 Observation.
-In a test, checked-off items moved within the list, making them hard for a participant to track.
+Checked items jumped around the list, making the participant lose track of them.
 Change.
-We fixed the reordering: checking off an item no longer changes its position within its category.
+Checking an item off no longer changes the row order.
 Current beta: Shopping for 4 days, before items are checked off
 The same category after four items are checked off; row order is preserved
 Validation status.
-We have not retested these changes with participants yet. I use the app myself and check the fixes. I also found and fixed more shopping list bugs in daily use; that is a separate feedback source, not a finding from the first tests.
+Repeat testing has not happened yet. I check fixes through daily use; this also helped me find and fix additional shopping bugs.
 What I will test next
-Full user testing is still ahead. I will check whether someone can choose a dinner from the suggested menu without guidance, change it, and prepare a shopping list. I will also ask how easy the decision felt.
-For now, the project has a working beta and early interface observations. Whether it reduces decision time and mental effort remains to be tested.
+Can someone choose dinner, replace a dish, and prepare a shopping list without guidance? I will test these scenarios and ask how easy the decision felt. Reduced decision time and effort have not been confirmed yet.
 Project conclusion
 Conclusion
 Research changed the product's starting point
-I moved from storing recipes to suggesting a menu. The beta lets us test the next question: does that suggestion help people choose what to eat day to day?
+I moved from a recipe library to a suggested menu. Next, I will test whether it helps people choose meals in everyday life.
 Next
 View all case studies
 Back to top ↑

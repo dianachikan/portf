@@ -114,14 +114,23 @@
 .case-research__number { display: block; color: var(--color-heading); font-size: var(--type-stat); font-weight: 600; line-height: 1; letter-spacing: var(--tracking-heading); }
 .case-research__method h3 { margin: 6px 0 14px; }
 .case-research__method p { margin: 0; font-size: var(--type-small); line-height: 1.45; }
-.case-chart-grid { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
-.case-chart { min-width: 0; margin: 0; padding: 28px; background: var(--color-surface); border: 1px solid var(--color-line); border-radius: 18px; }
-.case-chart figcaption { min-height: 2.4em; margin-bottom: 24px; }
-.case-chart__context { margin: 0 0 20px; color: var(--color-ink-muted); font-family: var(--font-ui); font-size: var(--type-small); line-height: var(--leading-body); letter-spacing: var(--tracking-body); }
-.case-chart__row { display: grid; grid-template-columns: 1fr auto; gap: 6px 12px; margin-top: 18px; font-size: var(--type-small); line-height: 1.25; }
-.case-chart__row strong { font-weight: 600; }
-.case-chart__row i { grid-column: 1 / -1; display: block; width: var(--bar); height: 10px; border-radius: 99px; background: var(--color-chart-green); }
-.case-chart--blue .case-chart__row i { background: var(--color-chart-blue); }
+.case-chart-grid { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: var(--case-grid-gap); margin-top: 40px; }
+.case-chart { min-width: 0; margin: 0; padding: 36px; background: var(--color-mint-soft); border: 0; border-radius: 22px; }
+.case-chart--blue { background: var(--color-peach-soft); }
+.case-chart--compact { grid-column: 1 / -1; background: var(--color-neutral-soft); }
+.case-chart.case-chart--compact figcaption { min-height: 0; margin-bottom: 12px; }
+.case-chart--compact .case-chart__context { min-height: 0; }
+.case-source-grid { display: grid; grid-template-columns: var(--case-grid-columns); gap: 24px var(--case-grid-gap); margin: 28px 0 0; font-family: var(--font-ui); letter-spacing: var(--tracking-body); line-height: var(--leading-body); }
+.case-source-grid > div { grid-column: span 3; }
+.case-source-grid dt { font-size: var(--type-small); color: var(--color-ink-muted); }
+.case-source-grid dd { margin: 8px 0 0; font-size: var(--type-body); font-weight: 600; }
+.case-chart figcaption { min-height: 2.4em; margin-bottom: 16px; font-family: var(--font-ui); }
+.case-chart__context { min-height: 2.8em; margin: 0 0 20px; color: var(--color-ink-muted); font-family: var(--font-ui); font-size: var(--type-small); line-height: var(--leading-body); letter-spacing: var(--tracking-body); }
+.case-chart__row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: start; gap: 12px 20px; margin-top: 24px; font-family: var(--font-ui); font-size: var(--type-small); line-height: var(--leading-body); letter-spacing: var(--tracking-body); }
+.case-chart__row > span { min-height: 2.5em; }
+.case-chart__row strong { font-weight: 600; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.case-chart__row i { grid-column: 1 / -1; display: block; width: 100%; height: 8px; border-radius: 99px; background: var(--color-surface); overflow: hidden; }
+.case-chart__row i::after { content: ""; display: block; width: var(--bar); height: 100%; border-radius: inherit; background: var(--color-ink); }
 .case-caption { grid-column: 1 / -1; margin: 12px 0 0; color: var(--color-ink-muted); font-size: var(--type-small); }
 .case-quote-grid { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 46px; }
 .case-quote-grid blockquote { margin: 0; padding: 28px; border-radius: 18px; background: var(--color-rose-soft); font-size: var(--type-small); line-height: 1.5; }
@@ -211,6 +220,7 @@
   .case-research, .case-chart-grid, .case-insight-grid, .case-roadmap { gap: 12px; }
   .case-research__method, .case-chart, .case-insight-grid article, .case-roadmap > div { padding: 22px; }
   .case-chart figcaption { min-height: 0; }
+  .case-source-grid > div { grid-column: span 6; }
   .case-quote-grid { gap: 10px; margin-top: 32px; }
   .case-quote-grid blockquote { padding: 22px; }
   .case-insight-grid article { min-height: 0; }

@@ -7,7 +7,7 @@
   <meta name="description" content="Product design portfolio by Diana Chikan" />
   <link rel="icon" href="../../assets/img/favicon.png" type="image/png" />
   <link rel="stylesheet" href="../../assets/css/style.css?v=12" />
-  <link rel="stylesheet" href="../../assets/css/case-blocks.css?v=18" />
+  <link rel="stylesheet" href="../../assets/css/case-blocks.css?v=20" />
   <link rel="stylesheet" href="../../assets/css/site-header.css?v=2" />
 </head>
 <body id="top">
@@ -55,29 +55,16 @@
         <section class="case-section case-section--split" aria-labelledby="yasmy-about">
   <h2 id="yasmy-about">About the product</h2>
   <div class="case-section__content">
-<p class="case-lead">Yasmy suggests a meal plan and turns it into a shopping list. The goal is to help answer the daily question “What should I cook?” without making people plan from scratch every time.</p>
-            <p>The Telegram Mini App and bot connect a meal plan, recipe library, and shopping list. Users can add their own recipes through the bot.</p>
-            <p>Shared access and the subscription shown on the cover are planned next. Neither is available in the working beta yet.</p>
+<p class="case-lead">Yasmy suggests a menu, lets users replace dishes, and creates a shopping list. The goal is to make everyday meal choices easier.</p>
+            <p>The meal plan, recipes, and shopping list work in a Telegram Mini App and bot. Shared access and the subscription shown on the cover are still in development.</p>
   </div>
 </section>
-
-
-        <aside class="case-highlight" aria-label="Key idea of the project">
-  <span class="case-highlight__label">Key change</span>
-  <div class="case-highlight__content">
-    <p class="case-highlight__statement">Interviews shifted the focus from storing recipes to helping people decide what to cook</p>
-    <p class="case-highlight__description">The product should ease the mental load, not ask users to make yet another plan.</p>
-  </div>
-</aside>
 
 
         <section class="case-section case-section--split" aria-labelledby="yasmy-role">
   <h2 id="yasmy-role">My role</h2>
   <div class="case-section__content">
-<p>Yasmy is a side project that my partner and I build in the evenings and on weekends without outside funding.</p>
-            <p><strong>Research and product strategy.</strong> I ran a survey and interviews and studied how people currently plan meals. The findings shifted the focus from a recipe library to a suggested menu.</p>
-            <p><strong>Design and development.</strong> I own the information architecture, UX/UI, and frontend development with Codex across meal planning, recipes, and shopping. I also sometimes work on the backend.</p>
-            <p><strong>My partner's work.</strong> He leads backend development, deployment, and server maintenance, including operations and hosting costs.</p>
+<p>I lead research, product strategy, information architecture, UX/UI, and frontend development with Codex, with occasional backend work. My partner handles the main backend and server. We work evenings and weekends without external funding.</p>
   </div>
 </section>
 
@@ -85,8 +72,7 @@
         <section class="case-section case-section--split" aria-labelledby="yasmy-context">
   <h2 id="yasmy-context">Context</h2>
   <div class="case-section__content">
-<p>The idea came from a personal problem. When we ran out of food, we had to choose meals again, find recipes, discuss the menu together, and write a shopping list.</p>
-            <p>I wanted the product to feel reassuring: a decision has already been made, but you can change it. The name Yasmy is short and gentle, and in Russian it echoes the word for “clear.”</p>
+<p>Whenever food ran out, I searched for recipes again, discussed dinner with my partner, and put together a grocery order. I wanted to open a ready-made suggestion and adapt it to my needs.</p>
   </div>
 </section>
 
@@ -94,38 +80,25 @@
         <section class="case-section case-section--divider" aria-labelledby="yasmy-hypothesis">
           <div class="case-section__intro">
             <h2 id="yasmy-hypothesis">Initial concept</h2>
-            <p>At first, I imagined a recipe library with a menu planner. Early wireframes followed a simple flow:</p>
+            <p>I initially designed a recipe library with a meal planner:</p>
           </div>
           <ol class="case-flow" aria-label="Original product flow">
             <li><span>01</span>save a recipe</li>
             <li><span>02</span>make a meal plan</li>
             <li><span>03</span>get a shopping list</li>
           </ol>
-          <p class="case-section__after">In the survey, 35 of 50 selected participants said they did not know what to cook. I changed the starting point from an empty planner to a suggested menu that users could edit.</p>
-          <ol class="case-flow" aria-label="Revised product flow">
-            <li><span>01</span>see a suggested menu</li>
-            <li><span>02</span>keep the dishes or edit the plan</li>
-            <li><span>03</span>make a shopping list</li>
-          </ol>
+          <p class="case-section__after">Existing apps did not make me want to return. I decided to explore what other people needed and how they already handled this task.</p>
         </section>
 
-        <section class="case-section" aria-labelledby="yasmy-research">
-          <div class="case-section__intro">
-            <h2 id="yasmy-research">Research</h2>
-            <p>I wanted to see whether other people faced this problem and how they handled meal planning.</p>
-          </div>
-          <p class="case-section__after">I ran the survey in January 2026, inviting people through chats, Instagram stories, and UX research communities. Of 69 respondents, I selected 50 close to the target audience. I invited those who had left contact details to interviews. This was a volunteer sample from channels available to me, not a random sample of everyone who cooks at home.</p>
-          <div class="case-research">
-            <article class="case-research__method">
-              <span class="case-research__number">69</span>
-              <h3>survey responses</h3>
-              <p>I selected 50 people close to the target audience for further analysis: those who regularly cook at home and struggle with meal planning.</p>
-            </article>
-            <article class="case-research__method">
-              <span class="case-research__number">4</span>
-              <h3>research interviews</h3>
-              <p>We discussed how participants choose meals, plan cooking, and use existing tools. This was separate from the first interface tests.</p>
-            </article>
+        <section class="case-section case-section--split" aria-labelledby="yasmy-research">
+          <h2 id="yasmy-research">survey: what to explore further</h2>
+          <div class="case-section__content">
+            <p><strong>Goal.</strong> Understand meal planning difficulties and habits, and select topics and participants for interviews.</p>
+            <h3>Who I surveyed and how</h3>
+            <p>Online survey, January 2026. Recruitment through chats, Instagram, and UX communities. From 69 responses, I selected 50 participants close to the target audience: people who cook at home and face planning difficulties. 33 of 50 plan meals for two.</p>
+            <h3>What I learned</h3>
+            <p>35 of 50 do not know what to cook; 22 feel the difficulties most strongly before cooking. Only three plan a week ahead. In interviews, I explored how meal choices arise and why plans change.</p>
+            <p>Interview participants described using Telegram. The survey combines it with VK, so I did not measure Telegram usage separately.</p>
           </div>
           <div class="case-chart-grid">
             <figure class="case-chart">
@@ -137,68 +110,68 @@
               <div class="case-chart__row"><span>Tracking calories and macros is difficult</span><strong>13 of 50</strong><i aria-hidden="true" style="--bar:26%"></i></div>
             </figure>
             <figure class="case-chart case-chart--blue">
-              <figcaption>How people find and save recipes</figcaption>
-              <p class="case-chart__context">Number of participants out of 50. Each person could give more than one answer.</p>
-              <div class="case-chart__row"><span>Search engines</span><strong>33 of 50</strong><i aria-hidden="true" style="--bar:66%"></i></div>
-              <div class="case-chart__row"><span>Instagram or TikTok</span><strong>27 of 50</strong><i aria-hidden="true" style="--bar:54%"></i></div>
-              <div class="case-chart__row"><span>Don't save recipes; decide as they go</span><strong>19 of 50</strong><i aria-hidden="true" style="--bar:38%"></i></div>
-              <div class="case-chart__row"><span>Telegram or VK</span><strong>19 of 50</strong><i aria-hidden="true" style="--bar:38%"></i></div>
+              <figcaption>How people plan meals</figcaption>
+              <p class="case-chart__context">50 participants, one answer each.</p>
+              <div class="case-chart__row"><span>Sometimes, depending on mood</span><strong>20 of 50</strong><i aria-hidden="true" style="--bar:40%"></i></div>
+              <div class="case-chart__row"><span>For 2–3 days</span><strong>19 of 50</strong><i aria-hidden="true" style="--bar:38%"></i></div>
+              <div class="case-chart__row"><span>Do not plan</span><strong>6 of 50</strong><i aria-hidden="true" style="--bar:12%"></i></div>
+              <div class="case-chart__row"><span>For a week</span><strong>3 of 50</strong><i aria-hidden="true" style="--bar:6%"></i></div>
+              <div class="case-chart__row"><span>For a day</span><strong>2 of 50</strong><i aria-hidden="true" style="--bar:4%"></i></div>
+            </figure>
+            <figure class="case-chart case-chart--compact">
+              <figcaption>Where people find and save recipes</figcaption>
+              <p class="case-chart__context">Out of 50 participants; multiple sources allowed. Selected options are shown.</p>
+              <dl class="case-source-grid">
+                <div><dt>Search engines</dt><dd>33 of 50</dd></div>
+                <div><dt>Instagram / TikTok</dt><dd>27 of 50</dd></div>
+                <div><dt>Telegram / VK</dt><dd>19 of 50</dd></div>
+                <div><dt>Recipe apps</dt><dd>3 of 50</dd></div>
+              </dl>
             </figure>
           </div>
-          <p class="case-caption">Survey, January 2026. Selected responses from the target sample, N = 50; bar widths show each share of the 50 participants. Totals may exceed 50. The sample describes these participants, not how common the problem is among everyone.</p>
-          <div class="case-quote-grid" aria-label="Interview excerpts">
-            <blockquote>“I've asked AI to make a menu for me several times because I want to eat a more varied, healthier diet. But then I forget and drop it.”</blockquote>
-            <blockquote>“I can spend an hour looking for recipes. Either the ingredients are expensive, the recipe is difficult, or it takes too long.”</blockquote>
-            <blockquote>“I often buy groceries when I'm in a good mood, then I don't have time to cook and they go bad.”</blockquote>
-          </div>
+          <p class="case-caption">Selected sample, N = 50. Bars show the share of 50 participants. This volunteer sample focuses on planning difficulties; results cannot be generalised to everyone who cooks at home.</p>
         </section>
+
+        <section class="case-section case-section--split" aria-labelledby="yasmy-interviews">
+  <h2 id="yasmy-interviews">interviews: how people choose meals</h2>
+  <div class="case-section__content">
+<p><strong>Method.</strong> Four research interviews, March 2026. Recruitment from people who left their contact details in the survey. We explored their latest cooking and shopping experiences: the trigger, actions, options, and reasons for their choices.</p>
+            <h3>The next meal decision starts when food runs out</h3>
+            <p>One participant chose the next dish after the last portion; another did so on her way home. They recalled familiar meals and considered tiredness and ingredients at home. A saved recipe does not yet decide what to cook now.</p>
+            <h3>Plans change with circumstances</h3>
+            <p>One participant had stopped weekly planning: she wanted different food, discounts changed her choice of meat, or ingredients ran out. Another did not return to her AI-generated menu. Getting a plan and using it are different tasks.</p>
+            <h3>Not everyone who cooks needs help</h3>
+            <p>One participant was happy with her routine: decisions with her partner, bulk shopping, and a chart on the fridge. Further testing should focus on people who struggle to choose meals or maintain a planning routine.</p>
+  </div>
+</section>
+
 
         <section class="case-section case-section--split" aria-labelledby="yasmy-alternatives">
   <h2 id="yasmy-alternatives">Existing alternatives</h2>
   <div class="case-section__content">
-<p>I tried meal-kit deliveries for several months, including Elementaree and Chefmarket. They add variety, but do not cover breakfasts, limit choice, and do not let me cook my favorite meals.</p>
-            <p>More often, people assemble their own system from search, social media, notes, and delivery services. Each tool helps with one stage, but the hardest question — <strong>what to cook</strong> — is still left to the person.</p>
+<p><strong>Yasmy competes with the habit of deciding on the go.</strong> 19 of 50 participants selected this option in the recipe question. Memory, search, and messaging are always at hand: a new service needs to give people a reason to change that habit.</p>
+            <p>I tried alternatives myself. Elementaree and Chefmarket meal kits did not give me enough flexibility for breakfasts and my own dishes. I abandoned a recipe app after two entries because manual input was a barrier. This personal experience led to the import hypothesis.</p>
   </div>
 </section>
 
 
-        <section class="case-section case-section--split" aria-labelledby="yasmy-insights">
-  <h2 id="yasmy-insights">From observations to decisions</h2>
-  <div class="case-section__content">
-<h3>Start with a suggestion, not an empty plan</h3>
-            <p><strong>Observation.</strong> 35 of 50 selected survey participants said they did not know what to cook. I saw a problem that comes before saving a recipe.</p>
-            <p><strong>Decision.</strong> I made a suggested menu the starting point. My hypothesis is that a ready-made suggestion can make choosing easier. Its effect still needs to be tested in use.</p>
-            <p><strong>What to test.</strong> Can someone choose a suitable dinner without help, and how many substitutions do they need?</p>
-
-            <h3>Let people change the menu</h3>
-            <p><strong>Observation.</strong> One interview participant said she gave up on weekly plans: by the planned day she wanted something else, or discounts and changes in her pantry affected the choice.</p>
-            <p><strong>Decision.</strong> The suggested plan is editable. Automation gives people a starting point, not a fixed menu.</p>
-            <p><strong>What to test.</strong> Do people understand how to change dishes and portions, and what happens to the rest of the plan?</p>
-
-            <h3>Don't begin with manual recipe entry</h3>
-            <p><strong>Observation.</strong> Only 3 of 50 survey participants mentioned recipe apps. When I tried alternatives myself, I also stopped entering recipes after just two.</p>
-            <p><strong>Decision.</strong> Adding a recipe through the bot became its own flow: users share a source instead of rewriting the recipe from scratch. My experience helped shape the idea, but cannot replace user testing.</p>
-            <p><strong>What to test.</strong> Can people save their own recipes, find them in the library, and correct imported details when needed?</p>
-  </div>
-</section>
-
-
-        <section class="case-section" aria-labelledby="yasmy-principles">
-          <div class="case-section__intro"><h2 id="yasmy-principles">Product principles</h2><p>I checked each decision against one question: does it reduce the actions and decisions required of the user?</p></div>
-          <ol class="case-principles">
-            <li><span>01</span><div><h3>A suggestion instead of a blank start</h3><p>Yasmy selects dishes for the plan. If no suitable dish exists, leaving a meal empty is better than suggesting one that breaks dietary restrictions.</p></div></li>
-            <li><span>02</span><div><h3>Personal recipes influence suggestions</h3><p>Saved dishes get priority alongside other preferences. There is no fixed ratio of familiar to new recipes.</p></div></li>
-            <li><span>03</span><div><h3>Less manual input</h3><p>Users can send a recipe to the bot for import. Automatic extraction helps fill the library, though the result may need checking.</p></div></li>
+        <section class="case-section" aria-labelledby="yasmy-new-flow">
+          <div class="case-section__intro">
+            <h2 id="yasmy-new-flow">what I changed</h2>
+            <p>A suggested menu replaces the empty planner. Users can swap dishes and change portions. The hypothesis: starting with a suggestion is easier than choosing from scratch.</p>
+          </div>
+          <ol class="case-flow" aria-label="Revised product flow">
+            <li><span>01</span>see a suggested menu</li>
+            <li><span>02</span>keep the dishes or edit the plan</li>
+            <li><span>03</span>make a shopping list</li>
           </ol>
         </section>
 
         <section class="case-section case-section--split" aria-labelledby="yasmy-control">
   <h2 id="yasmy-control">The menu is editable</h2>
   <div class="case-section__content">
-<p>Users start with a suggested menu. If a dish does not fit, they can remove it and pick another for the same meal without rebuilding the whole plan.</p>
-            <p><strong>Filling gaps and rebuilding the plan are different actions.</strong> Automatic filling keeps dishes and portions already selected. A meal that the user deliberately removed should not return on its own.</p>
-            <p><strong>Users can edit the plan.</strong> They can remove a dish, add another, and change portion counts. Rebuilding the entire menu also replaces manual edits, so it should not be described as simply filling empty slots.</p>
-            <p><strong>A suitable recipe may not be found.</strong> In that case, the recommendation leaves the meal empty. The aim is to respect the user's restrictions, not fill the menu at any cost.</p>
+<p>Users can replace dishes and change portions. Automatic filling keeps existing choices and does not restore removed meals. Rebuilding the entire plan replaces manual edits too.</p>
+            <p>Personal recipes get priority in suggestions. If no suitable dish is available, the slot stays empty: dietary restrictions take priority over filling the menu.</p>
             <div class="case-screen-pair">
               <figure class="case-media case-media--screen">
   <div class="case-video">
@@ -225,8 +198,8 @@
         <section class="case-section case-section--split" aria-labelledby="yasmy-bot">
   <h2 id="yasmy-bot">Importing a recipe from a link</h2>
   <div class="case-section__content">
-<p>Instead of entering a recipe manually, users send a link to the bot. After processing, they receive ingredients and steps in the chat, open the recipe in the Mini App, and can add it to a chosen day in the plan.</p>
-            <p>The bot indicates that it is processing the link, then sends the completed recipe.</p>
+<p>Users send a link to the bot, receive a recipe, and add it to the plan. There is no need to copy ingredients manually.</p>
+            <p>The bot shows that processing is in progress. Users can check and correct the result in the editor.</p>
             <div class="case-screen-pair">
               <figure class="case-media case-media--screen">
   <div class="case-video">
@@ -248,7 +221,7 @@
             </div>
             <div class="case-supplement">
               <h3>More recipe actions</h3>
-              <p>The bot message links to the original source and offers actions to open, edit, or add the recipe to a plan. In the editor, users can correct the name, cooking time, portions, and ingredients.</p>
+              <p>The editor lets users change the name, time, portions, and ingredients.</p>
               <div class="case-screen-pair">
                 <figure class="case-media case-media--screen">
   <img src="../../assets/img/yasmy-beta/bot-recipe.jpg" alt="Bot recipe actions: open, edit, add to plan, and create a shopping list" width="1206" height="2622" loading="lazy" />
@@ -267,8 +240,8 @@
         <section class="case-section case-section--split" aria-labelledby="yasmy-shopping">
   <h2 id="yasmy-shopping">Shopping from the plan</h2>
   <div class="case-section__content">
-<p>After choosing dishes, users get a list of required groceries for the entire plan period, four days in this example. Items are grouped by category and can be checked off while shopping.</p>
-            <p>The new shopping design shown on the cover has not shipped. The working version is shown below.</p>
+<p>The list covers the entire plan period: four days here. Groceries are grouped by category and can be checked off.</p>
+            <p>The recording shows the working list. The new design on the cover has not been implemented yet.</p>
             <figure class="case-media case-media--screen">
   <div class="case-video">
     <video controls playsinline preload="none" poster="../../assets/img/yasmy-beta/shopping-before.jpg" width="1206" height="2622" aria-label="Beta recording: opening a four-day shopping list from the plan and checking off items without changing row order">
@@ -306,9 +279,9 @@
         <section class="case-section case-section--split" aria-labelledby="yasmy-result">
   <h2 id="yasmy-result">Beta and early observations</h2>
   <div class="case-section__content">
-<p>Yasmy is already in beta: we gave friends access and gained our first users. We are now building shared access for a partner or family. Subscriptions and payments come next, followed by a wider beta and metric checks.</p>
+<p>We shared the beta with friends and got our first users. We are building shared access next, followed by subscriptions and a wider beta.</p>
             <p><a href="https://t.me/YasmyCookBot" target="_blank" rel="noopener noreferrer">Open Yasmy in Telegram ↗</a></p>
-            <p>Separately, I ran early informal tests with two participants, walking through the main product flows. They revealed issues with how people understood the interface, but cannot establish an effect across the broader audience.</p>
+            <p>I ran initial scenario tests with two participants and found interface comprehension issues. The product's impact has not been measured yet.</p>
   </div>
 </section>
 
@@ -317,16 +290,16 @@
   <h2 id="yasmy-testing">What the first tests revealed</h2>
   <div class="case-section__content">
 <h3>The plan period was unclear</h3>
-            <p><strong>Observation.</strong> One participant took a three-day plan to be a menu for today only because the period was not clearly shown.</p>
-            <p><strong>Change.</strong> We added an onboarding question asking how many days the menu should cover. Users now set the period before their first plan. The plan itself still has no separate period label; another test will show whether the onboarding change is enough.</p>
+            <p><strong>Observation.</strong> A participant mistook a three-day plan for today's menu.</p>
+            <p><strong>Change.</strong> We added a duration choice to onboarding. The plan itself still has no period label; repeat testing will show whether this change is enough.</p>
 
             <h3>Shopping and meal plans do not always cover the same period</h3>
-            <p><strong>Observation.</strong> Participants described different needs: buying a little food for tomorrow or stocking up for longer. A list covering the whole plan did not always match the amount they expected to buy.</p>
-            <p><strong>Change and limitation.</strong> We labeled the shopping list period, for example “Shopping for three days” when the plan covers three days. We did not add a separate shopping period selector: the list still covers the entire plan. The label explains current behavior, but does not solve the need for a smaller grocery trip.</p>
+            <p><strong>Observation.</strong> Shopping for tomorrow and stocking up are different tasks. A list covering the whole plan did not always match expectations.</p>
+            <p><strong>Change and limitation.</strong> We labelled the shopping period. A separate duration choice has not been added, so this does not solve a short shopping trip within a longer plan.</p>
 
             <h3>Checking off an item should not move its row</h3>
-            <p><strong>Observation.</strong> In a test, checked-off items moved within the list, making them hard for a participant to track.</p>
-            <p><strong>Change.</strong> We fixed the reordering: checking off an item no longer changes its position within its category.</p>
+            <p><strong>Observation.</strong> Checked items jumped around the list, making the participant lose track of them.</p>
+            <p><strong>Change.</strong> Checking an item off no longer changes the row order.</p>
             <div class="case-screen-pair">
               <figure class="case-media case-media--screen">
   <img src="../../assets/img/yasmy-beta/shopping-before.jpg" alt="Current beta: Shopping for 4 days, before items are checked off" width="1206" height="2622" loading="lazy" />
@@ -337,7 +310,7 @@
 </figure>
 
             </div>
-            <p><strong>Validation status.</strong> We have not retested these changes with participants yet. I use the app myself and check the fixes. I also found and fixed more shopping list bugs in daily use; that is a separate feedback source, not a finding from the first tests.</p>
+            <p><strong>Validation status.</strong> Repeat testing has not happened yet. I check fixes through daily use; this also helped me find and fix additional shopping bugs.</p>
   </div>
 </section>
 
@@ -345,8 +318,7 @@
         <section class="case-section case-section--split" aria-labelledby="yasmy-next">
   <h2 id="yasmy-next">What I will test next</h2>
   <div class="case-section__content">
-<p>Full user testing is still ahead. I will check whether someone can choose a dinner from the suggested menu without guidance, change it, and prepare a shopping list. I will also ask how easy the decision felt.</p>
-            <p>For now, the project has a working beta and early interface observations. Whether it reduces decision time and mental effort remains to be tested.</p>
+<p>Can someone choose dinner, replace a dish, and prepare a shopping list without guidance? I will test these scenarios and ask how easy the decision felt. Reduced decision time and effort have not been confirmed yet.</p>
   </div>
 </section>
 
@@ -354,7 +326,7 @@
   <span class="case-highlight__label">Conclusion</span>
   <div class="case-highlight__content">
     <p class="case-highlight__statement">Research changed the product's starting point</p>
-    <p class="case-highlight__description">I moved from storing recipes to suggesting a menu. The beta lets us test the next question: does that suggestion help people choose what to eat day to day?</p>
+    <p class="case-highlight__description">I moved from a recipe library to a suggested menu. Next, I will test whether it helps people choose meals in everyday life.</p>
   </div>
 </aside>
 
