@@ -51,6 +51,7 @@
   --type-display: var(--type-heading);
   --type-hero: var(--type-heading);
   --type-stat: clamp(72px, 10vw, 120px);
+  --radius-screen: 36px;
   --tap-size: 44px;
 }
 
