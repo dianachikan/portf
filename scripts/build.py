@@ -58,7 +58,7 @@ PAGES = [
     {
         "src": "design-system.html",
         "out": "design-system/index.html",
-        "title": "Дизайн-система для B2B-продукта",
+        "title": "Дизайн-система ServiceVizor",
         "root": "../",
         "home": "../index.html",
         "footer": True,

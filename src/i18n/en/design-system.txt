@@ -1,4 +1,4 @@
-Design system for a B2B product
+The ServiceVizor design system
 Home
 Contacts
 chat
@@ -6,77 +6,45 @@ CV
 email
 Telegram channel
 channel
-B2B and B2E
-A product design system for technical specialists
-How a systematic approach halved post-development revisions and made scaling easier
-Calendar from the design system
-Year selection in the design system calendar
-About the product
-ServiceVizor is a digital assistant for manufacturing teams.
-The product has two connected parts:
-A web service where technical specialists create work instructions, plan and assign tasks, and track progress;
-A mobile app where shop-floor operators complete tasks, answer instruction check questions, and record issues as they work.
-This connects office planning with actual work on the shop floor. ServiceVizor aims to reduce errors and improve communication between office and production teams.
-In brief
-We moved from fragmented interfaces and ad hoc processes to a structured system. I defined layout patterns, tokens, and a component architecture, organized our Figma workspace, and aligned design with development. Post-development revisions fell by half, interfaces became more consistent, and the product became easier to scale.
-Problem
-The interface had grown in fragments, without shared rules or consistent components. Decisions were often made during development. Designs drifted from the implementation, last-minute changes came with tight deadlines, and developers added third-party or custom elements outside the system. The design system was not guiding the product, while an overloaded, unstructured Figma file made interfaces harder to find and maintain.
-Goal
-Build a design system that:
-— establishes shared interface rules
-— aligns design and development
-— reduces revisions after development
-— scales with the product
-— stays flexible
-— does not demand excessive resources
-Approach
-Rules
-A single rigid grid would not work across our very different interfaces. I introduced structure without unnecessary constraints by:
-— defining foundational rules for spacing, corner radii, type styles, icons, and colors
-— identifying layouts shared across modules, including form dialogs, tables, and empty states
-— moving elements used at least twice into the design system
-Components
-I followed the principles of atomic design, combining small foundational components into more complex ones.
-Design system components
-Specifications
-I document components with interaction patterns, edge cases, and constraints. This keeps decisions recorded and reduces the need for developers to improvise.
-Component specifications
-Working with development
-Developers are gradually migrating the product to the new design system by aligning implementation APIs with my Figma tokens and components.
-Example: date picker
-Old version
-The original DatePicker came from a third-party library and had several problems:
-— no manual date entry
-— no distinction between single-date and range selection
-— unclear range-selection behavior
-Old date picker
-New version
-I redesigned the component to include:
-— manual date entry
-— separate selection flows
-— hover feedback for ranges, highlighting dates in between
-— dynamic presets for today, week, month, and quarter that update automatically
-New date picker
-Reorganizing the workspace
-Modular Figma file structure
-Color-coded file covers
-I replaced one overloaded file with a modular structure that matches the product architecture.
-Blue covers mark web modules and their design system, turquoise covers mark tablet modules and their design system, and red covers mark graphics files.
-Process and quality control
-To reduce late changes and gaps between design and implementation, I introduced:
-— design grooming with developers and explicit edge-case reviews
-— a structured issue template with priority, design-versus-build comparison, and problem description
-— dedicated review pages in every Figma file
-— presentations for weekly demos
-— design review before release, tracked in a separate Jira column (shown below)
-Design review column in Jira
-Outcome
-— Post-development revisions fell by half
-— Interfaces became more consistent across modules
-— More issues were caught during design instead of after release
-— Developers created fewer custom components
-— Finding and working with designs in Figma became easier
-— Design system adoption became a structured process
+The ServiceVizor design system
+Technical specialists use ServiceVizor to write instructions, schedule work and track its progress. I built a component library for these interfaces and documented how the components behave, giving design and engineering a shared reference.
+My role
+My contribution to the system
+Design:
+As the sole product designer, I owned the tokens, components, screen patterns and Figma file structure.
+Implementation:
+Engineers migrated components into the product gradually. We discussed edge cases before development, and I reviewed the implementation before release.
+The TabbarHeader page in Figma, showing tab states, the assembled bar and its interaction rules
+How the library fits together
+The instruction editor, task table and Gantt chart each need a different layout. I standardised their colours, typography, spacing and corner radii. When a solution recurred across modules, I added it to the library. Tables, forms in dialogs and empty states became reusable patterns.
+How an input fits inside a form
+The Input components handle entering or selecting a value. FormField brings together the label, input and supporting text. Each form supplies its own context and validation. This lets the same input work in an editing form or a table filter.
+Choosing a button
+In ButtonBase, visual priority and the meaning of an action are independent. For example, a delete button can be red to signal a destructive action while using a secondary style. Size, icon visibility and interaction state are separate properties.
+ButtonBase variants in Figma, with priority and colour in rows and interaction states in columns
+Each row shows a button in its default, hover, pressed and disabled states. Adjacent rows show alternative styles.
+What goes into a specification
+People work with multiple boards in both planning and analytics. I built TabbarHeader from individual TabHeader tabs so users could switch boards. The specification covers what happens before a board has a name and how a tab handles a long title.
+Tab sizing rules for empty, short and long board names
+An empty tab starts at its minimum width and grows as the user types. Its maximum width depends on the number of tabs and the space available beside the add button.
+When a title is truncated, hovering reveals its full text. Hovering over the menu button inside the same tab highlights the button and keeps the title tooltip hidden.
+One calendar for dates and ranges
+The original calendar had no manual date entry. When selecting a range, it was hard to tell which days would be included. I added manual entry and separate modes for dates and ranges. Once the start date is set, hovering previews the days in between.
+A selected date range from 9 to 13 January
+Circles mark the start and end dates, with a continuous band connecting the days in between.
+Year selection with relative date shortcuts below the grid
+The calendar header opens the year selector. The date shortcuts stay below the grid.
+I added relative shortcuts for frequently used periods. For example, “This quarter” is calculated from the current date.
+Watch the original calendar
+Watch the revised calendar
+How the team used the system
+The designs originally lived in one Figma file. I split them by product module, with separate files for the web and tablet libraries. Each module also had a page for implementation reviews.
+Figma files for the web app, tablet app, component libraries and graphics
+Blue covers identify web modules and their library. Turquoise covers identify the tablet app and its library.
+Reviewing the implementation
+I added a pre-release design review stage in Jira. For each discrepancy, I recorded the priority, attached a screenshot and described the expected behaviour. In the users table, for example, the name column showed an active sort while the names were out of order. I asked the developer to make the indicator match the actual row order.
+Design review note about sorting, with a priority and a screenshot of the users table
+I marked the issue as medium priority and asked the developer to check the same sorting behaviour in the devices table.
 Next
 View all case studies
 Back to top ↑
