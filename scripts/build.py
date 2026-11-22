@@ -42,7 +42,7 @@ PAGES = [
     {
         "src": "gantt.html",
         "out": "gantt/index.html",
-        "title": "От ручного планирования к системе управления процессами",
+        "title": "Как планируют обходы оборудования в ServiceVizor",
         "root": "../",
         "home": "../index.html",
         "footer": True,

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>From manual scheduling to process management</title>
+  <title>Scheduling equipment inspections in ServiceVizor</title>
   <meta name="description" content="Product design portfolio by Diana Chikan" />
   <link rel="icon" href="../../assets/img/favicon.png" type="image/png" />
   <link rel="stylesheet" href="../../assets/css/style.css?v=13" />
@@ -26,147 +26,94 @@
 </header>
 
   <main>
-    <article class="case">
-      <header class="case-hero">
-        <div class="container case-hero__layout">
-          <div>
-            <ul class="pills case-hero__tags">
-              <li>B2B and B2E</li>
-              <li>Web</li>
-            </ul>
-            <h1 class="case-hero__title">From manual scheduling to process management</h1>
-            <p class="case-hero__lead">How Gantt charts and analytics reduced planning time and made work easier to track</p>
+    <article class="case case--servicevizor">
+      <header class="case-hero case-hero--editorial">
+        <div class="container">
+          <div class="case-hero__copy">
+            <h1 class="case-hero__title">Scheduling equipment inspections in ServiceVizor</h1>
+            <p class="case-hero__lead">Managers used to create each inspection task by hand and check dates in a list. I designed a Gantt chart and recurrence settings for the people scheduling maintenance work.</p>
           </div>
-          <img class="case-hero__media case-hero__media--gantt" src="../../assets/img/tild3539-386_Silver.png" alt="Laptop showing a Gantt chart" />
+          <div class="case-project-summary">
+            <p class="case-project-summary__label">About the project</p>
+            <dl class="case-project-meta" aria-label="Project details">
+              <div><dt>My role:</dt> <dd>Sole product designer. I studied how managers built their schedules and designed the workflows and interface.</dd></div>
+              <div><dt>Product:</dt> <dd>Managers schedule work in the web app. On the factory floor, operators open the task on a tablet and follow its instructions.</dd></div>
+            </dl>
+          </div>
+          <figure class="case-cover">
+  <img src="../../assets/img/card-gantt-browser.png" alt="Production tasks on the ServiceVizor timeline" width="3840" height="2130" fetchpriority="high" />
+</figure>
+
         </div>
       </header>
+      <div class="container case-story">
+        <section class="case-section case-section--split" aria-labelledby="planning">
+  <h2 id="planning">How managers built the schedule</h2>
+  <div class="case-section__content">
+<p>Maintenance teams handle both scheduled inspections and unexpected repairs. The ServiceVizor list showed dates for each task separately. Managers had to compare dates to see which jobs overlapped the following week. Teams kept schedules in Excel or drew them by hand.</p>
+          <p>I interviewed two inspection managers about their daily work. I also spoke with our own manager about his use of Gantt charts and compared scheduling in Jira, Weeek and Excel. We chose two priorities for the first release: setting up recurring rounds and adjusting dates with nearby jobs in view.</p>
+  </div>
+</section>
 
-      <div class="container case-body">
-                <div class="accordion">
-          <div class="accordion__item">
-            <button class="accordion__btn" type="button" aria-expanded="false" aria-controls="about-product">
-              <span>About the product</span>
-              <span class="accordion__icon" aria-hidden="true"></span>
-            </button>
-            <div class="accordion__panel" id="about-product" hidden>
-              <p>ServiceVizor is a digital assistant for manufacturing teams.</p>
-              <p>The product has two connected parts:</p>
-              <ol>
-                <li>A web service where technical specialists create work instructions, plan and assign tasks, and track progress;</li>
-                <li>A mobile app where shop-floor operators complete tasks, answer instruction check questions, and record issues as they work.</li>
-              </ol>
-              <p>This connects office planning with actual work on the shop floor. ServiceVizor aims to reduce errors and improve communication between office and production teams.</p>
-            </div>
-          </div>
-        </div>
+        <section class="case-section case-section--split" aria-labelledby="recurrence">
+  <h2 id="recurrence">Why we made recurring tasks a separate type</h2>
+  <div class="case-section__content">
+<p>Scheduled inspections follow a recurring pattern. A repair is scheduled when equipment breaks down. We gave each its own task type. A manager creates a one-off task for a repair. For inspections, they define a rule that generates a task for each round.</p>
+          <figure class="case-media">
+  <img src="../../assets/img/tild6430-336_Container.png" alt="Recurring task settings" width="2206" height="1236" loading="lazy" />
+  <figcaption>In this example, inspections are scheduled every Tuesday and Thursday. Each task is created one hour before the round with the status “Scheduled”.</figcaption>
+</figure>
+  </div>
+</section>
 
-        <h2>In brief</h2>
-        <p>We designed planning and analytics tools for a manufacturing service: a Gantt view of tasks, recurring work, and customizable dashboards. Managers could plan inspections faster, track team capacity, and analyze how work was completed.</p>
+        <section class="case-section case-section--split" aria-labelledby="reschedule">
+  <h2 id="reschedule">Moving work on the timeline</h2>
+  <div class="case-section__content">
+<p>The timeline shows which jobs overlap and how long each lasts. Managers can switch between week and month views. Colour shows status, while a red outline and an exclamation mark flag overdue work.</p>
+          <p>I separated viewing from editing. Hovering reveals details and clicking opens the task. Managers drag the bar to reschedule work or its edge to change the duration, keeping adjacent jobs in view.</p>
+          <figure class="case-media">
+  <div class="case-video">
+    <video controls playsinline preload="none" poster="../../assets/img/gantt-reschedule-poster.png" width="1052" height="502" aria-label="Rescheduling a task by dragging it">
+      <source src="../../assets/video/gantt-reschedule.mp4" type="video/mp4" />
+      <a href="../../assets/video/gantt-reschedule.mp4">Open video</a>
+    </video>
+    <button class="case-video__play" type="button" hidden aria-label="Play video: rescheduling a task by dragging it">
+      <span class="case-video__circle" aria-hidden="true"></span>
+      <span class="case-video__label">Play video</span>
+    </button>
+  </div>
+  <figcaption>First, the manager drags the right edge to shorten the repair. Then they move the whole bar to schedule it for later dates.</figcaption>
+</figure>
+  </div>
+</section>
 
-        <h2>Context and problem</h2>
-        <p>Our customers were maintenance and repair departments at factories. They conduct scheduled rounds: regular inspections, checks, and repairs.</p>
-        <p>Previously, managers only saw tasks in a list. They could not assess workload over time or spot scheduling conflicts. The system also lacked recurring tasks, so they had to create each repeat inspection manually.</p>
+        <section class="case-section case-section--split" aria-labelledby="scope">
+  <h2 id="scope">What we deferred</h2>
+  <div class="case-section__content">
+<p>We considered a total duration for each production area so managers could estimate the work without expanding the task list. Calculating the total across every nested level would add processing overhead. With the benefit still untested, we left it out of the first release.</p>
+  </div>
+</section>
 
-        <h2>Research</h2>
-        <p>— Reviewed Jira, Weeek, and Excel to understand established chart interaction patterns.<br />— Interviewed two inspection managers about their day-to-day work.<br />— Interviewed a manager on our team who regularly used Gantt charts to learn which functions mattered most.</p>
+        <section class="case-section case-section--split" aria-labelledby="followup">
+  <h2 id="followup">Comparing actual and planned work</h2>
+  <div class="case-section__content">
+<p>After designing the schedule, I looked at completed work. The Gantt chart shows when an individual job is scheduled. The widgets help managers see whether the team finishes on time and which steps take longer than planned.</p>
+  </div>
+</section>
 
-        <div class="split">
-          <h3 class="split__title">Findings from interviews and chart analysis</h3>
-          <div class="split__text">— Users need to <mark class="mark mark--mint">change task dates and durations quickly and visually</mark> — this is the central chart interaction.<br />— Seeing workload over coming weeks and months helps managers allocate resources early and avoid schedule conflicts.<br />— <mark class="mark mark--mint">Recurring tasks are the main type of work</mark>, far more common than one-off tasks. Flexible recurrence settings are therefore essential.<br />— Production teams currently use Excel and hand-drawn charts, which take time and invite errors.<br />— Creating tasks or changing dates by clicking a timeline is risky in large enterprises, where deliberate actions and avoiding accidental clicks matter.<br />— Seeing due dates alone is not enough. Managers also need to understand where delays occur, how work is distributed, and how actual progress compares with the plan.</div>
-        </div>
-        <div class="split">
-          <h3 class="split__title">MVP features</h3>
-          <div class="split__text">
-            <ol>
-              <li>Visual task planning with a Gantt chart to spot workload and overlaps quickly.</li>
-              <li>Recurring tasks for scheduled inspection rounds.</li>
-              <li>Easy date adjustments through drag&amp;drop without extra steps.</li>
-            </ol>
-          </div>
-        </div>
-        <div class="split">
-          <h3 class="split__title">Post-MVP features</h3>
-          <div class="split__text">The Gantt chart addressed planning and schedule tracking. The next step was to analyze execution and find opportunities to improve.</div>
-        </div>
+        <figure class="case-media">
+  <img src="../../assets/img/tild6637-316_plan_20.png" alt="ServiceVizor analytics dashboard" width="2880" height="1620" loading="lazy" />
+  <figcaption>The top row shows the share of tasks completed early, on time or late for the week, month and quarter. The chart below compares planned and average actual time for each instruction step.</figcaption>
+</figure>
 
-        <h2>Designing the features</h2>
-        <div class="feature-row">
-          <div>
-            <h3 class="feature-row__title">Recurring tasks</h3>
-            <p class="feature-row__text">Should recurring tasks be convertible to one-off tasks and vice versa? In manufacturing, regular inspection rounds and repairs triggered by faults are distinct types of work. We kept them separate, which sped up development and made the interface clearer.</p>
-          </div>
-          <div class="feature-row__media">
-            <img src="../../assets/img/tild6430-336_Container.png" alt="Recurring tasks" />
-          </div>
-        </div>
-        <div class="feature-row feature-row--reverse">
-          <div>
-            <h3 class="feature-row__title">Navigation and scale</h3>
-            <div class="feature-row__text">We added several ways to navigate the chart:
-              <ul>
-                <li>switching between week and month views</li>
-                <li>jumping to today</li>
-                <li>horizontal scrolling</li>
-              </ul>
-              These controls make large numbers of tasks easier to manage.
-            </div>
-          </div>
-          <div class="feature-row__media">
-            <img src="../../assets/img/tild6166-366_512p-25fps.gif" alt="Gantt chart navigation" />
-          </div>
-        </div>
-        <div class="feature-row">
-          <div>
-            <h3 class="feature-row__title">Drag&amp;Drop as a core interaction</h3>
-            <p class="feature-row__text">Editing dates directly on the chart through drag&amp;drop is the fastest way to adjust task durations and move tasks.</p>
-          </div>
-          <div class="feature-row__media">
-            <img src="../../assets/img/tild3034-366_1x-25fps.gif" alt="Dragging tasks on the Gantt chart" />
-          </div>
-        </div>
-        <div class="feature-row feature-row--reverse">
-          <div>
-            <h3 class="feature-row__title">Design system</h3>
-            <p class="feature-row__text">Typography, colors, buttons, and other basic elements came from the existing design system. We built task bars, tooltips, recurrence markers, and other components from those foundations to keep the interface consistent and easier to maintain.</p>
-          </div>
-          <div class="feature-row__media">
-            <img src="../../assets/img/tild3739-396___512p-25fps.gif" alt="Gantt chart components" />
-          </div>
-        </div>
-        <div class="feature-row">
-          <div>
-            <h3 class="feature-row__title">Ideas we set aside</h3>
-            <p class="feature-row__text">We considered a summary badge on each area row showing the total duration of nested tasks. It might have helped managers gauge workload without expanding the row, but deep nesting would put a heavy load on the system and the value was still hypothetical. We left it for later.</p>
-          </div>
-          <div class="feature-row__media">
-            <img src="../../assets/img/tild3266-343__1.png" alt="Discarded idea for an area-row summary badge" />
-          </div>
-        </div>
+        <aside class="case-highlight case-highlight--closing" aria-label="Outcome">
+  <span class="case-highlight__label">Outcome</span>
+  <div class="case-highlight__content">
+    <p class="case-highlight__statement">Managers set the inspection schedule once.</p>
+    <p class="case-highlight__description">One-off repairs and scheduled inspections share a timeline. When plans change, managers can adjust dates while keeping nearby jobs in view.</p>
+  </div>
+</aside>
 
-        <h2>MVP solutions</h2>
-        <div class="split">
-          <h3 class="split__title">Gantt chart for visual planning</h3>
-          <div class="split__text">— Tasks appear as bars reflecting their duration.<br />— Color shows status: planned, active, in progress, complete, or interrupted. Overdue tasks also get an exclamation mark and red outline.<br />— Hovering reveals details in a tooltip; clicking opens the task card.<br />— Dates can be changed directly on the chart.</div>
-        </div>
-        <figure>
-          <img src="../../assets/img/tild6237-633_gant.png" alt="Gantt chart" />
-        </figure>
-        <figure>
-          <img src="../../assets/img/tild6133-633_create-14.png" alt="Creating a task on the chart" />
-        </figure>
-
-        <h2>Post-MVP solutions</h2>
-        <p>Widgets:<br />— Statistics on task start and completion dates<br />— Average step duration and variance from planned time<br />— Trends in a tracked metric<br />— Number of times each operator moved tasks into a selected status</p>
-        <figure>
-          <img src="../../assets/img/tild6637-316_plan_20.png" alt="Analytics widgets" />
-        </figure>
-        <div class="covers">
-          <img src="../../assets/img/tild3764-306_Frame_13521.png" alt="Statistics widget" />
-          <img src="../../assets/img/tild6638-396___.png" alt="Duration widget" />
-        </div>
-
-        <h2>Outcome</h2>
-        <p class="case-body__last">The project made schedules easier to understand, helped managers plan inspection rounds faster, and removed the routine of creating repeat tasks. It moved the product toward scalable planning and closer to new contracts.</p>
       </div>
     </article>
 

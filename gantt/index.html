@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>От&nbsp;ручного планирования к&nbsp;системе управления процессами</title>
+  <title>Как планируют обходы оборудования в&nbsp;ServiceVizor</title>
   <meta name="description" content="Портфолио продуктового дизайнера" />
   <link rel="icon" href="../assets/img/favicon.png" type="image/png" />
   <link rel="stylesheet" href="../assets/css/style.css?v=13" />
@@ -26,147 +26,94 @@
 </header>
 
   <main>
-    <article class="case">
-      <header class="case-hero">
-        <div class="container case-hero__layout">
-          <div>
-            <ul class="pills case-hero__tags">
-              <li>B2B и&nbsp;B2E</li>
-              <li>Web</li>
-            </ul>
-            <h1 class="case-hero__title">От&nbsp;ручного планирования к&nbsp;системе управления процессами</h1>
-            <p class="case-hero__lead">Как внедрение диаграммы Ганта и&nbsp;аналитики сократило время планирования и&nbsp;повысило прозрачность работ</p>
+    <article class="case case--servicevizor">
+      <header class="case-hero case-hero--editorial">
+        <div class="container">
+          <div class="case-hero__copy">
+            <h1 class="case-hero__title">Как планируют обходы оборудования в&nbsp;ServiceVizor</h1>
+            <p class="case-hero__lead">Раньше менеджер создавал задание на&nbsp;каждый обход вручную и&nbsp;сверял даты по&nbsp;списку. Я спроектировала диаграмму Ганта и&nbsp;настройку повторов для&nbsp;тех, кто составляет график работ на&nbsp;производстве.</p>
           </div>
-          <img class="case-hero__media case-hero__media--gantt" src="../assets/img/tild3539-386_Silver.png" alt="Ноутбук с диаграммой Ганта" />
+          <div class="case-project-summary">
+            <p class="case-project-summary__label">О&nbsp;проекте</p>
+            <dl class="case-project-meta" aria-label="Коротко о проекте">
+              <div><dt>Моя роль:</dt> <dd>Единственный продуктовый дизайнер. Изучала, как менеджеры составляют график, проектировала сценарии и&nbsp;интерфейс.</dd></div>
+              <div><dt>Продукт:</dt> <dd>Менеджеры планируют работы в&nbsp;веб-сервисе. На&nbsp;производстве исполнители открывают задание на&nbsp;планшете и&nbsp;следуют инструкции.</dd></div>
+            </dl>
+          </div>
+          <figure class="case-cover">
+  <img src="../assets/img/card-gantt-browser.png" alt="График производственных заданий в ServiceVizor" width="3840" height="2130" fetchpriority="high" />
+</figure>
+
         </div>
       </header>
+      <div class="container case-story">
+        <section class="case-section case-section--split" aria-labelledby="planning">
+  <h2 id="planning">Как собирали график</h2>
+  <div class="case-section__content">
+<p>В&nbsp;отделах технического обслуживания плановые осмотры чередуются с&nbsp;внеплановым ремонтом. В&nbsp;списке ServiceVizor менеджер видел сроки каждого задания по&nbsp;отдельности. Чтобы понять, какие работы накладываются друг на&nbsp;друга на&nbsp;следующей неделе, приходилось сопоставлять даты. Производственные команды вели графики в&nbsp;Excel или&nbsp;рисовали их вручную.</p>
+          <p>Я поговорила с&nbsp;двумя менеджерами обходов об&nbsp;их повседневной работе. Отдельно разобрала с&nbsp;менеджером нашей команды, как он пользуется диаграммой Ганта, и&nbsp;сравнила работу со&nbsp;сроками в&nbsp;Jira, Weeek и&nbsp;Excel. Для&nbsp;первой версии мы выделили две задачи: задавать повторяющиеся обходы и&nbsp;менять график, видя соседние работы.</p>
+  </div>
+</section>
 
-      <div class="container case-body">
-                <div class="accordion">
-          <div class="accordion__item">
-            <button class="accordion__btn" type="button" aria-expanded="false" aria-controls="about-product">
-              <span>о&nbsp;продукте</span>
-              <span class="accordion__icon" aria-hidden="true"></span>
-            </button>
-            <div class="accordion__panel" id="about-product" hidden>
-              <p>ServiceVizor — цифровой помощник на&nbsp;производстве.</p>
-              <p>Продукт состоит из&nbsp;двух взаимосвязанных частей:</p>
-              <ol>
-                <li>Веб-сервиса для&nbsp;технических специалистов, где создаются рабочие инструкции, планируются и&nbsp;назначаются задания, контролируется ход работ;</li>
-                <li>Мобильного приложения для&nbsp;операторов на&nbsp;производстве, в&nbsp;котором сотрудники выполняют задания, отвечают на&nbsp;контрольные вопросы по&nbsp;инструкциям и&nbsp;фиксируют замечания прямо в&nbsp;процессе работы.</li>
-              </ol>
-              <p>Такой подход позволяет связать офисное планирование и&nbsp;реальное выполнение задач на&nbsp;производстве в&nbsp;единую систему. ServiceVizor должен снижать количество ошибок и&nbsp;упрощать коммуникацию между офисом и&nbsp;цехом.</p>
-            </div>
-          </div>
-        </div>
+        <section class="case-section case-section--split" aria-labelledby="recurrence">
+  <h2 id="recurrence">Зачем разделили разовые и&nbsp;регулярные задания</h2>
+  <div class="case-section__content">
+<p>У&nbsp;планового осмотра есть расписание. Внеплановый ремонт назначают, когда оборудование выходит из&nbsp;строя. Мы разделили эти работы при&nbsp;создании задания. Для&nbsp;разового ремонта достаточно назначить одно задание. Для&nbsp;обхода менеджер задаёт правило, по&nbsp;которому система будет создавать задания к&nbsp;каждому осмотру.</p>
+          <figure class="case-media">
+  <img src="../assets/img/tild6430-336_Container.png" alt="Настройки регулярного задания" width="2206" height="1236" loading="lazy" />
+  <figcaption>В&nbsp;примере обход назначен на&nbsp;вторник и&nbsp;четверг каждую неделю. Задание появится в&nbsp;статусе «Запланировано» за&nbsp;час до&nbsp;начала обхода.</figcaption>
+</figure>
+  </div>
+</section>
 
-        <h2>коротко</h2>
-        <p>Разработали систему планирования и&nbsp;аналитики для&nbsp;производственного сервиса: Gantt-представление задач, регулярные сценарии и&nbsp;пользовательские дашборды. Это позволило менеджерам быстрее планировать обходы, контролировать загрузку команд и&nbsp;анализировать эффективность выполнения работ.</p>
+        <section class="case-section case-section--split" aria-labelledby="reschedule">
+  <h2 id="reschedule">Как сдвинуть работу в&nbsp;графике</h2>
+  <div class="case-section__content">
+<p>На&nbsp;шкале видно, какие работы идут одновременно и&nbsp;сколько длится каждая. Менеджер может переключиться между неделей и&nbsp;месяцем. Цвет полосы показывает статус, а&nbsp;у&nbsp;просроченного задания появляются красная обводка и&nbsp;восклицательный знак.</p>
+          <p>Я разделила просмотр и&nbsp;редактирование. Наведение показывает детали, клик открывает карточку задания. Чтобы сдвинуть сроки или&nbsp;изменить длительность, менеджер перетаскивает полосу или&nbsp;её край и&nbsp;видит новое положение рядом с&nbsp;другими работами.</p>
+          <figure class="case-media">
+  <div class="case-video">
+    <video controls playsinline preload="none" poster="../assets/img/gantt-reschedule-poster.png" width="1052" height="502" aria-label="Изменение сроков задания перетаскиванием">
+      <source src="../assets/video/gantt-reschedule.mp4" type="video/mp4" />
+      <a href="../assets/video/gantt-reschedule.mp4">Открыть видеозапись</a>
+    </video>
+    <button class="case-video__play" type="button" hidden aria-label="Воспроизвести видео: Изменение сроков задания перетаскиванием">
+      <span class="case-video__circle" aria-hidden="true"></span>
+      <span class="case-video__label">Смотреть видео</span>
+    </button>
+  </div>
+  <figcaption>Сначала менеджер тянет правый край полосы и&nbsp;сокращает длительность ремонта. Затем передвигает всю полосу на&nbsp;более поздние даты.</figcaption>
+</figure>
+  </div>
+</section>
 
-        <h2>контекст и&nbsp;проблематика</h2>
-        <p>Заказчики — отделы, которые занимаются техническим обслуживанием и&nbsp;ремонтом оборудования на&nbsp;заводах и&nbsp;предприятиях. У&nbsp;них есть плановые обходы: регулярные осмотры, проверки, ремонтные работы.</p>
-        <p>До&nbsp;проекта менеджеры видели задания только списком — это не&nbsp;позволяло оценивать загруженность по&nbsp;времени и&nbsp;вызывало пересечения по&nbsp;задачам. Кроме того, в&nbsp;системе не&nbsp;было функции регулярных заданий — повторяющиеся обходы приходилось создавать вручную.</p>
+        <section class="case-section case-section--split" aria-labelledby="scope">
+  <h2 id="scope">Что отложили</h2>
+  <div class="case-section__content">
+<p>Мы рассматривали счётчик общей длительности работ по&nbsp;участку. Он показал&nbsp;бы объём работ даже при&nbsp;свёрнутом списке заданий. Суммировать длительность пришлось&nbsp;бы по&nbsp;всем уровням вложенности. Команда ожидала дополнительную нагрузку на&nbsp;систему, а&nbsp;пользу счётчика ещё предстояло проверить. В&nbsp;первую версию он не&nbsp;вошёл.</p>
+  </div>
+</section>
 
-        <h2>исследования</h2>
-        <p>— Анализ решения в&nbsp;Jira, Weeek, Excel — какие UX-паттерны применяются для&nbsp;диаграмм.<br />— Интервью с&nbsp;двумя менеджерами обходов, чтобы понять как сейчас они решают свои рутинные задачи.<br />— Интервью с&nbsp;менеджером нашей команды, который регулярно пользуется Gantt-диаграмой, чтобы узнать, что для&nbsp;него самое важное.</p>
+        <section class="case-section case-section--split" aria-labelledby="followup">
+  <h2 id="followup">Как сравнить план с&nbsp;фактом</h2>
+  <div class="case-section__content">
+<p>После проектирования графика я перешла к&nbsp;вопросу о&nbsp;выполненных работах. По&nbsp;диаграмме видно, когда назначена отдельная работа. Виджеты нужны менеджеру, чтобы разобраться, укладывается&nbsp;ли команда в&nbsp;сроки и&nbsp;на&nbsp;каких шагах инструкции возникают отклонения.</p>
+  </div>
+</section>
 
-        <div class="split">
-          <h3 class="split__title">Инсайты из&nbsp;интервью и&nbsp;анализа других диаграмм</h3>
-          <div class="split__text">— Пользователям важно <mark class="mark mark--mint">быстро и&nbsp;наглядно изменять сроки и&nbsp;длительность задач</mark> — это ключевой сценарий работы с&nbsp;диаграммой.<br />— Просмотр загруженности будущих недель и&nbsp;месяцев помогает менеджерам заранее распределять ресурсы и&nbsp;избегать пересечений в&nbsp;графике.<br />— <mark class="mark mark--mint">Регулярные задания — основной тип работ</mark>, их значительно больше, чем разовых. Поэтому гибкая настройка повторений особенно критична.<br />— Сейчас производственные команды закрывают эту потребность с&nbsp;помощью Excel и&nbsp;вручную нарисованных диаграмм, что занимает много времени и&nbsp;приводит к&nbsp;ошибкам.<br />— Создавать новое задание или&nbsp;менять сроки через&nbsp;клик по&nbsp;таймлайну — не&nbsp;лучшая практика для&nbsp;крупных предприятий, где важна осознанность действий и&nbsp;минимизация мискликов.<br />— Пользователю недостаточно просто видеть сроки выполнения задач. Возникает потребность понять, как на&nbsp;самом деле работает процесс: где возникают задержки, как распределяется нагрузка и&nbsp;насколько план соответствует факту.</div>
-        </div>
-        <div class="split">
-          <h3 class="split__title">Функции в&nbsp;MVP</h3>
-          <div class="split__text">
-            <ol>
-              <li>Визуальное планирование задач через&nbsp;диаграмму Ганта, чтобы быстро видеть загрузку и&nbsp;пересечения.</li>
-              <li>Поддержка регулярных заданий, как основного формата плановых обходов.</li>
-              <li>Удобная корректировка сроков через&nbsp;drag&amp;drop без&nbsp;лишних действий.</li>
-            </ol>
-          </div>
-        </div>
-        <div class="split">
-          <h3 class="split__title">Функции в&nbsp;пост-MVP</h3>
-          <div class="split__text">Поскольку диаграмма Ганта закрывает задачу планирования и&nbsp;контроля сроков, то следующий шаг — анализ выполнения и&nbsp;поиск точек роста.</div>
-        </div>
+        <figure class="case-media">
+  <img src="../assets/img/tild6637-316_plan_20.png" alt="Дашборд с виджетами аналитики ServiceVizor" width="2880" height="1620" loading="lazy" />
+  <figcaption>Сверху — доли заданий, завершённых раньше срока, вовремя и&nbsp;с&nbsp;опозданием, за&nbsp;неделю, месяц и&nbsp;квартал. Ниже — плановое и&nbsp;среднее фактическое время каждого шага инструкции.</figcaption>
+</figure>
 
-        <h2>проработка фичей</h2>
-        <div class="feature-row">
-          <div>
-            <h3 class="feature-row__title">Регулярные задания</h3>
-            <p class="feature-row__text">Могут&nbsp;ли регулярные задания становиться обычными и&nbsp;наоборот? В&nbsp;производственной практике это два разных класса работ регулярные обходы и&nbsp;ситуативные ремонты из-за&nbsp;неисправностей. Поэтому мы решили сделать их двумя отдельными типами. Это ускорило разработку и&nbsp;сделало интерфейс более прозрачным.</p>
-          </div>
-          <div class="feature-row__media">
-            <img src="../assets/img/tild6430-336_Container.png" alt="Регулярные задания" />
-          </div>
-        </div>
-        <div class="feature-row feature-row--reverse">
-          <div>
-            <h3 class="feature-row__title">Навигация и&nbsp;управление масштабом</h3>
-            <div class="feature-row__text">Для&nbsp;удобства работы с&nbsp;диаграммой добавили набор навигационных инструментов:
-              <ul>
-                <li>изменение масштаба (неделя/месяц)</li>
-                <li>быстрый переход к&nbsp;сегодняшнему дню</li>
-                <li>горизонтальный скролл</li>
-              </ul>
-              Эти элементы делают работу с&nbsp;большим числом задач значительно проще.
-            </div>
-          </div>
-          <div class="feature-row__media">
-            <img src="../assets/img/tild6166-366_512p-25fps.gif" alt="Навигация по диаграмме Ганта" />
-          </div>
-        </div>
-        <div class="feature-row">
-          <div>
-            <h3 class="feature-row__title">Drag&amp;Drop как ключевой сценарий</h3>
-            <p class="feature-row__text">Одним из&nbsp;центральных UX-паттернов стало редактирование сроков прямо на&nbsp;диаграмме с&nbsp;помощью drag&amp;drop — это самый быстрый способ корректировать длительность и&nbsp;смещения задач.</p>
-          </div>
-          <div class="feature-row__media">
-            <img src="../assets/img/tild3034-366_1x-25fps.gif" alt="Перетаскивание задач на диаграмме Ганта" />
-          </div>
-        </div>
-        <div class="feature-row feature-row--reverse">
-          <div>
-            <h3 class="feature-row__title">Дизайн-система</h3>
-            <p class="feature-row__text">Вся типографика, цвета, кнопки и&nbsp;другие атомарные элементы были взяты из&nbsp;существующей дизайн-системы. Плашки задач, тултипы, маркеры повторов и&nbsp;другие «молекулы» мы собирали из&nbsp;атомов, чтобы сохранить единый визуальный язык и&nbsp;упростить поддержку.</p>
-          </div>
-          <div class="feature-row__media">
-            <img src="../assets/img/tild3739-396___512p-25fps.gif" alt="Компоненты диаграммы Ганта" />
-          </div>
-        </div>
-        <div class="feature-row">
-          <div>
-            <h3 class="feature-row__title">Идеи, от&nbsp;которых отказались</h3>
-            <p class="feature-row__text">Мы рассматривали идею показывать на&nbsp;строках участков плашку-счётчик, отражающую суммарную длительность всех вложенных задач. Она могла&nbsp;бы помочь оценивать объём работ без&nbsp;раскрытия строки, но&nbsp;при&nbsp;большой вложенности такая логика сильно нагружала&nbsp;бы систему и&nbsp;ценность остаётся гипотезой. Поэтому оставили эту идею «на&nbsp;потом».</p>
-          </div>
-          <div class="feature-row__media">
-            <img src="../assets/img/tild3266-343__1.png" alt="Отклонённая идея счётчика на строках" />
-          </div>
-        </div>
+        <aside class="case-highlight case-highlight--closing" aria-label="Итог">
+  <span class="case-highlight__label">Итог</span>
+  <div class="case-highlight__content">
+    <p class="case-highlight__statement">Менеджер задаёт расписание обхода один раз.</p>
+    <p class="case-highlight__description">Разовые ремонты и&nbsp;плановые обходы видны на&nbsp;общей шкале. Когда график меняется, менеджер видит соседние работы и&nbsp;может сразу скорректировать сроки.</p>
+  </div>
+</aside>
 
-        <h2>решения в&nbsp;MVP</h2>
-        <div class="split">
-          <h3 class="split__title">Диаграма Ганта — визуализация планирования</h3>
-          <div class="split__text">— Задачи отображаются полосками по&nbsp;длительности.<br />— Цвет — статус (запланировано, активно, в&nbsp;работе, завершено, прервано). Если задание просрочено, то у&nbsp;него появляется восклицательный знак и&nbsp;красная обводка.<br />— При&nbsp;наведении открывается тултип с&nbsp;деталями, по&nbsp;клику открывается карточка задания.<br />— Можно изменять даты задач прямо на&nbsp;диаграмме.</div>
-        </div>
-        <figure>
-          <img src="../assets/img/tild6237-633_gant.png" alt="Диаграмма Ганта" />
-        </figure>
-        <figure>
-          <img src="../assets/img/tild6133-633_create-14.png" alt="Создание задания на диаграмме" />
-        </figure>
-
-        <h2>решения в&nbsp;пост-MVP</h2>
-        <p>Виджеты:<br />— Статистика по&nbsp;срокам начала и&nbsp;завершения заданий<br />— Средняя длительность шагов и&nbsp;отклонения от&nbsp;планового времени<br />— Динамика контрольного параметра<br />— Количество переводов заданий в&nbsp;выбранный статус по&nbsp;исполнителям</p>
-        <figure>
-          <img src="../assets/img/tild6637-316_plan_20.png" alt="Виджеты аналитики" />
-        </figure>
-        <div class="covers">
-          <img src="../assets/img/tild3764-306_Frame_13521.png" alt="Виджет статистики" />
-          <img src="../assets/img/tild6638-396___.png" alt="Виджет длительности" />
-        </div>
-
-        <h2>результаты</h2>
-        <p class="case-body__last">Проект улучшил восприятие задач во&nbsp;времени, позволил менеджерам планировать обходы быстрее и&nbsp;избавил от&nbsp;рутины с&nbsp;повторными заданиями. Для&nbsp;продукта это стало шагом к&nbsp;масштабируемой системе планирования и&nbsp;приблизило к&nbsp;подписанию новых контрактов.</p>
       </div>
     </article>
 
