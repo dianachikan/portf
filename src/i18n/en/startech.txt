@@ -1,4 +1,4 @@
-A startup profile as a tool for external communication
+A startup profile to share with investors
 Home
 Contacts
 chat
@@ -6,50 +6,32 @@ CV
 email
 Telegram channel
 channel
-A startup profile as a tool for external communication
-How we turned a startup profile into a way to share project information
-View website
-Startech.Base illustration
-About the product
-Startech.Base is a B2C platform connecting startups, investors, and corporations. It is a database of technology companies and startups where founders can publish structured information about their products: the team, technology, business model, stage of development, case studies, and other details relevant to potential investors and partners.
-Registration and publishing a profile are free for startups.
-Investors and corporations use the platform to find investment opportunities or technology solutions for business needs. Access ranges from basic database search to advanced plans with dedicated support and more detailed project information, including tailored scouting.
-In brief
-We designed a system for sharing project profiles, turning an internal startup questionnaire into a tool for communicating with investors, partners, and accelerators.
-My role and contribution
-I was the sole designer at the post-MVP stage, responsible for product design across the platform's key areas.
-For this project, I:
-— defined the project profile concept and its use cases
-— designed the experience for generating and managing links
-— designed the public project page
-— restructured the startup questionnaire for read-only viewing
-— designed the link management module in the startup dashboard
-— helped define access rules, privacy, and limits
-Context and problem
-Originally, the startup questionnaire was only used inside the platform as a profile for finding investment and technology solutions. The platform already held a substantial amount of well-structured project data that was updated regularly.
-Outside the platform, however, startups still had to:
-— create separate presentations
-— update pitch decks manually
-— duplicate information in different formats
-— send outdated materials to investors and partners
-Demand for tools to share project information also grew after some international services left the market. We saw an opportunity to build a new use case on the platform's existing structure.
-Solution and concept
-Instead of creating a separate presentation builder, we reused the structure of the startup questionnaire. We designed a public project profile that anyone could open through a link without registering. It gave startups another way to present their profile outside the platform.
-Public Startech.Base project profile
-Startup dashboard
-I designed a dedicated module in the startup dashboard for managing project profiles.
-It includes a list of active links, access controls, and view statistics.
-Users can:
-— generate a unique project link
-— control access to the profile
-— set a link expiration date
-— limit the number of views
-— export a PDF version of the project
-— track page views
-A project could also remain unpublished in the public database to preserve privacy.
-Link management module in the startup dashboard
+A startup profile to share with investors
+Founders on Startech.Base filled out a profile to find investors. To introduce their startup outside the platform, they had to repack the same information into a pitch deck. We gave them a way to send an investor a link to their project.
+Visit Startech.Base
+About the project
+Project details
+My role:
+Sole product designer after the MVP launched. I designed the investor-facing profile and the founder’s link management tools. The team and I defined how access would work.
+Platform:
+Investors use Startech.Base to find startups. Companies use it to find technology that addresses their business needs.
+FashionView’s profile with a product description, contact details and the date of the last update
+One profile, two uses
+The profile already covered the product, team, business model and stage. A founder could update the platform while an investor still had an outdated deck in their inbox.
+We considered building a presentation editor. For an initial introduction, though, founders had already supplied the information an investor needed. I reorganised the profile for reading and designed a page that recipients could open without an account.
+How founders share a profile
+Publishing a startup in the directory made it searchable. Founders also needed a way to introduce a project to a particular investor. We separated those actions so founders could keep a project out of the directory and still share a link.
+I brought each project’s links together in the founder dashboard. A founder can create a link, set an expiry date or a view limit, and send it to a recipient. They can return to the same page to check the link’s status and usage.
+Shared links with expiry dates, statuses, opens and visitor counts
+In the mockup, the active link has been opened 340 times out of a possible 500. Two other links have expired. Opens and visitors appear in separate columns.
+What an investor sees
+I put the product description and contact details at the top of the profile, with the last update date next to the PDF download. Further down, investors can review the team, financial performance and funding terms.
+Funding request showing the round, amount sought and equity offered
+In this example, FashionView is seeking ₽7 million for a 2% stake. Investors can read the terms directly in the profile.
 Outcome
-We turned an internal startup questionnaire into a tool for external communication. It expanded the platform beyond investment search and gave Startech.Base users another practical benefit.
+Outcome
+Founders can introduce a project outside the directory.
+For an initial introduction, founders can share the profile they have already filled out. Investors get the product description, funding terms and contacts, while founders manage access from their dashboard.
 Next
 View all case studies
 Back to top ↑

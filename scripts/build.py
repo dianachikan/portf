@@ -50,7 +50,7 @@ PAGES = [
     {
         "src": "startech.html",
         "out": "startech/index.html",
-        "title": "Анкета стартапа как инструмент внешней коммуникации",
+        "title": "Визитка стартапа для инвестора",
         "root": "../",
         "home": "../index.html",
         "footer": True,
