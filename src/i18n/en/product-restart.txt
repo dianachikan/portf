@@ -34,7 +34,6 @@ Previous ServiceVizor web interface
 Compare the previous and new web interfaces
 Web interface before and after the redesign. Move the slider to compare.
 Diagram of problems with the first product version
-Why creating 3D models held back the product.
 Research and new focus
 Before redesigning, we needed to understand what customers wanted to accomplish, what they would pay for, and what prevented adoption.
 Research approach
@@ -43,7 +42,6 @@ Managers approve purchases, while operators use the system daily. We gained acce
 Audience
 Factories differed in process maturity and use of digital tools. Companies that had already begun digitizing their operations were the most ready to adopt the product.
 Three factory segments by process maturity and digitization
-Audience segments by readiness to adopt.
 Key findings
 Managers need planning and oversight; operators need speed and simplicity. Entering instructions manually from scratch is burdensome. Experienced shop-floor workers do not need detailed 3D models for recurring operations, and producing those models cannot scale to hundreds of processes.
 The new version needed a reusable structure, fast deployment, and a predictable interface.
@@ -56,13 +54,10 @@ Two modules connect the knowledge base with actual shop-floor work.
 Work instructions
 We built a tool that uses AI to convert existing instructions and speed up deployment. Users can edit the result, change text, and add photos, documents, and videos.
 ServiceVizor work instructions module
-Work instruction library.
 ServiceVizor work instruction editor
-Instruction editor.
 Task management
 Supervisors assign tasks based on prepared instructions. The main screen shows key task details and a completion report tailored to its status.
 ServiceVizor task manager
-Assigning and tracking tasks.
 Operator tablet
 We redesigned the main screen for completing a work instruction step on a tablet.
 Tablet screens before and after redesign

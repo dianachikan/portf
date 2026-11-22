@@ -23,11 +23,9 @@ How founders share a profile
 Publishing a startup in the directory made it searchable. Founders also needed a way to introduce a project to a particular investor. We separated those actions so founders could keep a project out of the directory and still share a link.
 I brought each project’s links together in the founder dashboard. A founder can create a link, set an expiry date or a view limit, and send it to a recipient. They can return to the same page to check the link’s status and usage.
 Shared links with expiry dates, statuses, opens and visitor counts
-In the mockup, the active link has been opened 340 times out of a possible 500. Two other links have expired. Opens and visitors appear in separate columns.
 What an investor sees
 I put the product description and contact details at the top of the profile, with the last update date next to the PDF download. Further down, investors can review the team, financial performance and funding terms.
 Funding request showing the round, amount sought and equity offered
-In this example, FashionView is seeking ₽7 million for a 2% stake. Investors can read the terms directly in the profile.
 Outcome
 Outcome
 Founders can introduce a project outside the directory.

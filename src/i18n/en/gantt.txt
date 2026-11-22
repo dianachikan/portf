@@ -29,7 +29,6 @@ Rescheduling a task by dragging it
 Open video
 Play video: rescheduling a task by dragging it
 Play video
-First, the manager drags the right edge to shorten the repair. Then they move the whole bar to schedule it for later dates.
 What we deferred
 We considered a total duration for each production area so managers could estimate the work without expanding the task list. Calculating the total across every nested level would add processing overhead. With the benefit still untested, we left it out of the first release.
 Comparing actual and planned work
