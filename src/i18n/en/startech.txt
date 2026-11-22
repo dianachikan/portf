@@ -22,10 +22,16 @@ We considered building a presentation editor. For an initial introduction, thoug
 How founders share a profile
 Publishing a startup in the directory made it searchable. Founders also needed a way to introduce a project to a particular investor. We separated those actions so founders could keep a project out of the directory and still share a link.
 I brought each project’s links together in the founder dashboard. A founder can create a link, set an expiry date or a view limit, and send it to a recipient. They can return to the same page to check the link’s status and usage.
-Shared links with expiry dates, statuses, opens and visitor counts
+Founder dashboard with project settings, shared links and access to statistics
 What an investor sees
-I put the product description and contact details at the top of the profile, with the last update date next to the PDF download. Further down, investors can review the team, financial performance and funding terms.
-Funding request showing the round, amount sought and equity offered
+I put the product description and contact details at the top of the profile, with the last update date next to the PDF download.
+Guest view of FashionView with its product description, contact person, last update and PDF download
+Further down the page, investors can review the team, financial figures and funding request.
+View the complete profile
+The dashboard and profile on mobile
+On mobile, each dashboard link shows its expiry date and two actions: copy and disable. In the investor view, the project card and contact details appear first, followed by the product description.
+Mobile dashboard with actions for each shared link
+Mobile profile with PDF download, contact details and the start of the description
 Outcome
 Outcome
 Founders can introduce a project outside the directory.
