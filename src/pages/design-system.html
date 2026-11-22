@@ -20,6 +20,7 @@
           <p>Редактор инструкций, таблица заданий и диаграмма Ганта устроены по-разному. Общими я сделала цвета, типографику, отступы и скругления. Когда решение повторялось в нескольких местах, я выносила его в библиотеку. Так появились паттерны таблиц, форм в диалогах и пустых состояний.</p>
           <h3>У поля ввода и формы разные задачи</h3>
           <p>В компонентах Input я описала ввод и выбор значения. FormField объединяет подпись, сам инпут и пояснение. Контекст и проверка значения зависят от конкретной формы. Благодаря такому разделению одно поле можно использовать и в форме редактирования, и в фильтре таблицы.</p>
+          <case-media src="../assets/img/ds-input-formfield.png" width="794" height="1230" alt="Спецификация Input и FormField: назначение, границы компонентов и пример собранного поля"></case-media>
           <h3>Как выбрать кнопку</h3>
           <p>Для ButtonBase я разделила визуальный приоритет и смысл действия. Например, удаление может быть второстепенным действием: кнопка останется красной, но получит меньший визуальный вес. Размер, наличие иконки и состояния задаются отдельно.</p>
           <case-media src="../assets/img/ds-button-variants.png" width="1035" height="898" alt="Варианты ButtonBase в Figma: визуальный приоритет и цвет по строкам, состояния по столбцам"></case-media>
@@ -35,7 +36,15 @@
             <case-media variant="screen" src="../assets/img/tild3235-306_InputDateDropdown1.png" width="852" height="1020" alt="В календаре выделен период с 9 по 13 января"></case-media>
             <case-media variant="screen" src="../assets/img/tild6435-313_InputDateDropdown2.png" width="852" height="1020" alt="Выбор года в календаре и быстрые периоды под ним"></case-media>
           </div>
-          <p>Для частых запросов я добавила относительные периоды. Например, «Этот квартал» рассчитывается от текущей даты. <a href="https://kinescope.io/embed/pSuVEgjxc5WLR5gyQssvUx">Прежний календарь в работе</a> · <a href="https://kinescope.io/embed/mxDHEPRRDTtdW7KCr7AMQ8">Новый календарь в работе</a></p>
+          <p>Для частых запросов я добавила относительные периоды. Например, «Этот квартал» рассчитывается от текущей даты.</p>
+          <details class="case-supplement"><summary>Прежний календарь в работе</summary>
+            <div class="video-frame"><iframe loading="lazy" src="https://kinescope.io/embed/pSuVEgjxc5WLR5gyQssvUx" title="Прежний календарь в работе" allow="fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+            <a href="https://kinescope.io/embed/pSuVEgjxc5WLR5gyQssvUx">Открыть запись отдельно</a>
+          </details>
+          <details class="case-supplement"><summary>Новый календарь в работе</summary>
+            <div class="video-frame"><iframe loading="lazy" src="https://kinescope.io/embed/mxDHEPRRDTtdW7KCr7AMQ8" title="Новый календарь в работе" allow="fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+            <a href="https://kinescope.io/embed/mxDHEPRRDTtdW7KCr7AMQ8">Открыть запись отдельно</a>
+          </details>
         </case-text>
         <case-text id="maintenance" title="Как команда работала с системой">
           <p>Изначально все макеты лежали в одном файле. Я разделила их по модулям продукта, а библиотеки для веба и планшета вынесла в отдельные файлы. В каждом модуле отвела страницу под ревью реализации.</p>

@@ -19,6 +19,7 @@ How the library fits together
 The instruction editor, task table and Gantt chart each need a different layout. I standardised their colours, typography, spacing and corner radii. When a solution recurred across modules, I added it to the library. Tables, forms in dialogs and empty states became reusable patterns.
 How an input fits inside a form
 The Input components handle entering or selecting a value. FormField brings together the label, input and supporting text. Each form supplies its own context and validation. This lets the same input work in an editing form or a table filter.
+Input and FormField specification with responsibilities and an assembled example
 Choosing a button
 In ButtonBase, visual priority and the meaning of an action are independent. For example, a delete button can be red to signal a destructive action while using a secondary style. Size, icon visibility and interaction state are separate properties.
 ButtonBase variants in Figma, with priority and colour in rows and interaction states in columns
@@ -33,7 +34,11 @@ A selected date range from 9 to 13 January
 Year selection with relative date shortcuts below the grid
 I added relative shortcuts for frequently used periods. For example, “This quarter” is calculated from the current date.
 Watch the original calendar
+Watch the original calendar
+Open the recording separately
 Watch the revised calendar
+Watch the revised calendar
+Open the recording separately
 How the team used the system
 The designs originally lived in one Figma file. I split them by product module, with separate files for the web and tablet libraries. Each module also had a page for implementation reviews.
 Figma files for the web app, tablet app, component libraries and graphics

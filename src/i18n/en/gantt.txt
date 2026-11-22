@@ -22,6 +22,8 @@ Why we made recurring tasks a separate type
 Scheduled inspections follow a recurring pattern. A repair is scheduled when equipment breaks down. We gave each its own task type. A manager creates a one-off task for a repair. For inspections, they define a rule that generates a task for each round.
 Recurring task settings
 In this example, inspections are scheduled every Tuesday and Thursday. Each task is created one hour before the round with the status “Scheduled”.
+A series can end on a date or after a set number of occurrences. Creation time and initial status are separate settings. A task can be created in advance as scheduled or made available to the operator immediately.
+Annual recurrence with 12 occurrences, each created as active 12 hours before it starts
 Moving work on the timeline
 The timeline shows which jobs overlap and how long each lasts. Managers can switch between week and month views. Colour shows status, while a red outline and an exclamation mark flag overdue work.
 I separated viewing from editing. Hovering reveals details and clicking opens the task. Managers drag the bar to reschedule work or its edge to change the duration, keeping adjacent jobs in view.
@@ -29,8 +31,11 @@ Rescheduling a task by dragging it
 Open video
 Play video: rescheduling a task by dragging it
 Play video
+I reused buttons and colours from the design system. For the chart itself, I designed task bars, tooltips and recurrence markers.
+View task states
 What we deferred
 We considered a total duration for each production area so managers could estimate the work without expanding the task list. Calculating the total across every nested level would add processing overhead. With the benefit still untested, we left it out of the first release.
+Deferred concept: a summary bar above two jobs on a hydraulic press
 Comparing actual and planned work
 After designing the schedule, I looked at completed work. The Gantt chart shows when an individual job is scheduled. The widgets help managers see whether the team finishes on time and which steps take longer than planned.
 ServiceVizor analytics dashboard

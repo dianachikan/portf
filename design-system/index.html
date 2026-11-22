@@ -53,6 +53,10 @@
 <p>Редактор инструкций, таблица заданий и&nbsp;диаграмма Ганта устроены по-разному. Общими я сделала цвета, типографику, отступы и&nbsp;скругления. Когда решение повторялось в&nbsp;нескольких местах, я выносила его в&nbsp;библиотеку. Так появились паттерны таблиц, форм в&nbsp;диалогах и&nbsp;пустых состояний.</p>
           <h3>У&nbsp;поля ввода и&nbsp;формы разные задачи</h3>
           <p>В&nbsp;компонентах Input я описала ввод и&nbsp;выбор значения. FormField объединяет подпись, сам инпут и&nbsp;пояснение. Контекст и&nbsp;проверка значения зависят от&nbsp;конкретной формы. Благодаря такому разделению одно поле можно использовать и&nbsp;в&nbsp;форме редактирования, и&nbsp;в&nbsp;фильтре таблицы.</p>
+          <figure class="case-media">
+  <img src="../assets/img/ds-input-formfield.png" alt="Спецификация Input и FormField: назначение, границы компонентов и пример собранного поля" width="794" height="1230" loading="lazy" />
+</figure>
+
           <h3>Как выбрать кнопку</h3>
           <p>Для&nbsp;ButtonBase я разделила визуальный приоритет и&nbsp;смысл действия. Например, удаление может быть второстепенным действием: кнопка останется красной, но&nbsp;получит меньший визуальный вес. Размер, наличие иконки и&nbsp;состояния задаются отдельно.</p>
           <figure class="case-media">
@@ -88,7 +92,15 @@
 </figure>
 
           </div>
-          <p>Для&nbsp;частых запросов я добавила относительные периоды. Например, «Этот квартал» рассчитывается от&nbsp;текущей даты. <a href="https://kinescope.io/embed/pSuVEgjxc5WLR5gyQssvUx">Прежний календарь в&nbsp;работе</a> · <a href="https://kinescope.io/embed/mxDHEPRRDTtdW7KCr7AMQ8">Новый календарь в&nbsp;работе</a></p>
+          <p>Для&nbsp;частых запросов я добавила относительные периоды. Например, «Этот квартал» рассчитывается от&nbsp;текущей даты.</p>
+          <details class="case-supplement"><summary>Прежний календарь в&nbsp;работе</summary>
+            <div class="video-frame"><iframe loading="lazy" src="https://kinescope.io/embed/pSuVEgjxc5WLR5gyQssvUx" title="Прежний календарь в работе" allow="fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+            <a href="https://kinescope.io/embed/pSuVEgjxc5WLR5gyQssvUx">Открыть запись отдельно</a>
+          </details>
+          <details class="case-supplement"><summary>Новый календарь в&nbsp;работе</summary>
+            <div class="video-frame"><iframe loading="lazy" src="https://kinescope.io/embed/mxDHEPRRDTtdW7KCr7AMQ8" title="Новый календарь в работе" allow="fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+            <a href="https://kinescope.io/embed/mxDHEPRRDTtdW7KCr7AMQ8">Открыть запись отдельно</a>
+          </details>
   </div>
 </section>
 

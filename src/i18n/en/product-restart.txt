@@ -43,7 +43,7 @@ Audience
 Factories differed in process maturity and use of digital tools. Companies that had already begun digitizing their operations were the most ready to adopt the product.
 Three factory segments by process maturity and digitization
 Key findings
-Managers need planning and oversight; operators need speed and simplicity. Entering instructions manually from scratch is burdensome. Experienced shop-floor workers do not need detailed 3D models for recurring operations, and producing those models cannot scale to hundreds of processes.
+Managers wanted to plan and track work. Operators wanted instructions they could follow quickly, and entering instructions from scratch was a burden. Experienced workers already knew routine operations by heart. Detailed 3D models could help with training, but the plants we spoke to were not hiring at scale. Their immediate needs did not justify the effort of producing the models.
 The new version needed a reusable structure, fast deployment, and a predictable interface.
 Focus of the first version
 MVP focus

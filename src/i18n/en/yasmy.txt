@@ -113,6 +113,10 @@ Open video recording
 Play video: sending a link to the bot, processing it, opening the recipe, and adding it to the plan
 Watch video
 Imported tom yum in the Mini App: cover, ingredients, and Add to plan button
+Editing an imported recipe
+The bot offers an edit action below the recipe. In the editor, you can change an ingredient quantity, remove an ingredient or add a missing one without re-entering the recipe.
+Edit recipe action below the bot message
+Imported recipe editor showing ingredient quantities
 What the first tests revealed
 I asked two participants to try a working version of Yasmy. The sessions showed where the interface caused confusion.
 The plan period was unclear
