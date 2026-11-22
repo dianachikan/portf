@@ -42,7 +42,7 @@ PAGES = [
     {
         "src": "gantt.html",
         "out": "gantt/index.html",
-        "title": "От ручного планирования к системе управления процессами",
+        "title": "Как планируют обходы оборудования в ServiceVizor",
         "root": "../",
         "home": "../index.html",
         "footer": True,
@@ -50,7 +50,7 @@ PAGES = [
     {
         "src": "startech.html",
         "out": "startech/index.html",
-        "title": "Анкета стартапа как инструмент внешней коммуникации",
+        "title": "Визитка стартапа для инвестора",
         "root": "../",
         "home": "../index.html",
         "footer": True,
@@ -58,7 +58,7 @@ PAGES = [
     {
         "src": "design-system.html",
         "out": "design-system/index.html",
-        "title": "Дизайн-система для B2B-продукта",
+        "title": "Дизайн-система ServiceVizor",
         "root": "../",
         "home": "../index.html",
         "footer": True,
@@ -115,6 +115,7 @@ def main() -> None:
         english = english.replace('aria-label="Telegram channel"', 'aria-label="LinkedIn"')
         english = english.replace('<span data-en="linkedin">channel</span>', '<span data-en="linkedin">linkedin</span>')
         english = english.replace('src="../../assets/redesign/channel.svg"', 'src="../../assets/redesign/linkedin.svg"')
+        english = english.replace('href="../../assets/resume/diana-chikan-ru.pdf"', 'href="../../assets/resume/diana-chikan-en.pdf"', 1)
         en_dest = ROOT / "en" / page["out"]
         en_dest.parent.mkdir(parents=True, exist_ok=True)
         en_dest.write_text(english)

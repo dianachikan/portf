@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Анкета стартапа как инструмент внешней коммуникации</title>
+  <title>Визитка стартапа для&nbsp;инвестора</title>
   <meta name="description" content="Портфолио продуктового дизайнера" />
   <link rel="icon" href="../assets/img/favicon.png" type="image/png" />
   <link rel="stylesheet" href="../assets/css/style.css?v=13" />
-  <link rel="stylesheet" href="../assets/css/case-blocks.css?v=21" />
+  <link rel="stylesheet" href="../assets/css/case-blocks.css?v=22" />
   <link rel="stylesheet" href="../assets/css/site-header.css?v=2" />
 </head>
 <body id="top">
@@ -18,7 +18,7 @@
     </a>
     <nav class="site-header__contacts" aria-label="Контакты">
       <a href="https://t.me/dyanatort"><span data-en="chat">написать</span><img src="../assets/redesign/chat.svg" alt="" /></a>
-      <a href="../index.html#about"><span data-en="cv">резюме</span><img src="../assets/redesign/cv.svg" alt="" /></a>
+      <a class="resume-link" href="../assets/resume/diana-chikan-ru.pdf" data-ru-href="../assets/resume/diana-chikan-ru.pdf" data-en-href="../assets/resume/diana-chikan-en.pdf" download><span data-en="cv">резюме</span><img src="../assets/redesign/cv.svg" alt="" /></a>
       <a href="mailto:dianachikan@yandex.ru"><span data-en="mail">почта</span><img src="../assets/redesign/mail.svg" alt="" /></a>
       <a class="social-link" href="https://t.me/vot_dumay" data-en-href="https://www.linkedin.com/in/diana-chikan-0b086a3b4" aria-label="Телеграм-канал"><span data-en="linkedin">канал</span><img src="../assets/redesign/channel.svg" data-en-src="../assets/redesign/linkedin.svg" alt="" /></a>
     </nav>
@@ -26,66 +26,84 @@
 </header>
 
   <main>
-    <article class="case">
-      <header class="case-hero">
-        <div class="container case-hero__layout">
-          <div>
-            <ul class="pills case-hero__tags">
-              <li>B2C</li>
-              <li>Web</li>
-              <li>Mobile</li>
-            </ul>
-            <h1 class="case-hero__title">Анкета стартапа как инструмент внешней коммуникации</h1>
-            <p class="case-hero__lead">Как мы превратили профиль стартапа в&nbsp;систему распространения проектной информации</p>
-            <a class="case-hero__cta" href="https://base.startech.vc/" target="_blank" rel="noopener">Посмотреть сайт</a>
+    <article class="case case--editorial">
+      <header class="case-hero case-hero--editorial">
+        <div class="container">
+          <div class="case-hero__copy">
+            <h1 class="case-hero__title">Визитка стартапа для&nbsp;инвестора</h1>
+            <p class="case-hero__lead">На&nbsp;Startech.Base основатели заполняли анкету для&nbsp;поиска инвестиций. Чтобы представить проект за&nbsp;пределами платформы, им приходилось собирать те&nbsp;же сведения в&nbsp;презентацию. Мы дали основателям возможность отправить инвестору ссылку на&nbsp;визитку проекта.</p>
+            <a class="case-hero__action" href="https://base.startech.vc/" target="_blank" rel="noopener noreferrer">Открыть Startech.Base <span aria-hidden="true">↗</span></a>
           </div>
-          <img class="case-hero__media case-hero__media--startech" src="../assets/img/tild3531-633_Group_11087.png" alt="Иллюстрация Startech.Base" />
+          <div class="case-project-summary">
+            <p class="case-project-summary__label">О&nbsp;проекте</p>
+            <dl class="case-project-meta" aria-label="Коротко о проекте">
+              <div><dt>Моя роль:</dt> <dd>Единственный продуктовый дизайнер после запуска MVP. Я спроектировала визитку и&nbsp;управление ссылками в&nbsp;кабинете стартапа. Правила доступа определяли вместе с&nbsp;командой.</dd></div>
+              <div><dt>Платформа:</dt> <dd>На&nbsp;Startech.Base инвесторы ищут стартапы, а&nbsp;корпорации — технологии для&nbsp;своих задач.</dd></div>
+            </dl>
+          </div>
+          <figure class="case-cover">
+  <img src="../assets/img/card-startech-browser.png" alt="Карточка FashionView с описанием продукта, контактами и датой обновления" width="3840" height="2130" fetchpriority="high" />
+</figure>
+
         </div>
       </header>
+      <div class="container case-story">
+        <section class="case-section case-section--split" aria-labelledby="profile">
+  <h2 id="profile">Одна анкета для&nbsp;двух сценариев</h2>
+  <div class="case-section__content">
+<p>В&nbsp;анкете уже были описание продукта, состав команды, бизнес-модель и&nbsp;стадия развития. Если основатель обновлял эти данные на&nbsp;платформе, у&nbsp;инвестора на&nbsp;почте всё ещё могла лежать старая презентация.</p>
+          <p>Мы рассматривали отдельный конструктор презентаций, но&nbsp;для&nbsp;первой отправки инвестору нужные сведения уже были собраны. Я переработала структуру анкеты для&nbsp;чтения и&nbsp;спроектировала страницу, которую получатель открывает без&nbsp;регистрации.</p>
+  </div>
+</section>
 
-      <div class="container case-body">
-        <div class="accordion">
-          <div class="accordion__item">
-            <button class="accordion__btn" type="button" aria-expanded="false" aria-controls="about-product">
-              <span>о&nbsp;продукте</span>
-              <span class="accordion__icon" aria-hidden="true"></span>
-            </button>
-            <div class="accordion__panel" id="about-product" hidden>
-              <p>Startech.Base — B2C-платформа для&nbsp;взаимодействия стартапов, инвесторов и&nbsp;корпораций. Это единая база технологических компаний и&nbsp;стартапов, где предприниматели могут размещать структурированную информацию о&nbsp;своём продукте: описание команды, технологии, бизнес-модели, стадии развития, кейсы и&nbsp;другие данные, важные для&nbsp;потенциальных инвесторов и&nbsp;партнёров.</p>
-              <p>Для&nbsp;стартапов регистрация и&nbsp;размещение информации бесплатны.</p>
-              <p>Инвесторы и&nbsp;корпорации используют платформу для&nbsp;поиска проектов для&nbsp;инвестиций или&nbsp;технологических решений под&nbsp;бизнес-задачи. Для&nbsp;них предусмотрены разные уровни доступа — от&nbsp;базового поиска по&nbsp;базе до&nbsp;расширенных тарифов с&nbsp;персональным сопровождением и&nbsp;доступом к&nbsp;более детальной информации о&nbsp;проектах, включая индивидуальный скаутинг.</p>
-            </div>
+        <section class="case-section case-section--split" aria-labelledby="founder">
+  <h2 id="founder">Основатель решает, кому отправить визитку</h2>
+  <div class="case-section__content">
+<p>Публикация в&nbsp;каталоге делала проект доступным для&nbsp;поиска. Основателю также нужен был способ показать проект конкретному инвестору. Мы разделили эти действия: можно оставить проект вне каталога и&nbsp;поделиться им по&nbsp;ссылке.</p>
+          <p>В&nbsp;кабинете я собрала ссылки на&nbsp;одной странице. Основатель создаёт ссылку, задаёт срок действия или&nbsp;лимит просмотров и&nbsp;отправляет её получателю. Позже здесь&nbsp;же можно проверить статус ссылки и&nbsp;посмотреть статистику.</p>
+          <figure class="case-media">
+  <img src="../assets/img/startech-manage-project.png" alt="Кабинет основателя: управление проектом, созданные ссылки и переход к статистике" width="2226" height="1670" loading="lazy" />
+</figure>
+  </div>
+</section>
+
+        <section class="case-section case-section--split" aria-labelledby="investor">
+  <h2 id="investor">Что видит инвестор по&nbsp;ссылке</h2>
+  <div class="case-section__content">
+<p>В&nbsp;начале визитки я разместила описание продукта и&nbsp;контакты. Рядом с&nbsp;кнопкой скачивания PDF указала дату актуальности данных.</p>
+          <figure class="case-media">
+  <img src="../assets/img/startech-guest-desktop.png" alt="Визитка без регистрации: описание FashionView, контактное лицо, дата актуальности и кнопка скачивания PDF" width="1360" height="725" loading="lazy" />
+</figure>
+
+          <p>Ниже на&nbsp;странице инвестор может изучить команду, финансовые показатели и&nbsp;запрос на&nbsp;инвестиции. <a href="../assets/img/tild6232-396_st1.png">Посмотреть визитку целиком</a></p>
+  </div>
+</section>
+
+        <section class="case-section case-section--split" aria-labelledby="mobile">
+  <h2 id="mobile">Кабинет и&nbsp;визитка на&nbsp;телефоне</h2>
+  <div class="case-section__content">
+<p>В&nbsp;мобильном кабинете у&nbsp;каждой ссылки оставила срок действия и&nbsp;две кнопки — скопировать и&nbsp;отключить. В&nbsp;визитке на&nbsp;телефоне сначала идут карточка проекта и&nbsp;контакты, а&nbsp;следом — описание.</p>
+          <div class="case-screen-pair" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 256px))">
+            <figure class="case-media case-media--screen">
+  <img src="../assets/img/startech-dashboard-mobile.png" alt="Мобильный кабинет с действиями для каждой ссылки" width="256" height="661" loading="lazy" />
+</figure>
+
+            <figure class="case-media case-media--screen">
+  <img src="../assets/img/startech-guest-mobile.png" alt="Мобильная визитка с кнопкой PDF, контактами и началом описания" width="256" height="838" loading="lazy" />
+</figure>
+
           </div>
-        </div>
+  </div>
+</section>
 
-        <h2>коротко</h2>
-        <p>Мы разработали систему шеринга карточки проекта, которая превратила внутреннюю анкету стартапа в&nbsp;инструмент внешней коммуникации с&nbsp;инвесторами, партнёрами и&nbsp;акселераторами.</p>
+        <aside class="case-highlight case-highlight--closing" aria-label="Итог">
+  <span class="case-highlight__label">Итог</span>
+  <div class="case-highlight__content">
+    <p class="case-highlight__statement">Основатель может представить проект за&nbsp;пределами каталога.</p>
+    <p class="case-highlight__description">Для&nbsp;первой встречи достаточно отправить визитку из&nbsp;уже заполненной анкеты. Инвестор получает описание проекта, условия и&nbsp;контакты, а&nbsp;основатель управляет доступом из&nbsp;своего кабинета.</p>
+  </div>
+</aside>
 
-        <h2>моя роль и&nbsp;вклад в&nbsp;проект</h2>
-        <p>Я работала единственным дизайнером на&nbsp;этапе post-MVP и&nbsp;отвечала за&nbsp;продуктовый дизайн ключевых направлений платформы.</p>
-        <p>В&nbsp;рамках этого кейса я:<br />— спроектировала концепцию карточки проекта и&nbsp;сценарии её использования<br />— разработала UX системы генерации и&nbsp;управления ссылками<br />— спроектировала публичную страницу проекта<br />— переработала структуру анкеты стартапа, адаптировав её под&nbsp;использование в&nbsp;режиме просмотра<br />— спроектировала модуль управления ссылками в&nbsp;личном кабинете<br />— участвовала в&nbsp;формировании логики доступа, приватности и&nbsp;ограничений</p>
-
-        <h2>контекст и&nbsp;проблематика</h2>
-        <p>Изначально анкета стартапа использовалась только внутри платформы как профиль для&nbsp;поиска инвестиций и&nbsp;технологических решений. При&nbsp;этом в&nbsp;продукте уже существовал большой объём качественно структурированных данных о&nbsp;проектах, которые регулярно обновлялись.</p>
-        <p>Проблема заключалась в&nbsp;том, что за&nbsp;пределами платформы стартапам всё ещё приходилось:<br />— собирать отдельные презентации<br />— поддерживать актуальность pitch deck’ов вручную<br />— дублировать информацию в&nbsp;разных форматах<br />— отправлять неактуальные версии материалов инвесторам и&nbsp;партнёрам</p>
-        <p>Дополнительно на&nbsp;рынке появился спрос на&nbsp;инструменты распространения проектной информации после ухода части зарубежных сервисов. Мы увидели возможность использовать уже существующую структуру платформы как основу для&nbsp;нового пользовательского сценария.</p>
-
-        <h2>решение и&nbsp;концепция</h2>
-        <p>Мы решили не&nbsp;создавать отдельный конструктор презентаций, а&nbsp;переиспользовать уже существующую структуру анкеты стартапа. На&nbsp;её основе мы спроектировали публичную карточку проекта, которую можно отправить по&nbsp;ссылке без&nbsp;регистрации. Карточка стала альтернативным представлением профиля стартапа вне платформы.</p>
-        <figure>
-          <img src="../assets/img/tild6232-396_st1.png" alt="Публичная карточка проекта Startech.Base" />
-        </figure>
-
-        <h2>личный кабинет</h2>
-        <p>Для&nbsp;управления карточками проектов я спроектировала отдельный модуль внутри личного кабинета стартапа.<br />Он включает список активных ссылок, управление доступами и&nbsp;статистику просмотров.</p>
-        <p>Пользователь может:<br />— генерировать уникальную ссылку на&nbsp;проект<br />— управлять доступом к&nbsp;карточке<br />— ограничивать срок действия ссылки<br />— ограничивать количество просмотров<br />— выгружать PDF-версию проекта<br />— отслеживать просмотры страницы</p>
-        <p>Также проект можно было не&nbsp;публиковать в&nbsp;открытой базе, сохраняя приватность.</p>
-        <figure>
-          <img src="../assets/img/tild6363-663_st2.png" alt="Модуль управления ссылками в личном кабинете" />
-        </figure>
-
-        <h2>результат</h2>
-        <p class="case-body__last">Мы превратили внутреннюю анкету стартапа в&nbsp;инструмент внешней коммуникации, который расширил сценарии использования платформы за&nbsp;пределы поиска инвестиций и&nbsp;стал дополнительной ценностью для&nbsp;пользователей Startech.Base.</p>
       </div>
     </article>
 

@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Design system for a B2B product</title>
+  <title>The ServiceVizor design system</title>
   <meta name="description" content="Product design portfolio by Diana Chikan" />
   <link rel="icon" href="../../assets/img/favicon.png" type="image/png" />
   <link rel="stylesheet" href="../../assets/css/style.css?v=13" />
-  <link rel="stylesheet" href="../../assets/css/case-blocks.css?v=21" />
+  <link rel="stylesheet" href="../../assets/css/case-blocks.css?v=22" />
   <link rel="stylesheet" href="../../assets/css/site-header.css?v=2" />
 </head>
 <body id="top">
@@ -18,7 +18,7 @@
     </a>
     <nav class="site-header__contacts" aria-label="Contacts">
       <a href="https://t.me/dyanatort"><span data-en="chat">chat</span><img src="../../assets/redesign/chat.svg" alt="" /></a>
-      <a href="../../index.html?lang=en#about"><span data-en="cv">CV</span><img src="../../assets/redesign/cv.svg" alt="" /></a>
+      <a class="resume-link" href="../../assets/resume/diana-chikan-en.pdf" data-ru-href="../../assets/resume/diana-chikan-ru.pdf" data-en-href="../../assets/resume/diana-chikan-en.pdf" download><span data-en="cv">CV</span><img src="../../assets/redesign/cv.svg" alt="" /></a>
       <a href="mailto:dianachikan@yandex.ru"><span data-en="mail">email</span><img src="../../assets/redesign/mail.svg" alt="" /></a>
       <a class="social-link" href="https://www.linkedin.com/in/diana-chikan-0b086a3b4" data-en-href="https://www.linkedin.com/in/diana-chikan-0b086a3b4" aria-label="LinkedIn"><span data-en="linkedin">linkedin</span><img src="../../assets/redesign/linkedin.svg" data-en-src="../../assets/redesign/linkedin.svg" alt="" /></a>
     </nav>
@@ -26,112 +26,102 @@
 </header>
 
   <main>
-    <article class="case">
-      <header class="case-hero">
-        <div class="container case-hero__layout">
-          <div>
-            <ul class="pills case-hero__tags">
-              <li>B2B and B2E</li>
-              <li>Design System</li>
-            </ul>
-            <h1 class="case-hero__title">A product design system for technical specialists</h1>
-            <p class="case-hero__lead">How a systematic approach halved post-development revisions and made scaling easier</p>
+    <article class="case case--servicevizor">
+      <header class="case-hero case-hero--editorial">
+        <div class="container">
+          <div class="case-hero__copy">
+            <h1 class="case-hero__title">The ServiceVizor design system</h1>
+            <p class="case-hero__lead">Technical specialists use ServiceVizor to write instructions, schedule work and track its progress. I built a component library for these interfaces and documented how the components behave, giving design and engineering a shared reference.</p>
           </div>
-          <div class="case-hero__stack">
-            <img src="../../assets/img/tild3235-306_InputDateDropdown1.png" alt="Calendar from the design system" />
-            <img src="../../assets/img/tild6435-313_InputDateDropdown2.png" alt="Year selection in the design system calendar" />
+          <div class="case-project-summary">
+            <p class="case-project-summary__label">My role</p>
+            <dl class="case-project-meta" aria-label="My contribution to the system">
+              <div><dt>Design:</dt> <dd>As the sole product designer, I owned the tokens, components, screen patterns and Figma file structure.</dd></div>
+              <div><dt>Implementation:</dt> <dd>Engineers migrated components into the product gradually. We discussed edge cases before development, and I reviewed the implementation before release.</dd></div>
+            </dl>
           </div>
+          <figure class="case-cover">
+  <img src="../../assets/img/card-design-system-browser.png" alt="The TabbarHeader page in Figma, showing tab states, the assembled bar and its interaction rules" width="2880" height="1800" fetchpriority="high" />
+</figure>
+
         </div>
       </header>
+      <div class="container case-story">
+        <section class="case-section case-section--split" aria-labelledby="architecture">
+  <h2 id="architecture">How the library fits together</h2>
+  <div class="case-section__content">
+<p>The instruction editor, task table and Gantt chart each need a different layout. I standardised their colours, typography, spacing and corner radii. When a solution recurred across modules, I added it to the library. Tables, forms in dialogs and empty states became reusable patterns.</p>
+          <h3>How an input fits inside a form</h3>
+          <p>The Input components handle entering or selecting a value. FormField brings together the label, input and supporting text. Each form supplies its own context and validation. This lets the same input work in an editing form or a table filter.</p>
+          <figure class="case-media">
+  <img src="../../assets/img/ds-input-formfield.png" alt="Input and FormField specification with responsibilities and an assembled example" width="794" height="1230" loading="lazy" />
+</figure>
 
-      <div class="container case-body">
-                <div class="accordion">
-          <div class="accordion__item">
-            <button class="accordion__btn" type="button" aria-expanded="false" aria-controls="about-product">
-              <span>About the product</span>
-              <span class="accordion__icon" aria-hidden="true"></span>
-            </button>
-            <div class="accordion__panel" id="about-product" hidden>
-              <p>ServiceVizor is a digital assistant for manufacturing teams.</p>
-              <p>The product has two connected parts:</p>
-              <ol>
-                <li>A web service where technical specialists create work instructions, plan and assign tasks, and track progress;</li>
-                <li>A mobile app where shop-floor operators complete tasks, answer instruction check questions, and record issues as they work.</li>
-              </ol>
-              <p>This connects office planning with actual work on the shop floor. ServiceVizor aims to reduce errors and improve communication between office and production teams.</p>
-            </div>
+          <h3>Choosing a button</h3>
+          <p>In ButtonBase, visual priority and the meaning of an action are independent. For example, a delete button can be red to signal a destructive action while using a secondary style. Size, icon visibility and interaction state are separate properties.</p>
+          <figure class="case-media">
+  <img src="../../assets/img/ds-button-variants.png" alt="ButtonBase variants in Figma, with priority and colour in rows and interaction states in columns" width="1035" height="898" loading="lazy" />
+</figure>
+  </div>
+</section>
+
+        <section class="case-section case-section--split" aria-labelledby="tabs">
+  <h2 id="tabs">What goes into a specification</h2>
+  <div class="case-section__content">
+<p>People work with multiple boards in both planning and analytics. I built TabbarHeader from individual TabHeader tabs so users could switch boards. The specification covers what happens before a board has a name and how a tab handles a long title.</p>
+          <figure class="case-media">
+  <img src="../../assets/img/ds-tab-sizing.png" alt="Tab sizing rules for empty, short and long board names" width="1245" height="539" loading="lazy" />
+  <figcaption>An empty tab starts at its minimum width and grows as the user types. Its maximum width depends on the number of tabs and the space available beside the add button.</figcaption>
+</figure>
+
+          <p>When a title is truncated, hovering reveals its full text. Hovering over the menu button inside the same tab highlights the button and keeps the title tooltip hidden.</p>
+  </div>
+</section>
+
+        <section class="case-section case-section--split" aria-labelledby="dates">
+  <h2 id="dates">One calendar for dates and ranges</h2>
+  <div class="case-section__content">
+<p>The original calendar had no manual date entry. When selecting a range, it was hard to tell which days would be included. I added manual entry and separate modes for dates and ranges. Once the start date is set, hovering previews the days in between.</p>
+          <div class="case-screen-pair">
+            <figure class="case-media case-media--screen">
+  <img src="../../assets/img/tild3235-306_InputDateDropdown1.png" alt="A selected date range from 9 to 13 January" width="852" height="1020" loading="lazy" />
+</figure>
+
+            <figure class="case-media case-media--screen">
+  <img src="../../assets/img/tild6435-313_InputDateDropdown2.png" alt="Year selection with relative date shortcuts below the grid" width="852" height="1020" loading="lazy" />
+</figure>
+
           </div>
-        </div>
+          <p>I added relative shortcuts for frequently used periods. For example, “This quarter” is calculated from the current date.</p>
+          <details class="case-supplement"><summary>Watch the original calendar</summary>
+            <div class="video-frame"><iframe loading="lazy" src="https://kinescope.io/embed/pSuVEgjxc5WLR5gyQssvUx" title="Watch the original calendar" allow="fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+            <a href="https://kinescope.io/embed/pSuVEgjxc5WLR5gyQssvUx">Open the recording separately</a>
+          </details>
+          <details class="case-supplement"><summary>Watch the revised calendar</summary>
+            <div class="video-frame"><iframe loading="lazy" src="https://kinescope.io/embed/mxDHEPRRDTtdW7KCr7AMQ8" title="Watch the revised calendar" allow="fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+            <a href="https://kinescope.io/embed/mxDHEPRRDTtdW7KCr7AMQ8">Open the recording separately</a>
+          </details>
+  </div>
+</section>
 
-        <h2>In brief</h2>
-        <p>We moved from fragmented interfaces and ad hoc processes to a structured system. I defined layout patterns, tokens, and a component architecture, organized our Figma workspace, and aligned design with development. Post-development revisions fell by half, interfaces became more consistent, and the product became easier to scale.</p>
+        <section class="case-section case-section--split" aria-labelledby="maintenance">
+  <h2 id="maintenance">How the team used the system</h2>
+  <div class="case-section__content">
+<p>The designs originally lived in one Figma file. I split them by product module, with separate files for the web and tablet libraries. Each module also had a page for implementation reviews.</p>
+          <figure class="case-media">
+  <img src="../../assets/img/tild6364-646_noroot.png" alt="Figma files for the web app, tablet app, component libraries and graphics" width="1316" height="877" loading="lazy" />
+  <figcaption>Blue covers identify web modules and their library. Turquoise covers identify the tablet app and its library.</figcaption>
+</figure>
 
-        <h2>Problem</h2>
-        <p>The interface had grown in fragments, without shared rules or consistent components. Decisions were often made during development. Designs drifted from the implementation, last-minute changes came with tight deadlines, and developers added third-party or custom elements outside the system. The design system was not guiding the product, while an overloaded, unstructured Figma file made interfaces harder to find and maintain.</p>
+          <h3>Reviewing the implementation</h3>
+          <p>I added a pre-release design review stage in Jira. For each discrepancy, I recorded the priority, attached a screenshot and described the expected behaviour. In the users table, for example, the name column showed an active sort while the names were out of order. I asked the developer to make the indicator match the actual row order.</p>
+          <figure class="case-media">
+  <img src="../../assets/img/ds-sort-review.png" alt="Design review note about sorting, with a priority and a screenshot of the users table" width="804" height="559" loading="lazy" />
+  <figcaption>I marked the issue as medium priority and asked the developer to check the same sorting behaviour in the devices table.</figcaption>
+</figure>
+  </div>
+</section>
 
-        <h2>Goal</h2>
-        <p>Build a design system that:<br />— establishes shared interface rules<br />— aligns design and development<br />— reduces revisions after development<br />— scales with the product<br />— stays flexible<br />— does not demand excessive resources</p>
-
-        <h2>Approach</h2>
-        <div class="split">
-          <h3 class="split__title">Rules</h3>
-          <div class="split__text">A single rigid grid would not work across our very different interfaces. I introduced structure without unnecessary constraints by:<br />— defining foundational rules for spacing, corner radii, type styles, icons, and colors<br />— identifying layouts shared across modules, including form dialogs, tables, and empty states<br />— moving elements used at least twice into the design system</div>
-        </div>
-        <div class="split">
-          <h3 class="split__title">Components</h3>
-          <div class="split__text">I followed the principles of atomic design, combining small foundational components into more complex ones.</div>
-        </div>
-        <figure>
-          <img src="../../assets/img/tild3863-383_photo.png" alt="Design system components" />
-        </figure>
-        <div class="split">
-          <h3 class="split__title">Specifications</h3>
-          <div class="split__text">I document components with interaction patterns, edge cases, and constraints. This keeps decisions recorded and reduces the need for developers to improvise.</div>
-        </div>
-        <figure>
-          <img src="../../assets/img/tild3261-356_photo.png" alt="Component specifications" />
-        </figure>
-        <div class="split">
-          <h3 class="split__title">Working with development</h3>
-          <div class="split__text">Developers are gradually migrating the product to the new design system by aligning implementation APIs with my Figma tokens and components.</div>
-        </div>
-
-        <h2>Example: date picker</h2>
-        <div class="two-col">
-          <div>
-            <h3 class="two-col__title">Old version</h3>
-            <p class="two-col__text">The original DatePicker came from a third-party library and had several problems:<br />— no manual date entry<br />— no distinction between single-date and range selection<br />— unclear range-selection behavior</p>
-          </div>
-          <div class="video-frame">
-            <iframe src="https://kinescope.io/embed/pSuVEgjxc5WLR5gyQssvUx" title="Old date picker" allow="autoplay; fullscreen; picture-in-picture; encrypted-media;" allowfullscreen></iframe>
-          </div>
-        </div>
-        <div class="two-col">
-          <div>
-            <h3 class="two-col__title">New version</h3>
-            <p class="two-col__text">I redesigned the component to include:<br />— manual date entry<br />— separate selection flows<br />— hover feedback for ranges, highlighting dates in between<br />— dynamic presets for today, week, month, and quarter that update automatically</p>
-          </div>
-          <div class="video-frame">
-            <iframe src="https://kinescope.io/embed/mxDHEPRRDTtdW7KCr7AMQ8" title="New date picker" allow="autoplay; fullscreen; picture-in-picture; encrypted-media;" allowfullscreen></iframe>
-          </div>
-        </div>
-
-        <h2>Reorganizing the workspace</h2>
-        <div class="covers">
-          <img src="../../assets/img/tild3564-353_noroot.png" alt="Modular Figma file structure" />
-          <img src="../../assets/img/tild6364-646_noroot.png" alt="Color-coded file covers" />
-        </div>
-        <p>I replaced one overloaded file with a modular structure that matches the product architecture.</p>
-        <p>Blue covers mark web modules and their design system, turquoise covers mark tablet modules and their design system, and red covers mark graphics files.</p>
-
-        <h2>Process and quality control</h2>
-        <p>To reduce late changes and gaps between design and implementation, I introduced:<br />— design grooming with developers and explicit edge-case reviews<br />— a structured issue template with priority, design-versus-build comparison, and problem description<br />— dedicated review pages in every Figma file<br />— presentations for weekly demos<br />— design review before release, tracked in a separate Jira column (shown below)</p>
-        <figure>
-          <img src="../../assets/img/tild3037-363_240426.png" alt="Design review column in Jira" />
-        </figure>
-
-        <h2>Outcome</h2>
-        <p class="case-body__last">— Post-development revisions fell by half<br />— Interfaces became more consistent across modules<br />— More issues were caught during design instead of after release<br />— Developers created fewer custom components<br />— Finding and working with designs in Figma became easier<br />— Design system adoption became a structured process</p>
       </div>
     </article>
 

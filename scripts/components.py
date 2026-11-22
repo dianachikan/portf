@@ -57,14 +57,12 @@ def render_components(source: str) -> str:
                 variant=variant,
                 inert_attr=" inert",
                 home_href="#top",
-                about_href="#about",
                 tail_html=tail_html,
             )
         return template.substitute(
             variant=variant,
             inert_attr="",
             home_href="{{home}}",
-            about_href="{{home}}#about",
             tail_html="",
         )
 

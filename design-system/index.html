@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Дизайн-система для&nbsp;B2B-продукта</title>
+  <title>Дизайн-система ServiceVizor</title>
   <meta name="description" content="Портфолио продуктового дизайнера" />
   <link rel="icon" href="../assets/img/favicon.png" type="image/png" />
   <link rel="stylesheet" href="../assets/css/style.css?v=13" />
-  <link rel="stylesheet" href="../assets/css/case-blocks.css?v=21" />
+  <link rel="stylesheet" href="../assets/css/case-blocks.css?v=22" />
   <link rel="stylesheet" href="../assets/css/site-header.css?v=2" />
 </head>
 <body id="top">
@@ -18,7 +18,7 @@
     </a>
     <nav class="site-header__contacts" aria-label="Контакты">
       <a href="https://t.me/dyanatort"><span data-en="chat">написать</span><img src="../assets/redesign/chat.svg" alt="" /></a>
-      <a href="../index.html#about"><span data-en="cv">резюме</span><img src="../assets/redesign/cv.svg" alt="" /></a>
+      <a class="resume-link" href="../assets/resume/diana-chikan-ru.pdf" data-ru-href="../assets/resume/diana-chikan-ru.pdf" data-en-href="../assets/resume/diana-chikan-en.pdf" download><span data-en="cv">резюме</span><img src="../assets/redesign/cv.svg" alt="" /></a>
       <a href="mailto:dianachikan@yandex.ru"><span data-en="mail">почта</span><img src="../assets/redesign/mail.svg" alt="" /></a>
       <a class="social-link" href="https://t.me/vot_dumay" data-en-href="https://www.linkedin.com/in/diana-chikan-0b086a3b4" aria-label="Телеграм-канал"><span data-en="linkedin">канал</span><img src="../assets/redesign/channel.svg" data-en-src="../assets/redesign/linkedin.svg" alt="" /></a>
     </nav>
@@ -26,112 +26,102 @@
 </header>
 
   <main>
-    <article class="case">
-      <header class="case-hero">
-        <div class="container case-hero__layout">
-          <div>
-            <ul class="pills case-hero__tags">
-              <li>B2B и&nbsp;B2E</li>
-              <li>Design System</li>
-            </ul>
-            <h1 class="case-hero__title">Дизайн-система продукта для&nbsp;технических специалистов</h1>
-            <p class="case-hero__lead">Как системный подход сократил правки в&nbsp;2&nbsp;раза и&nbsp;упростил масштабирование</p>
+    <article class="case case--servicevizor">
+      <header class="case-hero case-hero--editorial">
+        <div class="container">
+          <div class="case-hero__copy">
+            <h1 class="case-hero__title">Дизайн-система ServiceVizor</h1>
+            <p class="case-hero__lead">В&nbsp;ServiceVizor технические специалисты составляют инструкции, планируют работы и&nbsp;следят за&nbsp;их выполнением. Я собрала библиотеку компонентов для&nbsp;этих интерфейсов и&nbsp;описала их поведение, чтобы дизайнер и&nbsp;разработчик могли свериться с&nbsp;одним правилом.</p>
           </div>
-          <div class="case-hero__stack">
-            <img src="../assets/img/tild3235-306_InputDateDropdown1.png" alt="Календарь из дизайн-системы" />
-            <img src="../assets/img/tild6435-313_InputDateDropdown2.png" alt="Выбор года в календаре дизайн-системы" />
+          <div class="case-project-summary">
+            <p class="case-project-summary__label">Моя роль</p>
+            <dl class="case-project-meta" aria-label="Мой вклад в систему">
+              <div><dt>Дизайн:</dt> <dd>как единственный дизайнер продукта я отвечала за&nbsp;токены, компоненты, паттерны экранов и&nbsp;организацию файлов в&nbsp;Figma.</dd></div>
+              <div><dt>Внедрение:</dt> <dd>разработчики постепенно переносили компоненты в&nbsp;продукт. Мы обсуждали спорные состояния до&nbsp;разработки, а&nbsp;перед релизом я сверяла реализацию с&nbsp;макетами.</dd></div>
+            </dl>
           </div>
+          <figure class="case-cover">
+  <img src="../assets/img/card-design-system-browser.png" alt="Страница TabbarHeader в Figma: состояния вкладки, собранная панель и правила поведения" width="2880" height="1800" fetchpriority="high" />
+</figure>
+
         </div>
       </header>
+      <div class="container case-story">
+        <section class="case-section case-section--split" aria-labelledby="architecture">
+  <h2 id="architecture">Как устроена библиотека</h2>
+  <div class="case-section__content">
+<p>Редактор инструкций, таблица заданий и&nbsp;диаграмма Ганта устроены по-разному. Общими я сделала цвета, типографику, отступы и&nbsp;скругления. Когда решение повторялось в&nbsp;нескольких местах, я выносила его в&nbsp;библиотеку. Так появились паттерны таблиц, форм в&nbsp;диалогах и&nbsp;пустых состояний.</p>
+          <h3>У&nbsp;поля ввода и&nbsp;формы разные задачи</h3>
+          <p>В&nbsp;компонентах Input я описала ввод и&nbsp;выбор значения. FormField объединяет подпись, сам инпут и&nbsp;пояснение. Контекст и&nbsp;проверка значения зависят от&nbsp;конкретной формы. Благодаря такому разделению одно поле можно использовать и&nbsp;в&nbsp;форме редактирования, и&nbsp;в&nbsp;фильтре таблицы.</p>
+          <figure class="case-media">
+  <img src="../assets/img/ds-input-formfield.png" alt="Спецификация Input и FormField: назначение, границы компонентов и пример собранного поля" width="794" height="1230" loading="lazy" />
+</figure>
 
-      <div class="container case-body">
-                <div class="accordion">
-          <div class="accordion__item">
-            <button class="accordion__btn" type="button" aria-expanded="false" aria-controls="about-product">
-              <span>о&nbsp;продукте</span>
-              <span class="accordion__icon" aria-hidden="true"></span>
-            </button>
-            <div class="accordion__panel" id="about-product" hidden>
-              <p>ServiceVizor — цифровой помощник на&nbsp;производстве.</p>
-              <p>Продукт состоит из&nbsp;двух взаимосвязанных частей:</p>
-              <ol>
-                <li>Веб-сервиса для&nbsp;технических специалистов, где создаются рабочие инструкции, планируются и&nbsp;назначаются задания, контролируется ход работ;</li>
-                <li>Мобильного приложения для&nbsp;операторов на&nbsp;производстве, в&nbsp;котором сотрудники выполняют задания, отвечают на&nbsp;контрольные вопросы по&nbsp;инструкциям и&nbsp;фиксируют замечания прямо в&nbsp;процессе работы.</li>
-              </ol>
-              <p>Такой подход позволяет связать офисное планирование и&nbsp;реальное выполнение задач на&nbsp;производстве в&nbsp;единую систему. ServiceVizor должен снижать количество ошибок и&nbsp;упрощать коммуникацию между офисом и&nbsp;цехом.</p>
-            </div>
+          <h3>Как выбрать кнопку</h3>
+          <p>Для&nbsp;ButtonBase я разделила визуальный приоритет и&nbsp;смысл действия. Например, удаление может быть второстепенным действием: кнопка останется красной, но&nbsp;получит меньший визуальный вес. Размер, наличие иконки и&nbsp;состояния задаются отдельно.</p>
+          <figure class="case-media">
+  <img src="../assets/img/ds-button-variants.png" alt="Варианты ButtonBase в Figma: визуальный приоритет и цвет по строкам, состояния по столбцам" width="1035" height="898" loading="lazy" />
+</figure>
+  </div>
+</section>
+
+        <section class="case-section case-section--split" aria-labelledby="tabs">
+  <h2 id="tabs">Что входит в&nbsp;спецификацию</h2>
+  <div class="case-section__content">
+<p>В&nbsp;планировании и&nbsp;аналитике пользователи работают с&nbsp;несколькими досками. Для&nbsp;переключения между ними я собрала панель TabbarHeader из&nbsp;вкладок TabHeader. В&nbsp;спецификации разобрала, что происходит, пока у&nbsp;доски ещё нет имени, и&nbsp;как ведёт себя вкладка с&nbsp;длинным названием.</p>
+          <figure class="case-media">
+  <img src="../assets/img/ds-tab-sizing.png" alt="Спецификация создания вкладки с пустым, коротким и длинным названием" width="1245" height="539" loading="lazy" />
+  <figcaption>Пустая вкладка получает минимальную ширину. По&nbsp;мере ввода она растёт. Предел зависит от&nbsp;числа вкладок и&nbsp;места, оставшегося рядом с&nbsp;кнопкой добавления.</figcaption>
+</figure>
+
+          <p>Если название обрезалось, при&nbsp;наведении появляется подсказка с&nbsp;полным текстом. Для&nbsp;кнопки меню внутри той&nbsp;же вкладки я описала отдельное поведение: наведение подсвечивает кнопку, а&nbsp;подсказка с&nbsp;названием доски остаётся скрытой.</p>
+  </div>
+</section>
+
+        <section class="case-section case-section--split" aria-labelledby="dates">
+  <h2 id="dates">Один календарь для&nbsp;даты и&nbsp;периода</h2>
+  <div class="case-section__content">
+<p>В&nbsp;прежнем календаре нельзя было ввести дату вручную. При&nbsp;выборе периода было трудно понять, какие дни попадут в&nbsp;диапазон. В&nbsp;новой версии я предусмотрела ручной ввод и&nbsp;разделила выбор одной даты и&nbsp;периода. После выбора начала диапазона наведение подсвечивает промежуточные дни.</p>
+          <div class="case-screen-pair">
+            <figure class="case-media case-media--screen">
+  <img src="../assets/img/tild3235-306_InputDateDropdown1.png" alt="В календаре выделен период с 9 по 13 января" width="852" height="1020" loading="lazy" />
+</figure>
+
+            <figure class="case-media case-media--screen">
+  <img src="../assets/img/tild6435-313_InputDateDropdown2.png" alt="Выбор года в календаре и быстрые периоды под ним" width="852" height="1020" loading="lazy" />
+</figure>
+
           </div>
-        </div>
+          <p>Для&nbsp;частых запросов я добавила относительные периоды. Например, «Этот квартал» рассчитывается от&nbsp;текущей даты.</p>
+          <details class="case-supplement"><summary>Прежний календарь в&nbsp;работе</summary>
+            <div class="video-frame"><iframe loading="lazy" src="https://kinescope.io/embed/pSuVEgjxc5WLR5gyQssvUx" title="Прежний календарь в работе" allow="fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+            <a href="https://kinescope.io/embed/pSuVEgjxc5WLR5gyQssvUx">Открыть запись отдельно</a>
+          </details>
+          <details class="case-supplement"><summary>Новый календарь в&nbsp;работе</summary>
+            <div class="video-frame"><iframe loading="lazy" src="https://kinescope.io/embed/mxDHEPRRDTtdW7KCr7AMQ8" title="Новый календарь в работе" allow="fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+            <a href="https://kinescope.io/embed/mxDHEPRRDTtdW7KCr7AMQ8">Открыть запись отдельно</a>
+          </details>
+  </div>
+</section>
 
-        <h2>коротко</h2>
-        <p>Мы перешли от&nbsp;фрагментированных интерфейсов и&nbsp;хаотичных процессов к&nbsp;структурированной системе: я определила layout-паттерны, токены и&nbsp;компонентную архитектуру, навела порядок в&nbsp;Figma и&nbsp;синхронизировала работу с&nbsp;разработкой. Это позволило снизить количество правок после разработки в&nbsp;2&nbsp;раза, повысить консистентность интерфейсов и&nbsp;упростить масштабирование продукта.</p>
+        <section class="case-section case-section--split" aria-labelledby="maintenance">
+  <h2 id="maintenance">Как команда работала с&nbsp;системой</h2>
+  <div class="case-section__content">
+<p>Изначально все макеты лежали в&nbsp;одном файле. Я разделила их по&nbsp;модулям продукта, а&nbsp;библиотеки для&nbsp;веба и&nbsp;планшета вынесла в&nbsp;отдельные файлы. В&nbsp;каждом модуле отвела страницу под&nbsp;ревью реализации.</p>
+          <figure class="case-media">
+  <img src="../assets/img/tild6364-646_noroot.png" alt="Файлы Figma для веба, планшета, библиотек компонентов и графики" width="1316" height="877" loading="lazy" />
+  <figcaption>У&nbsp;веб-модулей и&nbsp;их библиотеки голубые обложки, у&nbsp;планшета и&nbsp;его библиотеки — бирюзовые.</figcaption>
+</figure>
 
-        <h2>проблема</h2>
-        <p>Интерфейс развивался фрагментарно: не&nbsp;было единого системного подхода и&nbsp;консистентных компонентов, а&nbsp;решения часто принимались уже на&nbsp;этапе разработки. Макеты расходились с&nbsp;реализацией, правки появлялись в&nbsp;последний момент из-за&nbsp;горящих сроков, а&nbsp;разработчики добавляли сторонние или&nbsp;кастомные элементы вне системы. Дизайн-система фактически не&nbsp;управляла продуктом, а&nbsp;перегруженная и&nbsp;неструктурированная Figma усложняла навигацию и&nbsp;поддержку интерфейсов.</p>
+          <h3>Как выглядело дизайн-ревью</h3>
+          <p>В&nbsp;Jira появился отдельный этап проверки перед релизом. Для&nbsp;каждого расхождения я фиксировала приоритет, прикладывала экран и&nbsp;описывала ожидаемое поведение. Например, в&nbsp;таблице пользователей индикатор показывал сортировку по&nbsp;ФИО, хотя строки шли не&nbsp;по&nbsp;алфавиту. На&nbsp;ревью я указала разработчику, что индикатор должен соответствовать фактическому порядку строк.</p>
+          <figure class="case-media">
+  <img src="../assets/img/ds-sort-review.png" alt="Заметка дизайн-ревью о сортировке таблицы пользователей с приоритетом и снимком реализации" width="804" height="559" loading="lazy" />
+  <figcaption>Я отметила средний приоритет и&nbsp;попросила проверить ту&nbsp;же сортировку в&nbsp;таблице устройств.</figcaption>
+</figure>
+  </div>
+</section>
 
-        <h2>задача</h2>
-        <p>Построить дизайн-систему, которая:<br />— задаёт единые правила интерфейса<br />— синхронизирует дизайн и&nbsp;разработку<br />— снижает количество правок после разработки<br />— масштабируется вместе с&nbsp;продуктом<br />— остаётся гибкой<br />— не&nbsp;требует огромного количества затрат ресурса</p>
-
-        <h2>подход</h2>
-        <div class="split">
-          <h3 class="split__title">Правила</h3>
-          <div class="split__text">Для&nbsp;нас не&nbsp;подходила классическая модульная сетка, одинаковая для&nbsp;всех разделов — интерфейсы очень разнообразные. Упорядочить хаос без&nbsp;лишних ограничений получилось так:<br />— Я задала правила на&nbsp;атомарном уровне — расстояния, скругления, текстовые стили, иконки, цвета<br />— Выделила отдельные лэйауты, характерные для&nbsp;нескольких модулей — поп-апы с&nbsp;формами, таблицы, состояния пустых экранов<br />— Если какой-то элемент используется где-то хотя&nbsp;бы 2&nbsp;раза, то выносила его в&nbsp;дизайн-систему</div>
-        </div>
-        <div class="split">
-          <h3 class="split__title">Компоненты</h3>
-          <div class="split__text">Здесь я использовала классические принципы атомарного дизайна — есть компоненты атомов, из&nbsp;них собираются молекулы.</div>
-        </div>
-        <figure>
-          <img src="../assets/img/tild3863-383_photo.png" alt="Компоненты дизайн-системы" />
-        </figure>
-        <div class="split">
-          <h3 class="split__title">Спецификации</h3>
-          <div class="split__text">Я расписываю пояснения к&nbsp;компонентам, описывая UX-паттерны, учитывая корнер-кейсы и&nbsp;возможные ограничения — чтобы и&nbsp;не&nbsp;забывать самой, и&nbsp;разработчики придумывали на&nbsp;ходу новое по&nbsp;минимуму.</div>
-        </div>
-        <figure>
-          <img src="../assets/img/tild3261-356_photo.png" alt="Спецификации компонентов" />
-        </figure>
-        <div class="split">
-          <h3 class="split__title">Связь с&nbsp;разработкой</h3>
-          <div class="split__text">Сейчас разработчики активно занимаются плавной миграцией на&nbsp;новую дизайн-систему с&nbsp;помощью синхронизации API с&nbsp;моими токенами и&nbsp;компонентами в&nbsp;Figma</div>
-        </div>
-
-        <h2>кейс: date picker</h2>
-        <div class="two-col">
-          <div>
-            <h3 class="two-col__title">Старая версия</h3>
-            <p class="two-col__text">Одним из&nbsp;примеров улучшения компонентов стал DatePicker, который изначально был подключён как стороннее решение и&nbsp;вызывал проблемы:<br />— отсутствовал ручной ввод даты<br />— не&nbsp;было разделения single / range сценариев<br />— неочевидная логика выбора диапазона</p>
-          </div>
-          <div class="video-frame">
-            <iframe src="https://kinescope.io/embed/pSuVEgjxc5WLR5gyQssvUx" title="Старая версия date picker" allow="autoplay; fullscreen; picture-in-picture; encrypted-media;" allowfullscreen></iframe>
-          </div>
-        </div>
-        <div class="two-col">
-          <div>
-            <h3 class="two-col__title">Новая версия</h3>
-            <p class="two-col__text">Я переработала компонент:<br />— добавила ручной ввод<br />— разделила сценарии выбора<br />— внедрила hover-поведение для&nbsp;range (подсветка промежуточных дат)<br />— добавила динамические пресеты (сегодня, неделя, месяц, квартал), которые автоматически обновляются</p>
-          </div>
-          <div class="video-frame">
-            <iframe src="https://kinescope.io/embed/mxDHEPRRDTtdW7KCr7AMQ8" title="Новая версия date picker" allow="autoplay; fullscreen; picture-in-picture; encrypted-media;" allowfullscreen></iframe>
-          </div>
-        </div>
-
-        <h2>реорганизация рабочего пространства</h2>
-        <div class="covers">
-          <img src="../assets/img/tild3564-353_noroot.png" alt="Модульная структура файлов Figma" />
-          <img src="../assets/img/tild6364-646_noroot.png" alt="Обложки файлов по цветам" />
-        </div>
-        <p>Перевела продукт с&nbsp;единого перегруженного файла на&nbsp;модульную структуру, соответствующую архитектуре продукта</p>
-        <p>Голубые обложки — разделы веба и&nbsp;его дизайн-система, бирюзовые — разделы планшета и&nbsp;дизайн-система, красные — файлы для&nbsp;графики.</p>
-
-        <h2>процессы и&nbsp;контроль качества</h2>
-        <p>Чтобы снизить количество поздних правок и&nbsp;расхождений с&nbsp;разработкой, я внедрила:<br />— груминг макетов с&nbsp;участием разработчиков и&nbsp;проработкой корнер кейсов<br />— структурированную систему фиксации правок (шаблон: приоритет, сравнение design/dev, описание проблемы)<br />— отдельные страницы для&nbsp;ревью в&nbsp;каждом файле Figma<br />— презентации для&nbsp;еженедельных демо<br />— дизайн-ревью перед релизом задач через&nbsp;отдельную колонку в&nbsp;Jira (пример ниже)</p>
-        <figure>
-          <img src="../assets/img/tild3037-363_240426.png" alt="Колонка дизайн-ревью в Jira" />
-        </figure>
-
-        <h2>итог</h2>
-        <p class="case-body__last">— Количество правок после разработки снизилось в&nbsp;2&nbsp;раза<br />— Интерфейсы стали более консистентными между модулями<br />— Проблемы чаще стали выявляться на&nbsp;этапе проектирования, а&nbsp;не&nbsp;после релиза<br />— Разработчики стали реже создавать кастомные компоненты<br />— Упростилась навигация и&nbsp;работа с&nbsp;Figma<br />— Процесс внедрения дизайн-системы в&nbsp;продукт стал системным</p>
       </div>
     </article>
 

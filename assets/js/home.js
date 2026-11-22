@@ -23,6 +23,7 @@ updateHeader();
 const copy = [...document.querySelectorAll('[data-en]')];
 const buttons = document.querySelectorAll('[data-lang]');
 const socialLinks = document.querySelectorAll('.social-link');
+const resumeLinks = document.querySelectorAll('.resume-link');
 const caseLinks = document.querySelectorAll('.case-card');
 const originalTitle = document.title;
 for (const item of copy) item.dataset.ru = item.textContent;
@@ -48,6 +49,9 @@ function setLanguage(language) {
     link.href = link.dataset[`${language}Href`];
     link.querySelector('img').src = link.querySelector('img').dataset[`${language}Src`];
     link.setAttribute('aria-label', en ? 'LinkedIn' : 'Телеграм-канал');
+  }
+  for (const link of resumeLinks) {
+    link.href = link.dataset[`${language}Href`];
   }
   for (const link of caseLinks) {
     link.href = en ? `en/${link.dataset.ruHref}` : link.dataset.ruHref;
